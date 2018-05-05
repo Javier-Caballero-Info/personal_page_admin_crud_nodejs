@@ -1,0 +1,10 @@
+node_modules
+dist
+.env
+data
+.nyc_output
+coverage
+.DS_Store
+.idea/
+.scannerwork/
+JavierCaballero.json
