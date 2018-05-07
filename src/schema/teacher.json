@@ -1,0 +1,32 @@
+{
+  "type": "object",
+  "properties": {
+    "annotation": {
+      "type": "string"
+    },
+    "institute": {
+      "type": "string"
+    }, 
+    "lang": {
+      "type": "string",
+      "enum": [
+        "ES",
+        "EN"
+      ]
+    },
+    "subject": {
+      "type": "string"
+    },
+    "time": {
+      "type": "string",
+      "pattern": ".* - .*"
+    }
+  },
+  "required": [
+    "annotation",
+    "institute",
+    "lang",
+    "subject",
+    "time"
+  ]
+}
