@@ -1,0 +1,31 @@
+{
+  "properties": {
+    "career": {
+      "type": "string"
+    },
+    "detail": {
+      "type": "string"
+    },
+    "institute": {
+      "type": "string"
+    },    
+    "lang": {
+      "type": "string",
+      "enum": [
+        "ES",
+        "EN"
+      ]
+    },
+    "time": {
+      "type": "string",
+      "pattern": ".* - .*"
+    }
+  },
+  "required": [
+    "career",
+    "detail",
+    "institute",
+    "lang",
+    "time"
+  ]
+}
