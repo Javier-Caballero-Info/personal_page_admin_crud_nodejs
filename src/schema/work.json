@@ -1,0 +1,32 @@
+{
+  "type": "object",
+  "properties": {
+    "company": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },    
+    "lang": {
+      "type": "string",
+      "enum": [
+        "ES",
+        "EN"
+      ]
+    },
+    "position": {
+      "type": "string"
+    },
+    "time": {
+      "type": "string",
+      "pattern": ".* - .*"
+    }
+  },
+  "required": [
+    "company",
+    "description",
+    "lang",
+    "position",
+    "time"
+  ]
+}
