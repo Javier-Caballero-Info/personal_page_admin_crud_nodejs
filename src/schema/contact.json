@@ -1,0 +1,31 @@
+{
+  "type": "object",
+  "properties": {
+    "icon": {
+      "type": "string"
+    },
+    "img": {
+      "type": "string"
+    },
+    "info": {
+      "type": "string"
+    },    
+    "lang": {
+      "type": "string",
+      "enum: [
+        "ES",
+        "EN"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "minLength": 2
+    }
+  },
+  "required": [
+    "icon",
+    "img",
+    "info",
+    "name"
+  ]
+}
