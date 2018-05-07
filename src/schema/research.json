@@ -23,10 +23,10 @@
     }
   },
   "required": [
-    "career",
-    "detail",
-    "institute",
+    "description",
+    "group",
     "lang",
+    "project",
     "time"
   ]
 }
