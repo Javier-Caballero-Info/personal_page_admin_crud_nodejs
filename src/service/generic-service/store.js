@@ -1,25 +1,15 @@
-/*
- * src/food-service/store.js
- **/
-
-export default function Store (db) {
-    // When calling external services, prefix the function with fetch
-    // e.g. When calling food service
-    // async function fetchFood () {
-    //  return request('http://localhost:3000/foods/1')
-    // }
-
-    // one, all, create, update, delete, count, search is reserved for DB only operation
+export default function Store (db, path) {
+    
+    const PATH = path
 
     async function all (params) {
-        let ref = db.child("/food")
+        let ref = db.child(path)
         let rows = []
 
         await ref.once("value", function(snapshot) {
             const tmp = snapshot.val()
             for (const k in tmp){
-                const i = tmp[k]
-                i['id'] = k
+                tmp[k]['id'] = k
                 rows.push(
                     tmp[k]
                 )
@@ -29,7 +19,7 @@ export default function Store (db) {
         return rows
     }
     async function one (id) {
-        let ref = db.child('/food/' + id)
+        let ref = db.child(PATH + '/' + id)
         let row = null
 
         await ref.once("value", function(snapshot) {
@@ -43,7 +33,7 @@ export default function Store (db) {
     }
 
     async function create (data) {
-        let ref = db.child('/food')
+        let ref = db.child(PATH)
 
         let row = null
         const key = await ref.push(data).key
@@ -56,7 +46,7 @@ export default function Store (db) {
     }
 
     async function update (id, data) {
-        const ref = db.child('/food/' + id)
+        const ref = db.child(PATH + '/' + id)
 
         let row = null
 
@@ -85,7 +75,7 @@ export default function Store (db) {
     }
 
     async function remove (id) {
-        let ref = db.child('/food/' + id)
+        let ref = db.child(PATH + '/' + id)
 
         let row = null
 

@@ -1,8 +1,4 @@
-/*
- * src/food-service/route.js 
- **/
-
-import { Ok, OkCreated, Err, NotFound } from '../helper'
+import { Ok, OkCreated, Err, NotFound } from '../../helper/index'
 
 export default function Route (model) {
     // GET /foods/:id

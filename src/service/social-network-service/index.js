@@ -1,57 +1,50 @@
-/*
- * src/food-service/index.js 
-**/
-
-import Store from './store'
+import Store from '../generic-service/store'
 import Model from './model'
 import Route from './route'
 
 import express from 'express'
 const router = express.Router()
+const PATH = '/social-network/'
 
 function Service ({ db, schema }) {
-  const store = Store(db)
+  const store = Store(db, PATH)
   const model = Model({ store, schema })
   const route = Route(model)
 
   router
-    .get('/', route.getFoods)
-    .get('/:id', route.getFood)
-    .post('/', route.postFood)
-    .put('/:id', route.putFood)
-    .delete('/:id', route.deleteFood)
+    .get('/', route.getSocialNetworks)
+    .get('/:id', route.getSocialNetwork)
+    .post('/', route.postSocialNetwork)
+    .put('/:id', route.putSocialNetwork)
+    .delete('/:id', route.deleteSocialNetwork)
 
   return router
 }
 
 export default (options) => {
   return {
-    basePath: '/foods',
     info: {
-      name: 'Food Service',
-      service: 'food',
-      version: '1.0.0',
-      description: 'Endpoint service the food service',
+      name: 'Social Networks',
       paths: {
         one: {
           method: 'GET',
-          path: '/foods/:id'
+          path: '/social-networks/:id'
         },
         all: {
           method: 'GET',
-          path: '/foods'
+          path: '/social-networks'
         },
         create: {
           method: 'POST',
-          path: '/foods'
+          path: '/social-networks'
         },
         update: {
           method: 'PUT',
-          path: '/foods'
+          path: '/social-networks/:id'
         },
         remove: {
           method: 'DELETE',
-          path: '/foods/:id'
+          path: '/social-networks/:id'
         }
       }
     },

@@ -1,6 +1,3 @@
-/*
- * src/food-service/model.js 
-**/
 
 export default function Model ({ store, schema }) {
 
@@ -12,23 +9,23 @@ export default function Model ({ store, schema }) {
     return await store.all()
   }
 
-  async function create ({ name }) {
+  async function create ({ name, link, img, order, lang }) {
     // Make params explicit
-    const params = { name }
+    const params = { name, link, img, order, lang }
 
     // Perform validation of request schema here
-    const validatedParams = await schema.validate('food', params)
+    const validatedParams = await schema.validate('social-network', params)
 
     // Call store with the validated params
     return await store.create(validatedParams)
   }
 
-  async function update (id, { name }) {
+  async function update (id, { name, link, img, order, lang }) {
     // Make params explicit
-    const params = { name }
+    const params = { name, link, img, order, lang }
 
     // Perform validation of request schema here
-    const validatedParams = await schema.validate('food', params)
+    const validatedParams = await schema.validate('social-network', params)
 
     // Call store with the validated params
     return await store.update(id, validatedParams)

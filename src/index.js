@@ -17,10 +17,12 @@ import Database from './database'
 import Schema from './schema'
 
 // Services
-import FoodService from './food-service'
+import FoodService from './service/food-service'
+import SocialNetworkService from './service/social-network-service'
 
 // Schemas
 import FoodSchema from './schema/food.json'
+import SocialNetworkSchema from './schema/social-network.json'
 
 // main is where our application resides
 
@@ -29,6 +31,7 @@ const app = express()
 const schema = Schema()
 
 schema.add('food', FoodSchema)
+schema.add('social-network', SocialNetworkSchema)
 
 // Middlewares
 middlewares(app)
@@ -39,7 +42,8 @@ app.use('/schemas', express.static(path.join(__dirname, 'schema')))
 const db = Database(config.get('db'))
 
 const services = [
-    FoodService
+    FoodService,
+    SocialNetworkService
     // Would make much more sense when you have multiple services
     // in the same application. e.g.
     // ServiceA
