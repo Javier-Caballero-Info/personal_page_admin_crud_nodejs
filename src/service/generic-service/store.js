@@ -2,8 +2,19 @@ export default function Store (db, path) {
     
     const PATH = path
 
-    async function all (params) {
-        let ref = db.child(path)
+    const LANGUAGES_AVAILABLE = ['es', 'en']
+
+    function getPath(lang){
+
+        if(!LANGUAGES_AVAILABLE.includes(lang)) {
+            throw new Error("Lang not supported. Languages available " + LANGUAGES_AVAILABLE.join(', '))
+        }
+
+        return lang + '/' + PATH
+    }
+
+    async function all (lang, params) {
+        let ref = db.child(getPath(lang))
         let rows = []
 
         await ref.once("value", function(snapshot) {
@@ -18,8 +29,8 @@ export default function Store (db, path) {
 
         return rows
     }
-    async function one (id) {
-        let ref = db.child(PATH + '/' + id)
+    async function one (id, lang) {
+        let ref = db.child(getPath(lang) + '/' + id)
         let row = null
 
         await ref.once("value", function(snapshot) {
@@ -32,8 +43,8 @@ export default function Store (db, path) {
         return row
     }
 
-    async function create (data) {
-        let ref = db.child(PATH)
+    async function create (lang, data) {
+        let ref = db.child(getPath(lang))
 
         let row = null
         const key = await ref.push(data).key
@@ -45,8 +56,8 @@ export default function Store (db, path) {
         return row
     }
 
-    async function update (id, data) {
-        const ref = db.child(PATH + '/' + id)
+    async function update (id, lang, data) {
+        const ref = db.child(getPath(lang) + '/' + id)
 
         let row = null
 
@@ -74,8 +85,8 @@ export default function Store (db, path) {
         return row
     }
 
-    async function remove (id) {
-        let ref = db.child(PATH + '/' + id)
+    async function remove (id, lang) {
+        let ref = db.child(getPath(lang) + '/' + id)
 
         let row = null
 

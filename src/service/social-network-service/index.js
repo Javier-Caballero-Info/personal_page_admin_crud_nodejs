@@ -7,47 +7,48 @@ const router = express.Router()
 const PATH = '/social-network/'
 
 function Service ({ db, schema }) {
-  const store = Store(db, PATH)
-  const model = Model({ store, schema })
-  const route = Route(model)
+    const store = Store(db, PATH)
+    const model = Model({ store, schema })
+    const route = Route(model)
 
-  router
-    .get('/', route.getSocialNetworks)
-    .get('/:id', route.getSocialNetwork)
-    .post('/', route.postSocialNetwork)
-    .put('/:id', route.putSocialNetwork)
-    .delete('/:id', route.deleteSocialNetwork)
+    router
+        .get('/:lang/social-networks', route.getSocialNetworks)
+        .get('/:lang/social-networks/:id', route.getSocialNetwork)
+        .post('/:lang/social-networks', route.postSocialNetwork)
+        .put('/:lang/social-networks/:id', route.putSocialNetwork)
+        .delete('/:lang/social-networks/:id', route.deleteSocialNetwork)
 
-  return router
+    return router
 }
 
 export default (options) => {
-  return {
-    info: {
-      name: 'Social Networks',
-      paths: {
-        one: {
-          method: 'GET',
-          path: '/social-networks/:id'
+    return {
+        basePath: '/',
+        info: {
+            name: 'Social Networks',
+            paths: {
+                one: {
+                    method: 'GET',
+                    path: '/social-networks/:lang/:id'
+                },
+                all: {
+                    method: 'GET',
+                    path: '/social-networks/:lang'
+                },
+                create: {
+                    method: 'POST',
+                    path: '/social-networks/:lang'
+                },
+                update: {
+                    method: 'PUT',
+                    path: '/social-networks/:lang/:id'
+                },
+                remove: {
+                    method: 'DELETE',
+                    path: '/social-networks/:lang/:id'
+                }
+            }
         },
-        all: {
-          method: 'GET',
-          path: '/social-networks'
-        },
-        create: {
-          method: 'POST',
-          path: '/social-networks'
-        },
-        update: {
-          method: 'PUT',
-          path: '/social-networks/:id'
-        },
-        remove: {
-          method: 'DELETE',
-          path: '/social-networks/:id'
-        }
-      }
-    },
-    route: Service(options)
-  }
+        route: Service(options)
+    }
 }
