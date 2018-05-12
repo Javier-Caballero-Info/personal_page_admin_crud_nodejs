@@ -6,16 +6,16 @@ import express from 'express'
 const router = express.Router()
 
 function Service ({ db, schema }) {
-    const store = Store(db, '/social-network/')
+    const store = Store(db, '/contact/')
     const model = Model({ store, schema })
     const route = Route(model)
 
     router
-        .get('/:lang/social-networks', route.getAllSocialNetworks)
-        .get('/:lang/social-networks/:id', route.getSocialNetwork)
-        .post('/:lang/social-networks', route.postSocialNetwork)
-        .put('/:lang/social-networks/:id', route.putSocialNetwork)
-        .delete('/:lang/social-networks/:id', route.deleteSocialNetwork)
+        .get('/:lang/contacts', route.getAllContacts)
+        .get('/:lang/contacts/:id', route.getContact)
+        .post('/:lang/contacts', route.postContact)
+        .put('/:lang/contacts/:id', route.putContact)
+        .delete('/:lang/contacts/:id', route.deleteContact)
 
     return router
 }
@@ -24,27 +24,27 @@ export default (options) => {
     return {
         basePath: '/',
         info: {
-            name: 'Social Networks',
+            name: 'Contacts',
             paths: {
                 one: {
                     method: 'GET',
-                    path: '/social-networks/:lang/:id'
+                    path: '/contacts/:lang/:id'
                 },
                 all: {
                     method: 'GET',
-                    path: '/social-networks/:lang'
+                    path: '/contacts/:lang'
                 },
                 create: {
                     method: 'POST',
-                    path: '/social-networks/:lang'
+                    path: '/contacts/:lang'
                 },
                 update: {
                     method: 'PUT',
-                    path: '/social-networks/:lang/:id'
+                    path: '/contacts/:lang/:id'
                 },
                 remove: {
                     method: 'DELETE',
-                    path: '/social-networks/:lang/:id'
+                    path: '/contacts/:lang/:id'
                 }
             }
         },

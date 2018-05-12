@@ -2,7 +2,7 @@ import { Ok, OkCreated, Err, NotFound } from '../../helper/index'
 
 export default function Route (model) {
 
-    async function getAllSocialNetworks (req, res) {
+    async function getAllWorks (req, res) {
 
         try {
             Ok(res)(await model.all(req.params.lang))
@@ -12,14 +12,14 @@ export default function Route (model) {
 
     }
 
-    async function getSocialNetwork (req, res) {
+    async function getWork (req, res) {
 
         try {
             const result = await model.one(req.params.id, req.params.lang)
             if(result){
                 Ok(res)(result)
             }else{
-                NotFound(res)("Social Network")
+                NotFound(res)("Work")
             }
         } catch (error) {
             Err(res)({"message": error.message})
@@ -27,7 +27,7 @@ export default function Route (model) {
 
     }
 
-    async function postSocialNetwork (req, res) {
+    async function postWork (req, res) {
         try {
             const result = await model.create(req.params.lang, req.body)
             OkCreated(res)(result)
@@ -36,20 +36,20 @@ export default function Route (model) {
         }
     }
 
-    async function putSocialNetwork (req, res) {
+    async function putWork (req, res) {
         try {
             const result = await model.update(req.params.id, req.params.lang, req.body)
             if(result){
                 Ok(res)(result)
             }else{
-                NotFound(res)("SocialNetwork")
+                NotFound(res)("Work")
             }
         } catch (error) {
             Err(res)({"message": error.message})
         }
     }
 
-    async function deleteSocialNetwork (req, res) {
+    async function deleteWork (req, res) {
 
         try {
 
@@ -58,7 +58,7 @@ export default function Route (model) {
             if(result){
                 Ok(res)(result)
             }else{
-                NotFound(res)("SocialNetwork")
+                NotFound(res)("Work")
             }
         } catch (error) {
             Err(res)({"message": error.message})
@@ -67,10 +67,10 @@ export default function Route (model) {
     }
 
     return {
-        getSocialNetwork,
-        getAllSocialNetworks,
-        postSocialNetwork,
-        putSocialNetwork,
-        deleteSocialNetwork
+        getWork,
+        getAllWorks,
+        postWork,
+        putWork,
+        deleteWork
     }
 }

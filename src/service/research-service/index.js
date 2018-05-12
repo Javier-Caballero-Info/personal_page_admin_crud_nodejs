@@ -6,16 +6,16 @@ import express from 'express'
 const router = express.Router()
 
 function Service ({ db, schema }) {
-    const store = Store(db, '/social-network/')
+    const store = Store(db, '/research/')
     const model = Model({ store, schema })
     const route = Route(model)
 
     router
-        .get('/:lang/social-networks', route.getAllSocialNetworks)
-        .get('/:lang/social-networks/:id', route.getSocialNetwork)
-        .post('/:lang/social-networks', route.postSocialNetwork)
-        .put('/:lang/social-networks/:id', route.putSocialNetwork)
-        .delete('/:lang/social-networks/:id', route.deleteSocialNetwork)
+        .get('/:lang/researches', route.getAllResearches)
+        .get('/:lang/researches/:id', route.getResearch)
+        .post('/:lang/researches', route.postResearch)
+        .put('/:lang/researches/:id', route.putResearch)
+        .delete('/:lang/researches/:id', route.deleteResearch)
 
     return router
 }
@@ -24,27 +24,27 @@ export default (options) => {
     return {
         basePath: '/',
         info: {
-            name: 'Social Networks',
+            name: 'Researches',
             paths: {
                 one: {
                     method: 'GET',
-                    path: '/social-networks/:lang/:id'
+                    path: '/researches/:lang/:id'
                 },
                 all: {
                     method: 'GET',
-                    path: '/social-networks/:lang'
+                    path: '/researches/:lang'
                 },
                 create: {
                     method: 'POST',
-                    path: '/social-networks/:lang'
+                    path: '/researches/:lang'
                 },
                 update: {
                     method: 'PUT',
-                    path: '/social-networks/:lang/:id'
+                    path: '/researches/:lang/:id'
                 },
                 remove: {
                     method: 'DELETE',
-                    path: '/social-networks/:lang/:id'
+                    path: '/researches/:lang/:id'
                 }
             }
         },

@@ -17,9 +17,19 @@ import Database from './database'
 import Schema from './schema'
 
 import SocialNetworkService from './service/social-network-service'
+import ContactService from './service/contact-service'
+import EducationService from './service/education-service'
+import ReseachService from './service/research-service'
+import ScholasticService from './service/scholastic-service'
+import WorkService from './service/work-service'
 
 // Schemas
 import SocialNetworkSchema from './schema/social-network.json'
+import ContactSchema from './schema/contact.json'
+import EducationSchema from './schema/education.json'
+import ResearchSchema from './schema/research.json'
+import ScholasticSchema from './schema/scholastic.json'
+import WorkSchema from './schema/work.json'
 
 // main is where our application resides
 
@@ -28,6 +38,11 @@ const app = express()
 const schema = Schema()
 
 schema.add('social-network', SocialNetworkSchema)
+schema.add('contact', ContactSchema)
+schema.add('education', EducationSchema)
+schema.add('research', ResearchSchema)
+schema.add('scholastic', ScholasticSchema)
+schema.add('work', WorkSchema)
 
 // Middlewares
 middlewares(app)
@@ -38,12 +53,12 @@ app.use('/schemas', express.static(path.join(__dirname, 'schema')))
 const db = Database(config.get('db'))
 
 const services = [
-    SocialNetworkService
-    // Would make much more sense when you have multiple services
-    // in the same application. e.g.
-    // ServiceA
-    // ServiceB
-    // ServiceC
+    SocialNetworkService,
+    ContactService,
+    EducationService,
+    ReseachService,
+    ScholasticService,
+    WorkService
 ].map(service => service({ db, schema }))
 
 // Initialize service by looping through them

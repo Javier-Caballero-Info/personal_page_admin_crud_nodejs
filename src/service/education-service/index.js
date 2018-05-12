@@ -6,16 +6,16 @@ import express from 'express'
 const router = express.Router()
 
 function Service ({ db, schema }) {
-    const store = Store(db, '/social-network/')
+    const store = Store(db, '/education/')
     const model = Model({ store, schema })
     const route = Route(model)
 
     router
-        .get('/:lang/social-networks', route.getAllSocialNetworks)
-        .get('/:lang/social-networks/:id', route.getSocialNetwork)
-        .post('/:lang/social-networks', route.postSocialNetwork)
-        .put('/:lang/social-networks/:id', route.putSocialNetwork)
-        .delete('/:lang/social-networks/:id', route.deleteSocialNetwork)
+        .get('/:lang/educations', route.getAllEducations)
+        .get('/:lang/educations/:id', route.getEducation)
+        .post('/:lang/educations', route.postEducation)
+        .put('/:lang/educations/:id', route.putEducation)
+        .delete('/:lang/educations/:id', route.deleteEducation)
 
     return router
 }
@@ -24,27 +24,27 @@ export default (options) => {
     return {
         basePath: '/',
         info: {
-            name: 'Social Networks',
+            name: 'Educations',
             paths: {
                 one: {
                     method: 'GET',
-                    path: '/social-networks/:lang/:id'
+                    path: '/educations/:lang/:id'
                 },
                 all: {
                     method: 'GET',
-                    path: '/social-networks/:lang'
+                    path: '/educations/:lang'
                 },
                 create: {
                     method: 'POST',
-                    path: '/social-networks/:lang'
+                    path: '/educations/:lang'
                 },
                 update: {
                     method: 'PUT',
-                    path: '/social-networks/:lang/:id'
+                    path: '/educations/:lang/:id'
                 },
                 remove: {
                     method: 'DELETE',
-                    path: '/social-networks/:lang/:id'
+                    path: '/educations/:lang/:id'
                 }
             }
         },

@@ -1,7 +1,7 @@
 {
   "type": "object",
   "properties": {
-    "annotation": {
+    "description": {
       "type": "string"
     },
     "institute": {
@@ -20,10 +20,14 @@
     "time": {
       "type": "string",
       "pattern": ".* - .*"
+    },
+    "order": {
+      "type": "integer",
+      "minimum": 0
     }
   },
   "required": [
-    "annotation",
+    "description",
     "institute",
     "lang",
     "subject",

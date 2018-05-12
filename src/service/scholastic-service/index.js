@@ -6,16 +6,16 @@ import express from 'express'
 const router = express.Router()
 
 function Service ({ db, schema }) {
-    const store = Store(db, '/social-network/')
+    const store = Store(db, '/scholastic/')
     const model = Model({ store, schema })
     const route = Route(model)
 
     router
-        .get('/:lang/social-networks', route.getAllSocialNetworks)
-        .get('/:lang/social-networks/:id', route.getSocialNetwork)
-        .post('/:lang/social-networks', route.postSocialNetwork)
-        .put('/:lang/social-networks/:id', route.putSocialNetwork)
-        .delete('/:lang/social-networks/:id', route.deleteSocialNetwork)
+        .get('/:lang/scholastic', route.getAllScholastic)
+        .get('/:lang/scholastic/:id', route.getScholastic)
+        .post('/:lang/scholastic', route.postScholastic)
+        .put('/:lang/scholastic/:id', route.putScholastic)
+        .delete('/:lang/scholastic/:id', route.deleteScholastic)
 
     return router
 }
@@ -24,27 +24,27 @@ export default (options) => {
     return {
         basePath: '/',
         info: {
-            name: 'Social Networks',
+            name: 'Scholastic',
             paths: {
                 one: {
                     method: 'GET',
-                    path: '/social-networks/:lang/:id'
+                    path: '/scholastic/:lang/:id'
                 },
                 all: {
                     method: 'GET',
-                    path: '/social-networks/:lang'
+                    path: '/scholastic/:lang'
                 },
                 create: {
                     method: 'POST',
-                    path: '/social-networks/:lang'
+                    path: '/scholastic/:lang'
                 },
                 update: {
                     method: 'PUT',
-                    path: '/social-networks/:lang/:id'
+                    path: '/scholastic/:lang/:id'
                 },
                 remove: {
                     method: 'DELETE',
-                    path: '/social-networks/:lang/:id'
+                    path: '/scholastic/:lang/:id'
                 }
             }
         },
