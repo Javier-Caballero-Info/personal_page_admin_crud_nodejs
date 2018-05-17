@@ -1,4 +1,4 @@
-// test/registration.spec.js
+
 const chai = require('chai')
 const chaiHttp = require('chai-http')
 
@@ -17,6 +17,8 @@ describe('Research Service', () => {
     const base_path = '/' + lang + '/researches'
 
     const fake_base_path = '/' + fake_lang + '/researches'
+
+    const authorizationToken = 'BEARER eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJ1c2lkIjoiQWxnbyJ9.i1ozPMRRfutuMDfJc6tZAIZlagHSy_IBtve0pg6xlGcFj7x6ebPxIivJpEqzdnB2'
 
     let research_id
 
@@ -42,6 +44,7 @@ describe('Research Service', () => {
 
         return chai.request(app)
             .get(base_path)
+            .set('authorization', authorizationToken)
             .then(res => {
                 res.should.have.status(200)
                 res.body.data.should.have.length(0)
@@ -54,6 +57,7 @@ describe('Research Service', () => {
     it('POST Research (201)', () => {
         return chai.request(app)
             .post(base_path)
+            .set('authorization', authorizationToken)
             .send(EXAMPLE_POST_DATA)
             .then(res => {
                 res.should.have.status(201)
@@ -64,6 +68,7 @@ describe('Research Service', () => {
     it('GET Researches (200,length==1)', () => {
         return chai.request(app)
             .get(base_path)
+            .set('authorization', authorizationToken)
             .then(res => {
                 res.should.have.status(200)
                 res.body.data.should.have.length(1)
@@ -76,6 +81,7 @@ describe('Research Service', () => {
     it('POST Research (400)', () => {
         return chai.request(app)
             .post(base_path)
+            .set('authorization', authorizationToken)
             .send({})
             .then(res => {
                 res.should.have.status(400)
@@ -85,6 +91,7 @@ describe('Research Service', () => {
     it('GET a Research (200)', () => {
         return chai.request(app)
             .get(base_path + '/' +research_id)
+            .set('authorization', authorizationToken)
             .send()
             .then(res => {
                 res.should.have.status(200)
@@ -94,6 +101,7 @@ describe('Research Service', () => {
     it('PUT a Research (200)', () => {
         return chai.request(app)
             .put(base_path + '/' +research_id)
+            .set('authorization', authorizationToken)
             .send(EXAMPLE_PUT_DATA)
             .then(res => {
                 res.should.have.status(200)
@@ -103,6 +111,7 @@ describe('Research Service', () => {
     it('PUT a Research (404)', () => {
         return chai.request(app)
             .put(base_path + '/not_found')
+            .set('authorization', authorizationToken)
             .send(EXAMPLE_PUT_DATA)
             .then(res => {
                 res.should.have.status(404)
@@ -112,6 +121,7 @@ describe('Research Service', () => {
     it('PUT a Research (400)', () => {
         return chai.request(app)
             .put(base_path + '/' +research_id)
+            .set('authorization', authorizationToken)
             .send({})
             .then(res => {
                 res.should.have.status(400)
@@ -121,6 +131,7 @@ describe('Research Service', () => {
     it('DELETE a Research (200)', () => {
         return chai.request(app)
             .delete(base_path + '/' +research_id)
+            .set('authorization', authorizationToken)
             .send()
             .then(res => {
                 res.should.have.status(200)
@@ -130,6 +141,7 @@ describe('Research Service', () => {
     it('DELETE a Research (404)', () => {
         return chai.request(app)
             .delete(base_path + '/not_found')
+            .set('authorization', authorizationToken)
             .send()
             .then(res => {
                 res.should.have.status(404)
@@ -139,6 +151,7 @@ describe('Research Service', () => {
     it('GET a Research (404)', () => {
         return chai.request(app)
             .get(base_path + '/' +research_id)
+            .set('authorization', authorizationToken)
             .send()
             .then(res => {
                 res.should.have.status(404)
@@ -148,6 +161,7 @@ describe('Research Service', () => {
     it('GET a Research (404)', () => {
         return chai.request(app)
             .get(base_path + '/fake')
+            .set('authorization', authorizationToken)
             .send()
             .then(res => {
                 res.should.have.status(404)
@@ -158,6 +172,7 @@ describe('Research Service', () => {
 
         return chai.request(app)
             .get(fake_base_path)
+            .set('authorization', authorizationToken)
             .then(res => {
                 res.should.have.status(400)
             })
@@ -170,6 +185,7 @@ describe('Research Service', () => {
 
         return chai.request(app)
             .get(fake_base_path + '/fake_id')
+            .set('authorization', authorizationToken)
             .then(res => {
                 res.should.have.status(400)
             })
@@ -182,6 +198,7 @@ describe('Research Service', () => {
 
         return chai.request(app)
             .post(fake_base_path, {})
+            .set('authorization', authorizationToken)
             .then(res => {
                 res.should.have.status(400)
             })
@@ -194,6 +211,7 @@ describe('Research Service', () => {
 
         return chai.request(app)
             .put(fake_base_path + '/fake_id', {})
+            .set('authorization', authorizationToken)
             .then(res => {
                 res.should.have.status(400)
             })
@@ -206,6 +224,7 @@ describe('Research Service', () => {
 
         return chai.request(app)
             .delete(fake_base_path + '/fake_id')
+            .set('authorization', authorizationToken)
             .then(res => {
                 res.should.have.status(400)
             })
