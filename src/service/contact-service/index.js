@@ -3,6 +3,9 @@ import Model from './model'
 import Route from './route'
 
 import express from 'express'
+
+import verifyToken from '../../util/verify_token'
+
 const router = express.Router()
 
 function Service ({ db, schema }) {
@@ -11,11 +14,11 @@ function Service ({ db, schema }) {
     const route = Route(model)
 
     router
-        .get('/:lang/contacts', route.getAllContacts)
-        .get('/:lang/contacts/:id', route.getContact)
-        .post('/:lang/contacts', route.postContact)
-        .put('/:lang/contacts/:id', route.putContact)
-        .delete('/:lang/contacts/:id', route.deleteContact)
+        .get('/:lang/contacts', verifyToken, route.getAllContacts)
+        .get('/:lang/contacts/:id', verifyToken, route.getContact)
+        .post('/:lang/contacts', verifyToken, route.postContact)
+        .put('/:lang/contacts/:id', verifyToken, route.putContact)
+        .delete('/:lang/contacts/:id', verifyToken, route.deleteContact)
 
     return router
 }

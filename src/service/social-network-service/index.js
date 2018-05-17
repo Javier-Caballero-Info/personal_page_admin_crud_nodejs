@@ -2,7 +2,10 @@ import Store from '../generic-service/store'
 import Model from './model'
 import Route from './route'
 
+import verifyToken from '../../util/verify_token'
+
 import express from 'express'
+
 const router = express.Router()
 
 function Service ({ db, schema }) {
@@ -11,11 +14,11 @@ function Service ({ db, schema }) {
     const route = Route(model)
 
     router
-        .get('/:lang/social-networks', route.getAllSocialNetworks)
-        .get('/:lang/social-networks/:id', route.getSocialNetwork)
-        .post('/:lang/social-networks', route.postSocialNetwork)
-        .put('/:lang/social-networks/:id', route.putSocialNetwork)
-        .delete('/:lang/social-networks/:id', route.deleteSocialNetwork)
+        .get('/:lang/social-networks', verifyToken, route.getAllSocialNetworks)
+        .get('/:lang/social-networks/:id', verifyToken, route.getSocialNetwork)
+        .post('/:lang/social-networks', verifyToken, route.postSocialNetwork)
+        .put('/:lang/social-networks/:id', verifyToken, route.putSocialNetwork)
+        .delete('/:lang/social-networks/:id', verifyToken, route.deleteSocialNetwork)
 
     return router
 }

@@ -2,7 +2,10 @@ import Store from '../generic-service/store'
 import Model from './model'
 import Route from './route'
 
+import verifyToken from '../../util/verify_token'
+
 import express from 'express'
+
 const router = express.Router()
 
 function Service ({ db, schema }) {
@@ -11,11 +14,11 @@ function Service ({ db, schema }) {
     const route = Route(model)
 
     router
-        .get('/:lang/works', route.getAllWorks)
-        .get('/:lang/works/:id', route.getWork)
-        .post('/:lang/works', route.postWork)
-        .put('/:lang/works/:id', route.putWork)
-        .delete('/:lang/works/:id', route.deleteWork)
+        .get('/:lang/works', verifyToken, route.getAllWorks)
+        .get('/:lang/works/:id', verifyToken, route.getWork)
+        .post('/:lang/works', verifyToken, route.postWork)
+        .put('/:lang/works/:id', verifyToken, route.putWork)
+        .delete('/:lang/works/:id', verifyToken, route.deleteWork)
 
     return router
 }
