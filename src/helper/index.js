@@ -1,6 +1,3 @@
-/*
- * src/helper/index.js 
-**/
 
 export function Err (res) {
   return ({ message, code }) => {

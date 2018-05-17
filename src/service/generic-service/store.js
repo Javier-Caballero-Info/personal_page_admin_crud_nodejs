@@ -1,8 +1,22 @@
 export default function Store (db, path) {
-    
     const PATH = path
 
     const LANGUAGES_AVAILABLE = ['es', 'en']
+
+    async function _getOneEntity(ref, id) {
+
+        let row = null
+
+        await ref.once("value", function(snapshot) {
+            row = snapshot.val()
+            if(row){
+                row["id"] = id
+            }
+        });
+
+        return row
+
+    }
 
     function getPath(lang){
 
@@ -31,16 +45,8 @@ export default function Store (db, path) {
     }
     async function one (id, lang) {
         let ref = db.child(getPath(lang) + '/' + id)
-        let row = null
 
-        await ref.once("value", function(snapshot) {
-            row = snapshot.val()
-            if(row){
-                row["id"] = id
-            }
-        });
-
-        return row
+        return await _getOneEntity(ref, id);
     }
 
     async function create (lang, data) {
@@ -59,14 +65,7 @@ export default function Store (db, path) {
     async function update (id, lang, data) {
         const ref = db.child(getPath(lang) + '/' + id)
 
-        let row = null
-
-        await ref.once("value", function(snapshot) {
-            row = snapshot.val()
-            if(row){
-                row["id"] = id
-            }
-        })
+        let row = await _getOneEntity(ref, id);
 
         if (row){
 

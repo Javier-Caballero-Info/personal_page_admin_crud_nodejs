@@ -15,14 +15,16 @@ function verifyToken(req, res, next) {
     if (completeToken[0] !== 'BEARER' || !token){
         return res.status(403).send({ auth: false, message: 'No token provided.' })
     }
-    jwt.verify(token, config.get('secret'), { algorithms: ['HS384'] }, function(err, decoded) {
-        if (err) {
-            return res.status(403).send({auth: false, message: 'Failed to authenticate token.'});
-        }
+
+    try {
+        const decoded = jwt.verify(token, config.get('secret'), { algorithms: ['HS384'] });
         // if everything good, save to request for use in other routes
         req.userId = decoded['usid'];
         next();
-    });
+    } catch(err) {
+        return res.status(403).send({auth: false, message: 'Failed to authenticate token.'});
+    }
+
 }
 
 export default verifyToken;

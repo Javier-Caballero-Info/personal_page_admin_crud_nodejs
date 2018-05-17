@@ -1,6 +1,3 @@
-/*
- * src/config/database.js 
- **/
 
 export default {
     databaseURL: {

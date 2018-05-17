@@ -1,6 +1,3 @@
-/*
- * src/database/index.js 
- **/
 
 function Database ({ databaseURL, private_key_id, private_key, client_email, client_id }) {
 
