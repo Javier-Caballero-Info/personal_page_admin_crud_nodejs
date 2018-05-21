@@ -1,60 +1,77 @@
-[![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
+# Personal Page Admin - NodeJS
 
-# NodeJS with Babel
+> Description
+# Table of Contents
 
-Read more about Babel from [here](https://babeljs.io/).
+-   [Support](https://github.com/nodejs/node/blob/master/README.md#support)
+-   [Release Types](https://github.com/nodejs/node/blob/master/README.md#release-types)
+    -   [Download](https://github.com/nodejs/node/blob/master/README.md#download)
+        -   [Current and LTS Releases](https://github.com/nodejs/node/blob/master/README.md#current-and-lts-releases)
+        -   [Nightly Releases](https://github.com/nodejs/node/blob/master/README.md#nightly-releases)
+        -   [API Documentation](https://github.com/nodejs/node/blob/master/README.md#api-documentation)
+    -   [Verifying Binaries](https://github.com/nodejs/node/blob/master/README.md#verifying-binaries)
+-   [Building Node.js](https://github.com/nodejs/node/blob/master/README.md#building-nodejs)
+-   [Security](https://github.com/nodejs/node/blob/master/README.md#security)
+-   [Current Project Team Members](https://github.com/nodejs/node/blob/master/README.md#current-project-team-members)
+    -   [TSC (Technical Steering Committee)](https://github.com/nodejs/node/blob/master/README.md#tsc-technical-steering-committee)
+    -   [Collaborators](https://github.com/nodejs/node/blob/master/README.md#collaborators)
+    -   [Release Team](https://github.com/nodejs/node/blob/master/README.md#release-team)
+-   [Contributing to Node.js](https://github.com/nodejs/node/blob/master/README.md#contributing-to-nodejs)
+
+## Overview
+
+Little description
 
 ## Clone
 
 ```bash
-git clone https://github.com/alextanhongpin/node-rest.git
+git clone https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs.git
 git remote rm origin
 git remote add origin <your-git-path>
 ```
 
-## Onion Architecture
-
-![Onion Architecture](/assets/onion_architecture.png)
-
-The architecture is based on the principle of [Dependency Inversion](https://dzone.com/articles/perfecting-your-solid-meal-with-dip). There are layers wrapping around each circle, forming the famous *onion*. Between the layers of the Onion, there is a strong _dependency rule_: **outer layers can depend on lower layers, but no code in the lower layer can depend directly on any code in the outer layer**. 
-
-Note that the database is not center, it is **external**. The moment you grasped this concept, you have grasped the onion architecture. 
-
 ## .babelrc
 
-Here you can specify the version of nodejs that you want the code to compile to. Since we are using AWS Lambda, we want the code to compile to nodejs version `6.10` (7 November 2017). If you are not bounded by this limitation, always use the current version:
+Here you can specify the version of Nodejs that you want the code to compile to. 
 
-```
+```json
 {
   "presets": [
     ["env", {
       "targets": {
-        "node": "current"
+        "node": "6.10"
+      },
+      "test": {
+        "plugins": [ "istanbul" ]
       }
     }]
   ]
 }
 ```
+## Requirements
 
+* Nodejs
+* Npm
+* Yarn
 ## Installation
 
 First, you have to install [Yarn](https://yarnpkg.com/lang/en/docs/install/). Then:
 
 ```bash
 # This will install all dependencies from package.json
-$ yarn install
+ yarn install
 
 # We use foreman to load the environment variables from `.env` file.
 # This is important to prevent accidental commit of sensitive data to github
-$ yarn global add foreman
+ yarn global add foreman
 ```
 
 ## Add/Remove packages
 
 ```bash
-$ yarn add <PACKAGE_NAME>
-$ yarn add --dev <PACKAGE_NAME>
-$ yarn remove <PACKAGE_NAME>
+ yarn add <PACKAGE_NAME>
+ yarn add --dev <PACKAGE_NAME>
+ yarn remove <PACKAGE_NAME>
 ```
 
 ## Environment
@@ -68,25 +85,9 @@ DB_USER=user
 DB_PASS=123456
 DB_NAME=testdb
 DB_HOST=localhost
-
-FOOD_SERVICE=true
 ```
 
-# Stop MySQL from your local
-
-Any running MySQL will prevent the app from connecting to the docker container.
-
-If you don't stop the MySQL, the following error might appear:
-```bash
-$ error 1044 (42000): access denied for user
-```
-
-# Starting the docker image with MySQL DB
-```bash
-$ docker-compose up -d
-```
-
-## Start
+## Developing
 
 ```bash
 $ nf start
@@ -112,13 +113,28 @@ $ yarn cover
 $ yarn build
 ```
 
-## Create a Table
+## Running with Docker
 
-```sql
-CREATE TABLE `food` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4
+To run the server on a Docker container, please execute the following from the root directory:
+
+### building the image
+```bash
+docker build -t swagger_server .
 ```
+### starting up a container
+```bash
+docker run -p 3000:3000 swagger_server
+```
+## Contributing
 
+Contributions welcome! See the  [Contributing Guide](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/CONTRIBUTING.md).
+
+## Author
+
+Created and maintained by Javier Hernán Caballero García ([@ealeksandrov](https://twitter.com/ealeksandrov)).
+
+## License
+
+GNU General Public License v3.0
+
+See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
