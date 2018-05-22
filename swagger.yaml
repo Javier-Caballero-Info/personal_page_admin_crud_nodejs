@@ -2,119 +2,266 @@ swagger: '2.0'
 info:
   version: '1.0'
   title: "Personal Page - Admin - NodeJS"
-  description: Polls is a simple API allowing consumers to view polls and vote in them.
+  description: Service that manage the text content of the Personal Page
   license:
-    name: MIT
-    url: https://github.com/apiaryio/polls-api/blob/master/LICENSE
-host: polls.apiblueprint.org
-basePath: /
+    name: GNU General Public License v3.0
+    url: https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE
+host: 188.166.96.202:3000
 schemes:
 - http
 consumes:
 - application/json
 produces:
 - application/json
+tags:
+- name: "Work"
+- name: "Contact"
+  description: "Operations about user"
 paths:
-  /questions:
-    x-summary: Questions Collection
+  /{lang}/works:
     get:
-      summary: List All Questions
+      summary: List All Works
+      tags:
+      - "Work"
+      security:
+      - Bearer: []
+      parameters:
+        - name: "lang"
+          description: "Lang of the content"
+          in: "path"
+          required: true
+          type: "string"
       responses:
         200:
           description: Successful Response
           schema:
             type: array
             items:
-              $ref: '#/definitions/Question'
+              $ref: '#/definitions/Work'
           examples:
             application/json:
-              - question: Favourite programming language?
-                published_at: '2015-08-05T08:40:51.620Z'
-                choices:
-                  - choice: Swift
-                    votes: 2048
-                  - choice: Python
-                    votes: 1024
-                  - choice: Objective-C
-                    votes: 512
-                  - choice: Ruby
-                    votes: 256
+                data:
+                  - id: "ABC004"
+                    company: "Globant"
+                    description: "Ingeniero en calidad de juegos (GQE game quality engineer), para Disney en proyectos de video juegos para iOS y Android. Encargado de automatización de pruebas."
+                    position: "Tester Automation Engineer"
+                    order: 4
+                    time: "Agosto 2017 - Actualidad"
+                    lang: "es"
+                  - id: "ABC003"
+                    company: "Aconcagua Software Factory"
+                    description: "Gestión de calidad para proyectos de Mercadopago. Métricas con Google Analytics, Hotjar, New Relic, DataDog, Rollbar. Análisis de la calidad del código. Configuración de alarmas de detección de fraude, fallas, defectos, inconsistencia de datos, etc."
+                    position: "Quality Assurance - Business Assurance"
+                    order: 3
+                    time: "Octubre 2015 - Agosto 2017"
+                    lang: "es"
+                  - id: "ABC002"
+                    company: "Aconcagua Software Factory"
+                    description: "Reporte de estado de proyectos, análisis de asignación de personal, análisis de productividad, definición de procesos, control de procesos, seguimiento y auditoría CMMI."
+                    position: "Project Manager Officer - QA Analist (CMMI)"
+                    order: 2
+                    time: "Octubre 2015 - Junio 2016"
+                    lang: "es"
+                  - id: "ABC001"
+                    company: "Aconcagua Software Factory"
+                    description: "Análisis de requerimientos, diseño de casos de prueba, ejecución de casos de pruebas, seguimiento de defectos. Automatización de pruebas."
+                    position: "QC Tester"
+                    order: 2
+                    time: "Febrero 2014 - Febrero 2016"
+                    lang: "es"
     post:
-      description: >-
-        You may create your own question using this action. It takes a JSON
-        object containing a question and a collection of answers in the
-        form of choices.
-      summary: Create a New Question
+      summary: Create a New Work
+      tags:
+      - "Work"
+      security:
+      - Bearer: []
       parameters:
-        - name: body
-          in: body
+        - name: "lang"
+          description: "Lang of the content"
+          in: "path"
+          required: true
+          type: "string"
+        - in: body
+          name: body
           required: true
           schema:
-            $ref: '#/definitions/QuestionRequest'
+            type: object
+            $ref: '#/definitions/WorkRequest'
+            example:
+              company: "Globant"
+              description: "Ingeniero en calidad de juegos (GQE game quality engineer), para Disney en proyectos de video juegos para iOS y Android. Encargado de automatización de pruebas."
+              position: "Tester Automation Engineer"
+              order: 4
+              time: "Agosto 2017 - Actualidad"
+              lang: "es"
       responses:
         201:
           description: ''
           schema:
-            $ref: '#/definitions/Question'
+            $ref: '#/definitions/Work'
           examples:
             application/json:
-                question: Favourite programming language?
-                published_at: '2015-08-05T08:40:51.620Z'
-                choices:
-                  - choice: Swift
-                    votes: 0
-                  - choice: Python
-                    votes: 0
-                  - choice: Objective-C
-                    votes: 0
-                  - choice: Ruby
-                    votes: 0
+              data:
+                id: "ABC004"
+                company: "Globant"
+                description: "Ingeniero en calidad de juegos (GQE game quality engineer), para Disney en proyectos de video juegos para iOS y Android. Encargado de automatización de pruebas."
+                position: "Tester Automation Engineer"
+                order: 4
+                time: "Agosto 2017 - Actualidad"
+                lang: "es"
+  /{lang}/works/{id}:
+    get: 
+      summary: Get a Work
+      tags:
+      - "Work"
+      security:
+      - Bearer: []
+      parameters:
+      - name: "lang"
+        description: "Lang of the content"
+        in: "path"
+        required: true
+        type: "string"
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: Successful Response
+          schema:
+            type: object
+            $ref: '#/definitions/Work'
+          examples:
+            application/json:
+                data:
+                  id: "ABC004"
+                  company: "Globant"
+                  description: "Ingeniero en calidad de juegos (GQE game quality engineer), para Disney en proyectos de video juegos para iOS y Android. Encargado de automatización de pruebas."
+                  position: "Tester Automation Engineer"
+                  order: 4
+                  time: "Agosto 2017 - Actualidad"
+                  lang: "es"
+    put: 
+      summary: Edit a Work
+      tags:
+      - "Work"
+      security:
+      - Bearer: []
+      parameters:
+      - name: "lang"
+        description: "Lang of the content"
+        in: "path"
+        required: true
+        type: "string"
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      - in: body
+        name: body
+        required: true
+        schema:
+          type: object
+          $ref: '#/definitions/WorkRequest'
+          example:
+            company: "Globant"
+            description: "Ingeniero en calidad de juegos (GQE game quality engineer), para Disney en proyectos de video juegos para iOS y Android. Encargado de automatización de pruebas."
+            position: "Tester Automation Engineer"
+            order: 4
+            time: "Agosto 2017 - Actualidad"
+            lang: "es"
+      responses:
+        200:
+          description: Successful Response
+          schema:
+            type: object
+            $ref: '#/definitions/Work'
+          examples:
+            application/json:
+                data:
+                  id: "ABC004"
+                  company: "Globant"
+                  description: "Ingeniero en calidad de juegos (GQE game quality engineer), para Disney en proyectos de video juegos para iOS y Android. Encargado de automatización de pruebas."
+                  position: "Tester Automation Engineer"
+                  order: 4
+                  time: "Agosto 2017 - Actualidad"
+                  lang: "es"
+    delete: 
+      summary: Delete a Work
+      tags:
+      - "Work"
+      security:
+      - Bearer: []
+      parameters:
+      - name: "lang"
+        description: "Lang of the content"
+        in: "path"
+        required: true
+        type: "string"
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        204:
+          description: Successful Response
+securityDefinitions:
+  Bearer:
+    description: "For accessing the API a valid token must be passed in all the queries.\
+      \ The following syntax must be used in the 'Authorization' header :\n\n    Bearer:\
+      \ xxxxxx.yyyyyyy.zzzzzz\n"
+    type: "apiKey"
+    name: "Authorization"
+    in: "header"
 definitions:
-  Question:
-    title: Question
+  Work:
+    title: Work
     type: object
     properties:
-      question:
+      id:
         type: string
-      published_at:
+      company:
         type: string
-      choices:
-        type: array
-        items:
-          $ref: '#/definitions/Choice'
-    required:
-      - question
-      - published_at
-      - choices
-  Choice:
-    title: Choice
-    type: object
-    properties:
-      votes:
+      description:
+        type: string
+      lang:
+        type: string
+      position:
+        type: string
+      order:
         type: integer
-        format: int32
-      choice:
+        minimum: 0
+      time:
         type: string
     required:
-      - votes
-      - choice
-  QuestionRequest:
-    title: Question Request
+      - company
+      - description
+      - lang
+      - order
+      - position
+      - time
+  WorkRequest:
+    title: Work
     type: object
     properties:
-      question:
+      company:
         type: string
-      choices:
-        type: array
-        items:
-          type: string
+      description:
+        type: string
+      lang:
+        type: string
+      position:
+        type: string
+      order:
+        type: integer
+        minimum: 0
+      time:
+        type: string
     required:
-      - question
-      - choices
-    example:
-      question: Favourite programming language?
-      choices:
-        - Swift
-        - Python
-        - Objective-C
-        - Ruby
+      - company
+      - description
+      - lang
+      - order
+      - position
+      - time
