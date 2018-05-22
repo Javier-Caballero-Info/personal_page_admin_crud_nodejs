@@ -64,16 +64,18 @@ First, you have to install [Yarn](https://yarnpkg.com/lang/en/docs/install/). Th
 4. ### Foreman
 
 ```bash
-# This will install all dependencies from package.json
- yarn install
- ```
- 
-```bash
 # We use foreman to load the environment variables from `.env` file.
 # This is important to prevent accidental commit of sensitive data to github
  yarn global add foreman
 ```
 
+5. ### Dependencies
+This will install all dependencies from package.json
+
+```bash
+ yarn install
+ ``` 
+ 
 ## Add/Remove packages
 
 ```bash
@@ -147,5 +149,5 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjA1MjY2MTgyLDgwMjI5OTE4MV19
+eyJoaXN0b3J5IjpbLTEzNjM5MDk2NTQsODAyMjk5MTgxXX0=
 -->
