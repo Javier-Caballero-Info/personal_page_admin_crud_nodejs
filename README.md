@@ -233,7 +233,12 @@ docker build -t personal_page_admin .
 ### Starting up a container
 ```bash
 docker run -p 3000:3000 -d \
--e 
+-e SECRET="secret" \
+-e DATABASE_URL="db.firebase.com" \
+-e DB_PRIVATE_KEY_ID="secret_id" \
+-e DB_PRIVATE_KEY="secret" \
+-e DB_CLIENT_EMAIL="email@firebase.com" \
+-e DB_CLIENT_ID="some_client_id \
 personal_page_admin
 ```
 ## Contributing
@@ -250,8 +255,8 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzIyMzQxODQ1LC0zNTI4MTI3NDgsMTI4NT
-c1MTU4MSw2MTI4NDkzMzQsMjEwNjc3NzY4MywxNTU5NDk2OTE5
-LC0xNDA2MzQ5MDY1LC0xNTg4NjgyMzkzLDU1Njk0NTUyOSwxMj
-gwNzg0MTVdfQ==
+eyJoaXN0b3J5IjpbLTc1MzUxMDg5MywtMzUyODEyNzQ4LDEyOD
+U3NTE1ODEsNjEyODQ5MzM0LDIxMDY3Nzc2ODMsMTU1OTQ5Njkx
+OSwtMTQwNjM0OTA2NSwtMTU4ODY4MjM5Myw1NTY5NDU1MjksMT
+I4MDc4NDE1XX0=
 -->
