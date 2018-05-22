@@ -9,6 +9,8 @@
 - [Requirements](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master#requirements)
 - [Installation](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master#installation)
 	- [Nodejs and Npm](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master#nodejs-and-npm)
+	- [Yarn](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master#yarn)
+	- [Nodejs and Npm](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master#nodejs-and-npm)
 
 ## Overview
 
@@ -228,6 +230,7 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1OTQ5NjkxOSwtMTQwNjM0OTA2NSwtMT
-U4ODY4MjM5Myw1NTY5NDU1MjksMTI4MDc4NDE1XX0=
+eyJoaXN0b3J5IjpbMzUxODE2OTk1LDE1NTk0OTY5MTksLTE0MD
+YzNDkwNjUsLTE1ODg2ODIzOTMsNTU2OTQ1NTI5LDEyODA3ODQx
+NV19
 -->
