@@ -28,7 +28,7 @@
 
 ## Overview
 
-Big description
+This is a content administration api for my Personal Page. 
 
 ## API Description
 
@@ -260,10 +260,10 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzNzk0MjYzNywxNzc1ODE2MjUyLC0zNz
-MyNjkxMTcsLTEyNjEwODQ5ODYsMTk4NDU0MzI5NSwtMTA2MzMx
-MTExMCwtMTQzMDg2MTE5LC03NTM1MTA4OTMsLTM1MjgxMjc0OC
-wxMjg1NzUxNTgxLDYxMjg0OTMzNCwyMTA2Nzc3NjgzLDE1NTk0
-OTY5MTksLTE0MDYzNDkwNjUsLTE1ODg2ODIzOTMsNTU2OTQ1NT
-I5LDEyODA3ODQxNV19
+eyJoaXN0b3J5IjpbLTU0MDQ2OTUzMywxNjM3OTQyNjM3LDE3Nz
+U4MTYyNTIsLTM3MzI2OTExNywtMTI2MTA4NDk4NiwxOTg0NTQz
+Mjk1LC0xMDYzMzExMTEwLC0xNDMwODYxMTksLTc1MzUxMDg5My
+wtMzUyODEyNzQ4LDEyODU3NTE1ODEsNjEyODQ5MzM0LDIxMDY3
+Nzc2ODMsMTU1OTQ5NjkxOSwtMTQwNjM0OTA2NSwtMTU4ODY4Mj
+M5Myw1NTY5NDU1MjksMTI4MDc4NDE1XX0=
 -->
