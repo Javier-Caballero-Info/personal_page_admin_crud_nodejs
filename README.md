@@ -19,6 +19,11 @@
 - [Report](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master#report)
 - [Build](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master#build)
 - [Running with Docker](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master#running-with-docker)
+	- [Building the image](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master#building-the-image)
+	- [Starting up a container](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master#starting-up-a-container)
+- [Build](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master#build)
+- [Build](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master#build)
+- [Build](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master#build)
 
 ## Overview
 
@@ -238,7 +243,7 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTM0MzU5MTMxLDIxMDY3Nzc2ODMsMTU1OT
-Q5NjkxOSwtMTQwNjM0OTA2NSwtMTU4ODY4MjM5Myw1NTY5NDU1
-MjksMTI4MDc4NDE1XX0=
+eyJoaXN0b3J5IjpbMTYzNTk1MDY2MCwyMTA2Nzc3NjgzLDE1NT
+k0OTY5MTksLTE0MDYzNDkwNjUsLTE1ODg2ODIzOTMsNTU2OTQ1
+NTI5LDEyODA3ODQxNV19
 -->
