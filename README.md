@@ -6,7 +6,8 @@
 -   [Overview](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master/README.md#overview)
 -   [Clone](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master/README.md#clone)
 -   [Babelrc](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master/README.md#babelrc)
-    -   [Download](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master/README.md#download)
+- https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master#requirements
+- 
 
 ## Overview
 
@@ -204,11 +205,11 @@ yarn build
 
 To run the server on a Docker container, please execute the following from the root directory, after build the project:
 
-### building the image
+### Building the image
 ```bash
 docker build -t personal_page_admin .
 ```
-### starting up a container
+### Starting up a container
 ```bash
 docker run -p 3000:3000 personal_page_admin
 ```
@@ -226,6 +227,6 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1ODg2ODIzOTMsNTU2OTQ1NTI5LDEyOD
-A3ODQxNV19
+eyJoaXN0b3J5IjpbOTU1NDk5NDM3LC0xNTg4NjgyMzkzLDU1Nj
+k0NTUyOSwxMjgwNzg0MTVdfQ==
 -->
