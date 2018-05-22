@@ -50,18 +50,22 @@ Latest LTS Version: **8.11.1** (includes npm 5.6.0)
 - Debian / Ubuntu
 ```bash
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-sudo apt-get install -y nodejs
 ```
 
 ```bash
-sudo apt update
+sudo apt install -y nodejs
 ```
+
 ```bash
-sudo apt install --no-install-recommends yarn
+sudo apt install -y build-essential
 ```
 
 - MacOS
 
+	- Bash
+	```bash
+curl "https://nodejs.org/dist/latest/node-${VERSION:-$(wget -qO- https://nodejs.org/dist/latest/ | sed -nE 's|.*>node-(.*)\.pkg</a>.*|\1|p')}.pkg" > "$HOME/Downloads/node-latest.pkg" && sudo installer -store -pkg "$HOME/Downloads/node-latest.pkg" -target "/"
+```
 	- Brew
 	```bash
 	brew install yarn --without-node
@@ -219,6 +223,6 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5MjU2NjExMSwxNjk1NTAyNzczLDk1Mj
+eyJoaXN0b3J5IjpbMjA3Mjg2MzY4MywxNjk1NTAyNzczLDk1Mj
 I2NjQxNiwtMTk1NTUyOTg2MCw4MDIyOTkxODFdfQ==
 -->
