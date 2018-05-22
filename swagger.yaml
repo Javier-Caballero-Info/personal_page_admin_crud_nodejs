@@ -14,9 +14,12 @@ consumes:
 produces:
 - application/json
 tags:
-- name: "Work"
 - name: "Contact"
-  description: "Operations about user"
+- name: "Education"
+- name: "Research"
+- name: "Scholastic"
+- name: "SocialNetwork"
+- name: "Work"
 paths:
   /{lang}/works:
     get:
@@ -215,6 +218,248 @@ securityDefinitions:
     name: "Authorization"
     in: "header"
 definitions:
+  Contact:
+    title: Contact
+    type: object
+    properties:
+      id:
+        type: string
+      icon:
+        type: string
+      img:
+        type: string
+      name:
+        type: string
+      lang:
+        type: string
+      info:
+        type: string
+      order:
+        type: integer
+        minimum: 0
+    required:
+    - icon
+    - img
+    - info
+    - lang
+    - name
+    - order
+  ContactRequest:
+    title: Contact
+    type: object
+    properties:
+      icon:
+        type: string
+      img:
+        type: string
+      name:
+        type: string
+      lang:
+        type: string
+      info:
+        type: string
+      order:
+        type: integer
+        minimum: 0
+    required:
+    - icon
+    - img
+    - info
+    - lang
+    - name
+    - order
+  Education:
+    title: Education
+    type: object
+    properties:
+      id:
+        type: string
+      career:
+        type: string
+      detail:
+        type: string
+      institute:
+        type: string
+      lang:
+        type: string
+      order:
+        type: integer
+        minimum: 0
+      time:
+        type: string
+    required:
+      - detail
+      - institute
+      - lang
+      - order
+      - time
+  EducationRequest:
+    title: Education
+    type: object
+    properties:
+      career:
+        type: string
+      detail:
+        type: string
+      institute:
+        type: string
+      lang:
+        type: string
+      order:
+        type: integer
+        minimum: 0
+      time:
+        type: string
+    required:
+      - detail
+      - institute
+      - lang
+      - order
+      - time
+  Research:
+    title: Research
+    type: object
+    properties:
+      id:
+        type: string
+      group:
+        type: string
+      description:
+        type: string
+      project:
+        type: string
+      lang:
+        type: string
+      order:
+        type: integer
+        minimum: 0
+      time:
+        type: string
+    required:
+      - group
+      - project
+      - description
+      - lang
+      - order
+      - time
+  ResearchRequest:
+    title: Research
+    type: object
+    properties:
+      group:
+        type: string
+      description:
+        type: string
+      project:
+        type: string
+      lang:
+        type: string
+      order:
+        type: integer
+        minimum: 0
+      time:
+        type: string
+    required:
+      - group
+      - project
+      - description
+      - lang
+      - order
+      - time
+  Scholastic:
+    title: Scholastic
+    type: object
+    properties:
+      id:
+        type: string
+      institute:
+        type: string
+      description:
+        type: string
+      subject:
+        type: string
+      lang:
+        type: string
+      order:
+        type: integer
+        minimum: 0
+      time:
+        type: string
+    required:
+      - institute
+      - subject
+      - description
+      - lang
+      - order
+      - time
+  ScholasticRequest:
+    title: Scholastic
+    type: object
+    properties:
+      institute:
+        type: string
+      description:
+        type: string
+      subject:
+        type: string
+      lang:
+        type: string
+      order:
+        type: integer
+        minimum: 0
+      time:
+        type: string
+    required:
+      - institute
+      - subject
+      - description
+      - lang
+      - order
+      - time
+  SocialNetwork:
+    title: SocialNetwork
+    type: object
+    properties:
+      id:
+        type: string
+      link:
+        type: string
+      img:
+        type: string
+      name:
+        type: string
+      lang:
+        type: string
+      order:
+        type: integer
+        minimum: 0
+    required:
+    - link
+    - img
+    - lang
+    - name
+    - order
+  SocialNetworkRequest:
+    title: SocialNetwork
+    type: object
+    properties:
+      link:
+        type: string
+      img:
+        type: string
+      name:
+        type: string
+      lang:
+        type: string
+      order:
+        type: integer
+        minimum: 0
+    required:
+    - link
+    - img
+    - lang
+    - name
+    - order
   Work:
     title: Work
     type: object
