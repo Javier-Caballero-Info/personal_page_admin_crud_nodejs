@@ -180,6 +180,7 @@ The `.env` should contain the following:
 ```bash
 PORT=3000
 SECRET=secret #Secret key for JWT
+
 #Firebase Credentials
 DATABASE_URL=testdb
 DB_PRIVATE_KEY_ID=localhost
@@ -247,7 +248,7 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMDIxMjg4MSw2MTI4NDkzMzQsMjEwNj
-c3NzY4MywxNTU5NDk2OTE5LC0xNDA2MzQ5MDY1LC0xNTg4Njgy
-MzkzLDU1Njk0NTUyOSwxMjgwNzg0MTVdfQ==
+eyJoaXN0b3J5IjpbMTI4NTc1MTU4MSwtMTMwMjEyODgxLDYxMj
+g0OTMzNCwyMTA2Nzc3NjgzLDE1NTk0OTY5MTksLTE0MDYzNDkw
+NjUsLTE1ODg2ODIzOTMsNTU2OTQ1NTI5LDEyODA3ODQxNV19
 -->
