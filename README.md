@@ -88,6 +88,8 @@ sudo apt install -y build-essential
 	- MSI installer
 	Download [here](http://nodejs.org/#download) the installer.
 
+For more details, please visit [https://nodejs.org/en/download/package-manager](https://nodejs.org/en/download/package-manager/).
+
 
 2. ### Yarn
 
@@ -223,5 +225,5 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI4MDc4NDE1XX0=
+eyJoaXN0b3J5IjpbLTg3MDk3NjgwNCwxMjgwNzg0MTVdfQ==
 -->
