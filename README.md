@@ -50,8 +50,8 @@ Here you can specify the version of Nodejs that you want the code to compile to.
 ```
 ## Requirements
 
-* Nodejs 
-* Npm
+* **Nodejs:** 8.11.1 or above
+* **Npm:** 5.6.0
 * Yarn
 ## Installation
 
@@ -139,5 +139,5 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1MzE3ODc2Myw4MDIyOTkxODFdfQ==
+eyJoaXN0b3J5IjpbLTM3MzkyOTQ2OSw4MDIyOTkxODFdfQ==
 -->
