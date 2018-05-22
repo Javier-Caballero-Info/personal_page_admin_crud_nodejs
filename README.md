@@ -44,9 +44,12 @@ Here you can specify the version of Nodejs that you want the code to compile to.
 * **Yarn:** 1.6.0  or above
 ## Installation
 
-1. ### NodeJs
-2. ### Npm
-3. ### Yarn
+1. ### NodeJs and Npm
+Latest LTS Version: **8.11.1** (includes npm 5.6.0)
+
+2. ### 
+
+4. ### Yarn
 
 - Debian / Ubuntu
 ```bash
@@ -180,6 +183,6 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4NDE1MDI5MCwxNjk1NTAyNzczLDk1Mj
-I2NjQxNiwtMTk1NTUyOTg2MCw4MDIyOTkxODFdfQ==
+eyJoaXN0b3J5IjpbLTIwNjA1OTUyMjEsMTY5NTUwMjc3Myw5NT
+IyNjY0MTYsLTE5NTU1Mjk4NjAsODAyMjk5MTgxXX0=
 -->
