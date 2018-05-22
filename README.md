@@ -178,10 +178,14 @@ Make sure you create the `.env` file or the service will not run.
 
 The `.env` should contain the following:
 ```bash
-DB_USER=user
-DB_PASS=123456
-DB_NAME=testdb
-DB_HOST=localhost
+PORT=user
+SECRET=123456
+DATABASE_URL=testdb
+DB_PRIVATE_KEY_ID=localhost
+DB_PRIVATE_KEY=testdb
+DB_CLIENT_EMAIL=localhost
+DATABASE_URL=testdb
+DB_PRIVATE_KEY_ID=localhost
 ```
 
 ## Developing
@@ -243,7 +247,7 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjEyODQ5MzM0LDIxMDY3Nzc2ODMsMTU1OT
-Q5NjkxOSwtMTQwNjM0OTA2NSwtMTU4ODY4MjM5Myw1NTY5NDU1
-MjksMTI4MDc4NDE1XX0=
+eyJoaXN0b3J5IjpbMTA3MDI3NTEyOSw2MTI4NDkzMzQsMjEwNj
+c3NzY4MywxNTU5NDk2OTE5LC0xNDA2MzQ5MDY1LC0xNTg4Njgy
+MzkzLDU1Njk0NTUyOSwxMjgwNzg0MTVdfQ==
 -->
