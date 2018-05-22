@@ -29,6 +29,7 @@
     "detail",
     "institute",
     "lang",
-    "time"
+    "time",
+    "order"
   ]
 }
