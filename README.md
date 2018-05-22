@@ -135,7 +135,7 @@ DB_HOST=localhost
 ## Developing
 
 ```bash
-$ nf start
+nf start
 ```
 
 ## Test
@@ -184,6 +184,6 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTUyMjY2NDE2LC0xOTU1NTI5ODYwLDgwMj
-I5OTE4MV19
+eyJoaXN0b3J5IjpbODI2MjIyNTcyLDk1MjI2NjQxNiwtMTk1NT
+UyOTg2MCw4MDIyOTkxODFdfQ==
 -->
