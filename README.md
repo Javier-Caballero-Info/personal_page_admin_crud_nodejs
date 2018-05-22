@@ -138,3 +138,6 @@ Created and maintained by Javier Hernán Caballero García ([@ealeksandrov](http
 GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbODAyMjk5MTgxXX0=
+-->
