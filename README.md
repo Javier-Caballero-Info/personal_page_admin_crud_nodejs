@@ -49,9 +49,10 @@ Latest LTS Version: **8.11.1** (includes npm 5.6.0)
 
 - Debian / Ubuntu
 ```bash
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt-get install -y nodejs
 ```
+
 ```bash
 sudo apt update
 ```
@@ -218,6 +219,6 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0NDM5MzA2MiwxNjk1NTAyNzczLDk1Mj
+eyJoaXN0b3J5IjpbLTc5MjU2NjExMSwxNjk1NTAyNzczLDk1Mj
 I2NjQxNiwtMTk1NTUyOTg2MCw4MDIyOTkxODFdfQ==
 -->
