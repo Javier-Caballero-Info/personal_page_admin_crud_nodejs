@@ -16,7 +16,9 @@
 - [Environment](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master#environment)
 - [Developing](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master#developing)
 - [Test](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master#test)
-- [Add/Remove packages](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master#addremove-packages)
+- [Report](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master#report)
+- [Build](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master#build)
+- [Running with Docker](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master#running-with-docker)
 
 ## Overview
 
@@ -236,7 +238,7 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwNjc3NzY4MywtNzIyMTA3OTQ2LDE1NT
-k0OTY5MTksLTE0MDYzNDkwNjUsLTE1ODg2ODIzOTMsNTU2OTQ1
-NTI5LDEyODA3ODQxNV19
+eyJoaXN0b3J5IjpbNTM0MzU5MTMxLDIxMDY3Nzc2ODMsMTU1OT
+Q5NjkxOSwtMTQwNjM0OTA2NSwtMTU4ODY4MjM5Myw1NTY5NDU1
+MjksMTI4MDc4NDE1XX0=
 -->
