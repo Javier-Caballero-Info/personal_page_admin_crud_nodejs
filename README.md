@@ -12,7 +12,11 @@
 	- [Yarn](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master#yarn)
 	- [Foreman](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master#foreman)
 	- [Dependencies](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master#dependencies)
-- [Add/Remove packages](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master#add/remove_packages)
+- [Add/Remove packages](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master#addremove-packages)
+- [Environment](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master#environment)
+- [Developing](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master#developing)
+- [Test](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master#addremove-packages)
+- [Add/Remove packages](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master#addremove-packages)
 
 ## Overview
 
@@ -232,7 +236,7 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTAwNDE0ODM0LC0yNzgxMTg5NTUsMTU1OT
+eyJoaXN0b3J5IjpbLTcyMjEwNzk0Niw1MDA0MTQ4MzQsMTU1OT
 Q5NjkxOSwtMTQwNjM0OTA2NSwtMTU4ODY4MjM5Myw1NTY5NDU1
 MjksMTI4MDc4NDE1XX0=
 -->
