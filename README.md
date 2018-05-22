@@ -3,8 +3,8 @@
 > Little Description
 ## Table of Contents
 
--   [Support](https://github.com/nodejs/node/blob/master/README.md#support)
--   [Release Types](https://github.com/nodejs/node/blob/master/README.md#release-types)
+-   [Support](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/masterREADME.md#support)
+-   [Release Types](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/masterREADME.md#release-types)
     -   [Download](https://github.com/nodejs/node/blob/master/README.md#download)
 
 ## Overview
@@ -201,7 +201,7 @@ yarn build
 
 ## Running with Docker
 
-To run the server on a Docker container, please execute the following from the root directory:
+To run the server on a Docker container, please execute the following from the root directory, after build the project:
 
 ### building the image
 ```bash
@@ -225,5 +225,5 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg3MDk3NjgwNCwxMjgwNzg0MTVdfQ==
+eyJoaXN0b3J5IjpbLTU4NTA5NTYxOCwxMjgwNzg0MTVdfQ==
 -->
