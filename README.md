@@ -64,15 +64,15 @@ sudo apt install -y build-essential
 
 	- Bash
 	```bash
-curl "https://nodejs.org/dist/latest/node-${VERSION:-$(wget -qO- https://nodejs.org/dist/latest/ | sed -nE 's|.*>node-(.*)\.pkg</a>.*|\1|p')}.pkg" > "$HOME/Downloads/node-latest.pkg" && sudo installer -store -pkg "$HOME/Downloads/node-latest.pkg" -target "/"
-```
+	curl "https://nodejs.org/dist/latest/node-${VERSION:-$(wget -qO- https://nodejs.org/dist/latest/ | sed -nE 's|.*>node-(.*)\.pkg</a>.*|\1|p')}.pkg" > "$HOME/Downloads/node-latest.pkg" && sudo installer -store -pkg "$HOME/Downloads/node-latest.pkg" -target "/"
+	```
 	- Brew
 	```bash
-	brew install yarn --without-node
+	brew install node
 	```
 	- MacPorts
 	```bash
-	sudo port install yarn
+	port install nodejs8
 	```
 
 - Windows
@@ -223,6 +223,6 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA3Mjg2MzY4MywxNjk1NTAyNzczLDk1Mj
-I2NjQxNiwtMTk1NTUyOTg2MCw4MDIyOTkxODFdfQ==
+eyJoaXN0b3J5IjpbLTE1MjQyODU0MTIsMTY5NTUwMjc3Myw5NT
+IyNjY0MTYsLTE5NTU1Mjk4NjAsODAyMjk5MTgxXX0=
 -->
