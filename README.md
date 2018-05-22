@@ -134,11 +134,11 @@ DB_HOST=localhost
 
 ## Developing
 
-Using .
+Using `.env` config file
 ```bash
 nf start
 ```
-or
+Or using `environment variables`
 ```
 yarn dev
 ```
@@ -146,6 +146,8 @@ yarn dev
 ## Test
 
 You can use any reporters that are supported by istanbul: `clover`, `cobertura`, `html`, `json-summary`, `json`, `lcov`, `lcovonly`, `none`, `teamcity`, `text-lcov`, `text-summary`, `text`.
+
+Setup
 
 ```
 yarn test
@@ -189,6 +191,6 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3MzAyMTgwMCw5NTIyNjY0MTYsLTE5NT
-U1Mjk4NjAsODAyMjk5MTgxXX0=
+eyJoaXN0b3J5IjpbLTEyMjUxMTUwMDAsOTUyMjY2NDE2LC0xOT
+U1NTI5ODYwLDgwMjI5OTE4MV19
 -->
