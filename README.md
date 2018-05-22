@@ -3,9 +3,10 @@
 > Little Description
 ## Table of Contents
 
--   [Support](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/masterREADME.md#support)
--   [Release Types](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/masterREADME.md#release-types)
-    -   [Download](https://github.com/nodejs/node/blob/master/README.md#download)
+-   [Overview](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master/README.md#Overview)
+-   [Clone](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master/README.md#Clone)
+-   [.babelrc](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master/README.md#.babelrc)
+    -   [Download](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master/README.md#download)
 
 ## Overview
 
@@ -225,5 +226,5 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU4NTA5NTYxOCwxMjgwNzg0MTVdfQ==
+eyJoaXN0b3J5IjpbNTU2OTQ1NTI5LDEyODA3ODQxNV19
 -->
