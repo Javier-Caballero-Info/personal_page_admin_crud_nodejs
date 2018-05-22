@@ -178,14 +178,14 @@ Make sure you create the `.env` file or the service will not run.
 
 The `.env` should contain the following:
 ```bash
-PORT=user
-SECRET=123456
+PORT=3000
+SECRET=secret #Secret key for JWT
+#Firebase Credentials
 DATABASE_URL=testdb
 DB_PRIVATE_KEY_ID=localhost
 DB_PRIVATE_KEY=testdb
 DB_CLIENT_EMAIL=localhost
-DATABASE_URL=testdb
-DB_PRIVATE_KEY_ID=localhost
+DB_CLIENT_ID=testdb
 ```
 
 ## Developing
@@ -247,7 +247,7 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3MDI3NTEyOSw2MTI4NDkzMzQsMjEwNj
+eyJoaXN0b3J5IjpbLTEzMDIxMjg4MSw2MTI4NDkzMzQsMjEwNj
 c3NzY4MywxNTU5NDk2OTE5LC0xNDA2MzQ5MDY1LC0xNTg4Njgy
 MzkzLDU1Njk0NTUyOSwxMjgwNzg0MTVdfQ==
 -->
