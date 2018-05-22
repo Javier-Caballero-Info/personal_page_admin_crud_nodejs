@@ -21,6 +21,361 @@ tags:
 - name: "SocialNetwork"
 - name: "Work"
 paths:
+  /{lang}/Contacts:
+    get:
+      summary: List All Contacts
+      tags:
+      - "Contact"
+      security:
+      - Bearer: []
+      parameters:
+        - name: "lang"
+          description: "Lang of the content"
+          in: "path"
+          required: true
+          type: "string"
+      responses:
+        200:
+          description: Successful Response
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Contact'
+          examples:
+            application/json:
+                data:
+                  - id: "CON_ABC002"
+                    icon: "icon-whatsapp"
+                    img: "https://s3.amazonaws.com/caballerojavier13-pages-files/personal_page/Mensajeria/whatsapp.png"
+                    info: "+54-263-4200-463" 
+                    name: "Whatsapp"
+                    order: 1
+                    lang: "es"
+                  - id: "CON_ABC001"
+                    icon: "icon-telegram"
+                    img: "https://s3.amazonaws.com/caballerojavier13-pages-files/personal_page/Mensajeria/telegram.png"
+                    info: "caballerojavier13"
+                    name: "Telegram"
+                    order: 2
+                    lang: "es"
+    post:
+      summary: Create a New Contact
+      tags:
+      - "Contact"
+      security:
+      - Bearer: []
+      parameters:
+        - name: "lang"
+          description: "Lang of the content"
+          in: "path"
+          required: true
+          type: "string"
+        - in: body
+          name: body
+          required: true
+          schema:
+            type: object
+            $ref: '#/definitions/ContactRequest'
+            example:
+              icon: "icon-whatsapp"
+              img: "https://s3.amazonaws.com/caballerojavier13-pages-files/personal_page/Mensajeria/whatsapp.png"
+              info: "+54-263-4200-463" 
+              name: "Whatsapp"
+              order: 1
+              lang: "es"
+      responses:
+        201:
+          description: ''
+          schema:
+            $ref: '#/definitions/Contact'
+          examples:
+            application/json:
+              data:
+                id: "CON_ABC002"
+                icon: "icon-whatsapp"
+                img: "https://s3.amazonaws.com/caballerojavier13-pages-files/personal_page/Mensajeria/whatsapp.png"
+                info: "+54-263-4200-463" 
+                name: "Whatsapp"
+                order: 1
+                lang: "es"
+  /{lang}/Contacts/{id}:
+    get: 
+      summary: Get a Contact
+      tags:
+      - "Contact"
+      security:
+      - Bearer: []
+      parameters:
+      - name: "lang"
+        description: "Lang of the content"
+        in: "path"
+        required: true
+        type: "string"
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: Successful Response
+          schema:
+            type: object
+            $ref: '#/definitions/Contact'
+          examples:
+            application/json:
+                data:
+                  id: "CON_ABC002"
+                  icon: "icon-whatsapp"
+                  img: "https://s3.amazonaws.com/caballerojavier13-pages-files/personal_page/Mensajeria/whatsapp.png"
+                  info: "+54-263-4200-463" 
+                  name: "Whatsapp"
+                  order: 1
+                  lang: "es"
+    put: 
+      summary: Edit a Contact
+      tags:
+      - "Contact"
+      security:
+      - Bearer: []
+      parameters:
+      - name: "lang"
+        description: "Lang of the content"
+        in: "path"
+        required: true
+        type: "string"
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      - in: body
+        name: body
+        required: true
+        schema:
+          type: object
+          $ref: '#/definitions/ContactRequest'
+          example:
+            icon: "icon-whatsapp"
+            img: "https://s3.amazonaws.com/caballerojavier13-pages-files/personal_page/Mensajeria/whatsapp.png"
+            info: "+54-263-4200-463" 
+            name: "Whatsapp"
+            order: 1
+            lang: "es"
+      responses:
+        200:
+          description: Successful Response
+          schema:
+            type: object
+            $ref: '#/definitions/Contact'
+          examples:
+            application/json:
+                data:
+                  id: "CON_ABC002"
+                  icon: "icon-whatsapp"
+                  img: "https://s3.amazonaws.com/caballerojavier13-pages-files/personal_page/Mensajeria/whatsapp.png"
+                  info: "+54-263-4200-463" 
+                  name: "Whatsapp"
+                  order: 1
+                  lang: "es"
+    delete: 
+      summary: Delete a Contact
+      tags:
+      - "Contact"
+      security:
+      - Bearer: []
+      parameters:
+      - name: "lang"
+        description: "Lang of the content"
+        in: "path"
+        required: true
+        type: "string"
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        204:
+          description: Successful Response
+  /{lang}/educations:
+    get:
+      summary: List All Educations
+      tags:
+      - "Education"
+      security:
+      - Bearer: []
+      parameters:
+        - name: "lang"
+          description: "Lang of the content"
+          in: "path"
+          required: true
+          type: "string"
+      responses:
+        200:
+          description: Successful Response
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Education'
+          examples:
+            application/json:
+                data:
+                  - id: "EDU_ABC003"
+                    career: "Ingeniería en Sistemas de Información"
+                    detail: "Promedio 8.22"
+                    institute: "Universidad Tecnológica Nacional-Facultad Regional Mendoza"
+                    time: "2010 - Actualidad"
+                    order: 3
+                    lang: "es"
+                  - id: "EDU_ABC002"
+                    career: "Humanidades y Ciencias Sociales con Orientación en Arte"
+                    detail: "Segundo Escolta Nacional"
+                    institute: "Instituto San Vicente de Paul"
+                    time: "2005 - 2009"
+                    order: 2
+                    lang: "es"
+                  - id: "EDU_ABC001"
+                    career: ""
+                    detail: "Abanderado Nacional - Alumno Destacado"
+                    institute: "Escuela Dr. Segundo Llaver"
+                    time: "1997 - 2004"
+                    order: 1
+                    lang: "es"
+    post:
+      summary: Create a New Education
+      tags:
+      - "Education"
+      security:
+      - Bearer: []
+      parameters:
+        - name: "lang"
+          description: "Lang of the content"
+          in: "path"
+          required: true
+          type: "string"
+        - in: body
+          name: body
+          required: true
+          schema:
+            type: object
+            $ref: '#/definitions/EducationRequest'
+            example:
+              career: "Ingeniería en Sistemas de Información"
+              detail: "Promedio 8.22"
+              institute: "Universidad Tecnológica Nacional-Facultad Regional Mendoza"
+              time: "2010 - Actualidad"
+              order: 3
+              lang: "es"
+      responses:
+        201:
+          description: ''
+          schema:
+            $ref: '#/definitions/Education'
+          examples:
+            application/json:
+              data:
+                id: "EDU_ABC003"
+                career: "Ingeniería en Sistemas de Información"
+                detail: "Promedio 8.22"
+                institute: "Universidad Tecnológica Nacional-Facultad Regional Mendoza"
+                time: "2010 - Actualidad"
+                order: 3
+                lang: "es"
+  /{lang}/educations/{id}:
+    get: 
+      summary: Get a Education
+      tags:
+      - "Education"
+      security:
+      - Bearer: []
+      parameters:
+      - name: "lang"
+        description: "Lang of the content"
+        in: "path"
+        required: true
+        type: "string"
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: Successful Response
+          schema:
+            type: object
+            $ref: '#/definitions/Education'
+          examples:
+            application/json:
+                data:
+                  id: "EDU_ABC003"
+                  career: "Ingeniería en Sistemas de Información"
+                  detail: "Promedio 8.22"
+                  institute: "Universidad Tecnológica Nacional-Facultad Regional Mendoza"
+                  time: "2010 - Actualidad"
+                  order: 3
+                  lang: "es"
+    put: 
+      summary: Edit a Education
+      tags:
+      - "Education"
+      security:
+      - Bearer: []
+      parameters:
+      - name: "lang"
+        description: "Lang of the content"
+        in: "path"
+        required: true
+        type: "string"
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      - in: body
+        name: body
+        required: true
+        schema:
+          type: object
+          $ref: '#/definitions/EducationRequest'
+          example:
+            career: "Ingeniería en Sistemas de Información"
+            detail: "Promedio 8.22"
+            institute: "Universidad Tecnológica Nacional-Facultad Regional Mendoza"
+            time: "2010 - Actualidad"
+            order: 3
+            lang: "es"
+      responses:
+        200:
+          description: Successful Response
+          schema:
+            type: object
+            $ref: '#/definitions/Education'
+          examples:
+            application/json:
+                data:
+                  id: "EDU_ABC003"
+                  career: "Ingeniería en Sistemas de Información"
+                  detail: "Promedio 8.22"
+                  institute: "Universidad Tecnológica Nacional-Facultad Regional Mendoza"
+                  time: "2010 - Actualidad"
+                  order: 3
+                  lang: "es"
+    delete: 
+      summary: Delete a Education
+      tags:
+      - "Education"
+      security:
+      - Bearer: []
+      parameters:
+      - name: "lang"
+        description: "Lang of the content"
+        in: "path"
+        required: true
+        type: "string"
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        204:
+          description: Successful Response
   /{lang}/works:
     get:
       summary: List All Works
@@ -44,28 +399,28 @@ paths:
           examples:
             application/json:
                 data:
-                  - id: "ABC004"
+                  - id: "WOR_ABC004"
                     company: "Globant"
                     description: "Ingeniero en calidad de juegos (GQE game quality engineer), para Disney en proyectos de video juegos para iOS y Android. Encargado de automatización de pruebas."
                     position: "Tester Automation Engineer"
                     order: 4
                     time: "Agosto 2017 - Actualidad"
                     lang: "es"
-                  - id: "ABC003"
+                  - id: "WOR_ABC003"
                     company: "Aconcagua Software Factory"
                     description: "Gestión de calidad para proyectos de Mercadopago. Métricas con Google Analytics, Hotjar, New Relic, DataDog, Rollbar. Análisis de la calidad del código. Configuración de alarmas de detección de fraude, fallas, defectos, inconsistencia de datos, etc."
                     position: "Quality Assurance - Business Assurance"
                     order: 3
                     time: "Octubre 2015 - Agosto 2017"
                     lang: "es"
-                  - id: "ABC002"
+                  - id: "WOR_ABC002"
                     company: "Aconcagua Software Factory"
                     description: "Reporte de estado de proyectos, análisis de asignación de personal, análisis de productividad, definición de procesos, control de procesos, seguimiento y auditoría CMMI."
                     position: "Project Manager Officer - QA Analist (CMMI)"
                     order: 2
                     time: "Octubre 2015 - Junio 2016"
                     lang: "es"
-                  - id: "ABC001"
+                  - id: "WOR_ABC001"
                     company: "Aconcagua Software Factory"
                     description: "Análisis de requerimientos, diseño de casos de prueba, ejecución de casos de pruebas, seguimiento de defectos. Automatización de pruebas."
                     position: "QC Tester"
@@ -105,7 +460,7 @@ paths:
           examples:
             application/json:
               data:
-                id: "ABC004"
+                id: "WOR_ABC004"
                 company: "Globant"
                 description: "Ingeniero en calidad de juegos (GQE game quality engineer), para Disney en proyectos de video juegos para iOS y Android. Encargado de automatización de pruebas."
                 position: "Tester Automation Engineer"
@@ -138,7 +493,7 @@ paths:
           examples:
             application/json:
                 data:
-                  id: "ABC004"
+                  id: "WOR_ABC004"
                   company: "Globant"
                   description: "Ingeniero en calidad de juegos (GQE game quality engineer), para Disney en proyectos de video juegos para iOS y Android. Encargado de automatización de pruebas."
                   position: "Tester Automation Engineer"
@@ -183,7 +538,7 @@ paths:
           examples:
             application/json:
                 data:
-                  id: "ABC004"
+                  id: "WOR_ABC004"
                   company: "Globant"
                   description: "Ingeniero en calidad de juegos (GQE game quality engineer), para Disney en proyectos de video juegos para iOS y Android. Encargado de automatización de pruebas."
                   position: "Tester Automation Engineer"
