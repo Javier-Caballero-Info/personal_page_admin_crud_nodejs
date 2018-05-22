@@ -179,14 +179,14 @@ Make sure you create the `.env` file or the service will not run.
 The `.env` should contain the following:
 ```bash
 PORT=3000
-SECRET=secret #Secret key for JWT
+SECRET=secret # Secret key for JWT
 
-#Firebase Credentials
-DATABASE_URL=testdb
-DB_PRIVATE_KEY_ID=localhost
-DB_PRIVATE_KEY=testdb
-DB_CLIENT_EMAIL=localhost
-DB_CLIENT_ID=testdb
+# Firebase Credentials
+DATABASE_URL=testdb # Url for Firebase database
+DB_PRIVATE_KEY_ID=localhost # Firebase private key id
+DB_PRIVATE_KEY=testdb # Firebase private key
+DB_CLIENT_EMAIL=localhost # Firebase client email
+DB_CLIENT_ID=testdb # Firebase client id
 ```
 
 ## Developing
@@ -248,7 +248,7 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI4NTc1MTU4MSwtMTMwMjEyODgxLDYxMj
-g0OTMzNCwyMTA2Nzc3NjgzLDE1NTk0OTY5MTksLTE0MDYzNDkw
-NjUsLTE1ODg2ODIzOTMsNTU2OTQ1NTI5LDEyODA3ODQxNV19
+eyJoaXN0b3J5IjpbNDUxMjQyNDgyLDEyODU3NTE1ODEsNjEyOD
+Q5MzM0LDIxMDY3Nzc2ODMsMTU1OTQ5NjkxOSwtMTQwNjM0OTA2
+NSwtMTU4ODY4MjM5Myw1NTY5NDU1MjksMTI4MDc4NDE1XX0=
 -->
