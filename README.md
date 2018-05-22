@@ -32,7 +32,7 @@ Big description
 
 ## API Description
 
-For more information b
+For more information about the endpoints of the API please check the [apiary doc](https://personalpageadminnodejs.docs.apiary.io).
 
 ## Clone
 
@@ -260,10 +260,10 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3NTgxNjI1Miw2MzgyNTYxNDksLTM3Mz
-I2OTExNywtMTI2MTA4NDk4NiwxOTg0NTQzMjk1LC0xMDYzMzEx
-MTEwLC0xNDMwODYxMTksLTc1MzUxMDg5MywtMzUyODEyNzQ4LD
-EyODU3NTE1ODEsNjEyODQ5MzM0LDIxMDY3Nzc2ODMsMTU1OTQ5
-NjkxOSwtMTQwNjM0OTA2NSwtMTU4ODY4MjM5Myw1NTY5NDU1Mj
-ksMTI4MDc4NDE1XX0=
+eyJoaXN0b3J5IjpbMTYzNzk0MjYzNywxNzc1ODE2MjUyLC0zNz
+MyNjkxMTcsLTEyNjEwODQ5ODYsMTk4NDU0MzI5NSwtMTA2MzMx
+MTExMCwtMTQzMDg2MTE5LC03NTM1MTA4OTMsLTM1MjgxMjc0OC
+wxMjg1NzUxNTgxLDYxMjg0OTMzNCwyMTA2Nzc3NjgzLDE1NTk0
+OTY5MTksLTE0MDYzNDkwNjUsLTE1ODg2ODIzOTMsNTU2OTQ1NT
+I5LDEyODA3ODQxNV19
 -->
