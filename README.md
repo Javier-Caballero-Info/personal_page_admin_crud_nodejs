@@ -47,6 +47,43 @@ Here you can specify the version of Nodejs that you want the code to compile to.
 1. ### NodeJs and Npm
 Latest LTS Version: **8.11.1** (includes npm 5.6.0)
 
+- Debian / Ubuntu
+```bash
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+```
+```bash
+sudo apt update
+```
+```bash
+sudo apt install --no-install-recommends yarn
+```
+
+- MacOS
+
+	- Brew
+	```bash
+	brew install yarn --without-node
+	```
+	- MacPorts
+	```bash
+	sudo port install yarn
+	```
+
+- Windows
+
+	- Chocolatey
+	```bash
+	choco install yarn
+	```
+	- Scoop
+	```
+	scoop install yarn
+	```
+	- MSI installer
+	Download [here](https://yarnpkg.com/latest.msi) the installer.
+
+
 2. ### Yarn
 
 - Debian / Ubuntu
@@ -181,6 +218,6 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAwMjU3NzEyLDE2OTU1MDI3NzMsOTUyMj
-Y2NDE2LC0xOTU1NTI5ODYwLDgwMjI5OTE4MV19
+eyJoaXN0b3J5IjpbMTI0NDM5MzA2MiwxNjk1NTAyNzczLDk1Mj
+I2NjQxNiwtMTk1NTUyOTg2MCw4MDIyOTkxODFdfQ==
 -->
