@@ -134,8 +134,13 @@ DB_HOST=localhost
 
 ## Developing
 
+Using .
 ```bash
 nf start
+```
+or
+```
+yarn dev
 ```
 
 ## Test
@@ -143,19 +148,19 @@ nf start
 You can use any reporters that are supported by istanbul: `clover`, `cobertura`, `html`, `json-summary`, `json`, `lcov`, `lcovonly`, `none`, `teamcity`, `text-lcov`, `text-summary`, `text`.
 
 ```
-$ yarn test
+yarn test
 ```
 
 ## Report
 
 ```
-$ yarn cover
+yarn cover
 ```
 
 ## Build
 
 ```
-$ yarn build
+yarn build
 ```
 
 ## Running with Docker
@@ -184,6 +189,6 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODI2MjIyNTcyLDk1MjI2NjQxNiwtMTk1NT
-UyOTg2MCw4MDIyOTkxODFdfQ==
+eyJoaXN0b3J5IjpbLTY3MzAyMTgwMCw5NTIyNjY0MTYsLTE5NT
+U1Mjk4NjAsODAyMjk5MTgxXX0=
 -->
