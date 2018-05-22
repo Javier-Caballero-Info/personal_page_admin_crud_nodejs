@@ -50,7 +50,7 @@ Here you can specify the version of Nodejs that you want the code to compile to.
 ```
 ## Requirements
 
-* **Nodejs:** 8.11.1 or above
+* **NodeJs:** 8.11.1 or above
 * **Npm:** 5.6.0 or above
 * **Yarn:** 1.6.0  or above
 ## Installation
@@ -60,10 +60,15 @@ Here you can specify the version of Nodejs that you want the code to compile to.
 3. ### Yarn
 First, you have to install [Yarn](https://yarnpkg.com/lang/en/docs/install/). Then:
 
+
+4. ### Foreman
+
 ```bash
 # This will install all dependencies from package.json
  yarn install
-
+ ```
+ 
+```bash
 # We use foreman to load the environment variables from `.env` file.
 # This is important to prevent accidental commit of sensitive data to github
  yarn global add foreman
@@ -142,5 +147,5 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDI3MzQ4MTUsODAyMjk5MTgxXX0=
+eyJoaXN0b3J5IjpbNjA1MjY2MTgyLDgwMjI5OTE4MV19
 -->
