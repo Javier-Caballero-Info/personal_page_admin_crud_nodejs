@@ -47,9 +47,7 @@ Here you can specify the version of Nodejs that you want the code to compile to.
 1. ### NodeJs and Npm
 Latest LTS Version: **8.11.1** (includes npm 5.6.0)
 
-2. ### 
-
-4. ### Yarn
+2. ### Yarn
 
 - Debian / Ubuntu
 ```bash
@@ -89,13 +87,13 @@ sudo apt install --no-install-recommends yarn
 
 For more details, please visit [https://yarnpkg.com/lang/en/docs/install](https://yarnpkg.com/lang/en/docs/install/).
 	
-4. ### Foreman
+3. ### Foreman
 We use foreman to load the environment variables from `.env` file. This is important to prevent accidental commit of sensitive data to github
 ```bash
  yarn global add foreman
 ```
 
-5. ### Dependencies
+4. ### Dependencies
 
 This will install all dependencies from package.json
 
@@ -183,6 +181,6 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjA1OTUyMjEsMTY5NTUwMjc3Myw5NT
-IyNjY0MTYsLTE5NTU1Mjk4NjAsODAyMjk5MTgxXX0=
+eyJoaXN0b3J5IjpbMTAwMjU3NzEyLDE2OTU1MDI3NzMsOTUyMj
+Y2NDE2LC0xOTU1NTI5ODYwLDgwMjI5OTE4MV19
 -->
