@@ -232,7 +232,9 @@ docker build -t personal_page_admin .
 ```
 ### Starting up a container
 ```bash
-docker run -p 3000:3000 personal_page_admin
+docker run -p 3000:3000 -d \
+-e 
+personal_page_admin
 ```
 ## Contributing
 
@@ -248,7 +250,8 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1MjgxMjc0OCwxMjg1NzUxNTgxLDYxMj
-g0OTMzNCwyMTA2Nzc3NjgzLDE1NTk0OTY5MTksLTE0MDYzNDkw
-NjUsLTE1ODg2ODIzOTMsNTU2OTQ1NTI5LDEyODA3ODQxNV19
+eyJoaXN0b3J5IjpbMzIyMzQxODQ1LC0zNTI4MTI3NDgsMTI4NT
+c1MTU4MSw2MTI4NDkzMzQsMjEwNjc3NzY4MywxNTU5NDk2OTE5
+LC0xNDA2MzQ5MDY1LC0xNTg4NjgyMzkzLDU1Njk0NTUyOSwxMj
+gwNzg0MTVdfQ==
 -->
