@@ -85,9 +85,15 @@ sudo apt install --no-install-recommends yarn
 - Windows
 
 	- Chocolatey
+	```bash
+	choco install yarn
+	```
 	- Scoop
+	```
+	scoop install yarn
+	```
 	- MSI installer
-	Download [here] the installer.
+	Download [here](https://yarnpkg.com/latest.msi) the installer.
 
 For more details, please visit [https://yarnpkg.com/lang/en/docs/install](https://yarnpkg.com/lang/en/docs/install/).
 	
@@ -178,6 +184,6 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY5OTM5MDY3NiwtMTk1NTUyOTg2MCw4MD
-IyOTkxODFdfQ==
+eyJoaXN0b3J5IjpbLTEyNTY1MjgxNDAsLTE5NTU1Mjk4NjAsOD
+AyMjk5MTgxXX0=
 -->
