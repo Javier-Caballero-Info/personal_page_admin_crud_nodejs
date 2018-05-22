@@ -79,14 +79,14 @@ sudo apt install -y build-essential
 
 	- Chocolatey
 	```bash
-	choco install yarn
+	cinst nodejs.install
 	```
 	- Scoop
-	```
-	scoop install yarn
+	```bash
+	scoop install nodejs
 	```
 	- MSI installer
-	Download [here](https://yarnpkg.com/latest.msi) the installer.
+	Download [here](http://nodejs.org/#download) the installer.
 
 
 2. ### Yarn
@@ -223,6 +223,5 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MjQyODU0MTIsMTY5NTUwMjc3Myw5NT
-IyNjY0MTYsLTE5NTU1Mjk4NjAsODAyMjk5MTgxXX0=
+eyJoaXN0b3J5IjpbMTI4MDc4NDE1XX0=
 -->
