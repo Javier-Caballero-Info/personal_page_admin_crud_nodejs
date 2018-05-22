@@ -164,11 +164,11 @@ To run the server on a Docker container, please execute the following from the r
 
 ### building the image
 ```bash
-docker build -t swagger_server .
+docker build -t personal_page_admin .
 ```
 ### starting up a container
 ```bash
-docker run -p 3000:3000 swagger_server
+docker run -p 3000:3000 personal_page_admin
 ```
 ## Contributing
 
@@ -184,6 +184,6 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5NzM2NjEyLC0xOTU1NTI5ODYwLDgwMj
+eyJoaXN0b3J5IjpbOTUyMjY2NDE2LC0xOTU1NTI5ODYwLDgwMj
 I5OTE4MV19
 -->
