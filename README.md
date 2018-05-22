@@ -60,6 +60,11 @@ Here you can specify the version of Nodejs that you want the code to compile to.
 3. ### Yarn
 First, you have to install [Yarn](https://yarnpkg.com/lang/en/docs/install/). Then:
 
+- Debian / Ubuntu
+```bash
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+```
 
 4. ### Foreman
 We use foreman to load the environment variables from `.env` file. This is important to prevent accidental commit of sensitive data to github
@@ -148,5 +153,6 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTU1Mjk4NjAsODAyMjk5MTgxXX0=
+eyJoaXN0b3J5IjpbLTQ5NjIyNTAwNSwtMTk1NTUyOTg2MCw4MD
+IyOTkxODFdfQ==
 -->
