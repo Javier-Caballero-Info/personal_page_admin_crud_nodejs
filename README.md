@@ -65,6 +65,14 @@ First, you have to install [Yarn](https://yarnpkg.com/lang/en/docs/install/). Th
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 ```
+```bash
+sudo apt update
+```
+```bash
+sudo apt install --no-install-recommends yarn
+```
+
+
 
 4. ### Foreman
 We use foreman to load the environment variables from `.env` file. This is important to prevent accidental commit of sensitive data to github
@@ -153,6 +161,6 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5NjIyNTAwNSwtMTk1NTUyOTg2MCw4MD
+eyJoaXN0b3J5IjpbMTExNzgwMjA3NCwtMTk1NTUyOTg2MCw4MD
 IyOTkxODFdfQ==
 -->
