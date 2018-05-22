@@ -5,7 +5,7 @@
 
 -   [Overview](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master/README.md#overview)
 -   [Clone](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master/README.md#clone)
--   [.babelrc](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master/README.md#babelrc)
+-   [Babelrc](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master/README.md#babelrc)
     -   [Download](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master/README.md#download)
 
 ## Overview
@@ -20,9 +20,9 @@ git remote rm origin
 git remote add origin <your-git-path>
 ```
 
-## .babelrc
+## Babelrc
 
-Here you can specify the version of Nodejs that you want the code to compile to. 
+Here you can specify the version of Nodejs (`.babelrc` file) that you want the code to compile to. 
 
 ```json
 {
@@ -226,6 +226,6 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDkyMTk0NDY3LDU1Njk0NTUyOSwxMjgwNz
-g0MTVdfQ==
+eyJoaXN0b3J5IjpbLTE1ODg2ODIzOTMsNTU2OTQ1NTI5LDEyOD
+A3ODQxNV19
 -->
