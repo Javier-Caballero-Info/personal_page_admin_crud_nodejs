@@ -51,8 +51,8 @@ Here you can specify the version of Nodejs that you want the code to compile to.
 ## Requirements
 
 * **Nodejs:** 8.11.1 or above
-* **Npm:** 5.6.0
-* Yarn
+* **Npm:** 5.6.0 or above
+* **Yarn:** 1.6.0  or above
 ## Installation
 
 First, you have to install [Yarn](https://yarnpkg.com/lang/en/docs/install/). Then:
@@ -139,5 +139,5 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3MzkyOTQ2OSw4MDIyOTkxODFdfQ==
+eyJoaXN0b3J5IjpbNDY2ODAyNzg0LDgwMjI5OTE4MV19
 -->
