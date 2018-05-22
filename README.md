@@ -28,7 +28,7 @@
 
 ## Overview
 
-This is a content administration api for my Personal Page. Each endpoint correspond with a section of the page. The idea with the project is proof the concept of microservice a little scale. Exist others endpoints to manage dif
+This is a content administration api for my Personal Page. Each endpoint correspond with a section of the page. The idea with the project is proof the concept of microservice a little scale. Exist others endpoints to manage difer
 
 ## API Description
 
@@ -260,11 +260,10 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgzNTIwNDE1MiwtMjAyNjY2NzIxMSwxNj
-M3OTQyNjM3LDE3NzU4MTYyNTIsLTM3MzI2OTExNywtMTI2MTA4
-NDk4NiwxOTg0NTQzMjk1LC0xMDYzMzExMTEwLC0xNDMwODYxMT
-ksLTc1MzUxMDg5MywtMzUyODEyNzQ4LDEyODU3NTE1ODEsNjEy
-ODQ5MzM0LDIxMDY3Nzc2ODMsMTU1OTQ5NjkxOSwtMTQwNjM0OT
-A2NSwtMTU4ODY4MjM5Myw1NTY5NDU1MjksMTI4MDc4NDE1XX0=
-
+eyJoaXN0b3J5IjpbNTEyMzYwNzU3LC04MzUyMDQxNTIsMTYzNz
+k0MjYzNywxNzc1ODE2MjUyLC0zNzMyNjkxMTcsLTEyNjEwODQ5
+ODYsMTk4NDU0MzI5NSwtMTA2MzMxMTExMCwtMTQzMDg2MTE5LC
+03NTM1MTA4OTMsLTM1MjgxMjc0OCwxMjg1NzUxNTgxLDYxMjg0
+OTMzNCwyMTA2Nzc3NjgzLDE1NTk0OTY5MTksLTE0MDYzNDkwNj
+UsLTE1ODg2ODIzOTMsNTU2OTQ1NTI5LDEyODA3ODQxNV19
 -->
