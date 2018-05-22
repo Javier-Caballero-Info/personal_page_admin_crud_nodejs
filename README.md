@@ -147,14 +147,14 @@ yarn dev
 
 You can use any reporters that are supported by istanbul: `clover`, `cobertura`, `html`, `json-summary`, `json`, `lcov`, `lcovonly`, `none`, `teamcity`, `text-lcov`, `text-summary`, `text`.
 
-Setup
+>Setup the environment variables before run the command.
 
 ```
 yarn test
 ```
 
 ## Report
-
+>Setup the environment variables before run the command.
 ```
 yarn cover
 ```
@@ -191,6 +191,6 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjUxMTUwMDAsOTUyMjY2NDE2LC0xOT
-U1NTI5ODYwLDgwMjI5OTE4MV19
+eyJoaXN0b3J5IjpbMTY5NTUwMjc3Myw5NTIyNjY0MTYsLTE5NT
+U1Mjk4NjAsODAyMjk5MTgxXX0=
 -->
