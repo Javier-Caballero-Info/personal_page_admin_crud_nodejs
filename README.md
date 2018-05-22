@@ -176,7 +176,7 @@ Contributions welcome! See the  [Contributing Guide](https://github.com/Javier-C
 
 ## Author
 
-Created and maintained by Javier Hernán Caballero García ([https://javiercaballero.info/(http://javiercaballero.info)).
+Created and maintained by Javier Hernán Caballero García ([https://javiercaballero.info](https://javiercaballero.info)).
 
 ## License
 
@@ -184,6 +184,6 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2NjgyNjEwOSwtMTk1NTUyOTg2MCw4MD
-IyOTkxODFdfQ==
+eyJoaXN0b3J5IjpbLTI5NzM2NjEyLC0xOTU1NTI5ODYwLDgwMj
+I5OTE4MV19
 -->
