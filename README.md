@@ -34,8 +34,6 @@ Big description
 
 
 
-https://documenter.getpostman.com/view/954922/RW81tCTr#intro
-
 ## Clone
 
 ```bash
@@ -262,9 +260,9 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk4NDU0MzI5NSwtMTA2MzMxMTExMCwtMT
-QzMDg2MTE5LC03NTM1MTA4OTMsLTM1MjgxMjc0OCwxMjg1NzUx
-NTgxLDYxMjg0OTMzNCwyMTA2Nzc3NjgzLDE1NTk0OTY5MTksLT
-E0MDYzNDkwNjUsLTE1ODg2ODIzOTMsNTU2OTQ1NTI5LDEyODA3
-ODQxNV19
+eyJoaXN0b3J5IjpbLTE4MDg5MzUzNTgsMTk4NDU0MzI5NSwtMT
+A2MzMxMTExMCwtMTQzMDg2MTE5LC03NTM1MTA4OTMsLTM1Mjgx
+Mjc0OCwxMjg1NzUxNTgxLDYxMjg0OTMzNCwyMTA2Nzc3NjgzLD
+E1NTk0OTY5MTksLTE0MDYzNDkwNjUsLTE1ODg2ODIzOTMsNTU2
+OTQ1NTI5LDEyODA3ODQxNV19
 -->
