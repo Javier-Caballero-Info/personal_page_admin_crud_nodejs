@@ -81,6 +81,12 @@ sudo apt install --no-install-recommends yarn
 	```bash
 	sudo port install yarn
 	```
+
+- Windows
+
+	- Chocolatey
+
+For more details, please visit [https://yarnpkg.com/lang/en/docs/install](https://yarnpkg.com/lang/en/docs/install/).
 	
 4. ### Foreman
 We use foreman to load the environment variables from `.env` file. This is important to prevent accidental commit of sensitive data to github
@@ -169,6 +175,6 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODMwMzgyNTUsLTE5NTU1Mjk4NjAsOD
-AyMjk5MTgxXX0=
+eyJoaXN0b3J5IjpbMTcxODE0ODkxNiwtMTk1NTUyOTg2MCw4MD
+IyOTkxODFdfQ==
 -->
