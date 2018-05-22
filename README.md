@@ -28,7 +28,7 @@
 
 ## Overview
 
-This is a content administration api for my Personal Page. Each endpoint correspond with a section of the page. The idea with the project is prof
+This is a content administration api for my Personal Page. Each endpoint correspond with a section of the page. The idea with the project is proof 
 
 ## API Description
 
@@ -260,10 +260,11 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjI3NjkwNTQ2LDE2Mzc5NDI2MzcsMTc3NT
-gxNjI1MiwtMzczMjY5MTE3LC0xMjYxMDg0OTg2LDE5ODQ1NDMy
-OTUsLTEwNjMzMTExMTAsLTE0MzA4NjExOSwtNzUzNTEwODkzLC
-0zNTI4MTI3NDgsMTI4NTc1MTU4MSw2MTI4NDkzMzQsMjEwNjc3
-NzY4MywxNTU5NDk2OTE5LC0xNDA2MzQ5MDY1LC0xNTg4NjgyMz
-kzLDU1Njk0NTUyOSwxMjgwNzg0MTVdfQ==
+eyJoaXN0b3J5IjpbLTIwMjY2NjcyMTEsMjI3NjkwNTQ2LDE2Mz
+c5NDI2MzcsMTc3NTgxNjI1MiwtMzczMjY5MTE3LC0xMjYxMDg0
+OTg2LDE5ODQ1NDMyOTUsLTEwNjMzMTExMTAsLTE0MzA4NjExOS
+wtNzUzNTEwODkzLC0zNTI4MTI3NDgsMTI4NTc1MTU4MSw2MTI4
+NDkzMzQsMjEwNjc3NzY4MywxNTU5NDk2OTE5LC0xNDA2MzQ5MD
+Y1LC0xNTg4NjgyMzkzLDU1Njk0NTUyOSwxMjgwNzg0MTVdfQ==
+
 -->
