@@ -6,7 +6,7 @@
 -   [Overview](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master/README.md#overview)
 -   [Clone](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master/README.md#clone)
 -   [Babelrc](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master/README.md#babelrc)
-- [requirements](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master#requirements)
+- [Requirements](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master#requirements)
 - [Installation](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master#installation)
 	- [Nodejs and Npm](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master#nodejs-and-npm)
 
@@ -228,6 +228,6 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDYzNDkwNjUsMTMzMTU3ODksLTE1OD
-g2ODIzOTMsNTU2OTQ1NTI5LDEyODA3ODQxNV19
+eyJoaXN0b3J5IjpbMTU1OTQ5NjkxOSwtMTQwNjM0OTA2NSwtMT
+U4ODY4MjM5Myw1NTY5NDU1MjksMTI4MDc4NDE1XX0=
 -->
