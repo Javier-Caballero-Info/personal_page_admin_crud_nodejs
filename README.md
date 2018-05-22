@@ -1,6 +1,6 @@
 # Personal Page Admin - NodeJS
 
-> NodeJS API REST Full with ExpressJS and Firebase
+> NodeJS API REST Full with ExpressJS and Firebase database
 ## Table of Contents
 
 -   [Overview](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master/README.md#overview)
@@ -262,9 +262,9 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjMzMTExMTAsLTE1NzY1NDM1NTEsLT
-E0MzA4NjExOSwtNzUzNTEwODkzLC0zNTI4MTI3NDgsMTI4NTc1
-MTU4MSw2MTI4NDkzMzQsMjEwNjc3NzY4MywxNTU5NDk2OTE5LC
-0xNDA2MzQ5MDY1LC0xNTg4NjgyMzkzLDU1Njk0NTUyOSwxMjgw
-Nzg0MTVdfQ==
+eyJoaXN0b3J5IjpbMTk4NDU0MzI5NSwtMTA2MzMxMTExMCwtMT
+QzMDg2MTE5LC03NTM1MTA4OTMsLTM1MjgxMjc0OCwxMjg1NzUx
+NTgxLDYxMjg0OTMzNCwyMTA2Nzc3NjgzLDE1NTk0OTY5MTksLT
+E0MDYzNDkwNjUsLTE1ODg2ODIzOTMsNTU2OTQ1NTI5LDEyODA3
+ODQxNV19
 -->
