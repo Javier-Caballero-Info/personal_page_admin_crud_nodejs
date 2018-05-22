@@ -39,7 +39,7 @@ Here you can specify the version of Nodejs that you want the code to compile to.
   "presets": [
     ["env", {
       "targets": {
-        "node": "6.10"
+        "node": "8.11.1"
       },
       "test": {
         "plugins": [ "istanbul" ]
@@ -50,7 +50,7 @@ Here you can specify the version of Nodejs that you want the code to compile to.
 ```
 ## Requirements
 
-* Nodejs
+* Nodejs 
 * Npm
 * Yarn
 ## Installation
@@ -139,5 +139,5 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODAyMjk5MTgxXX0=
+eyJoaXN0b3J5IjpbLTI1MzE3ODc2Myw4MDIyOTkxODFdfQ==
 -->
