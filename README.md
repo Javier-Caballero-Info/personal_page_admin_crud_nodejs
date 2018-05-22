@@ -10,7 +10,9 @@
 - [Installation](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master#installation)
 	- [Nodejs and Npm](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master#nodejs-and-npm)
 	- [Yarn](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master#yarn)
-	- [Nodejs and Npm](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master#nodejs-and-npm)
+	- [Foreman](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master#foreman)
+	- [Dependencies](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master#dependencies)
+- [Add/Remove packages](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/tree/master#add/removepackages)
 
 ## Overview
 
@@ -230,7 +232,7 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzUxODE2OTk1LDE1NTk0OTY5MTksLTE0MD
-YzNDkwNjUsLTE1ODg2ODIzOTMsNTU2OTQ1NTI5LDEyODA3ODQx
-NV19
+eyJoaXN0b3J5IjpbLTI3ODExODk1NSwxNTU5NDk2OTE5LC0xND
+A2MzQ5MDY1LC0xNTg4NjgyMzkzLDU1Njk0NTUyOSwxMjgwNzg0
+MTVdfQ==
 -->
