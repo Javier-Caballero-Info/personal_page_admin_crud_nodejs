@@ -72,7 +72,7 @@ Latest LTS Version: **9.11.1** (includes npm 5.6.0)
 
 - Debian / Ubuntu
 ```bash
-curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
 ```
 
 ```bash
@@ -260,11 +260,11 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTM5OTI0MDMsLTE0Mzg1NDc4MjcsMT
-YzMTgxMDg2MSw1MTIzNjA3NTcsMTYzNzk0MjYzNywxNzc1ODE2
-MjUyLC0zNzMyNjkxMTcsLTEyNjEwODQ5ODYsMTk4NDU0MzI5NS
-wtMTA2MzMxMTExMCwtMTQzMDg2MTE5LC03NTM1MTA4OTMsLTM1
-MjgxMjc0OCwxMjg1NzUxNTgxLDYxMjg0OTMzNCwyMTA2Nzc3Nj
-gzLDE1NTk0OTY5MTksLTE0MDYzNDkwNjUsLTE1ODg2ODIzOTMs
-NTU2OTQ1NTI5XX0=
+eyJoaXN0b3J5IjpbLTIxMDEwMTQ4MDIsLTE4NTM5OTI0MDMsLT
+E0Mzg1NDc4MjcsMTYzMTgxMDg2MSw1MTIzNjA3NTcsMTYzNzk0
+MjYzNywxNzc1ODE2MjUyLC0zNzMyNjkxMTcsLTEyNjEwODQ5OD
+YsMTk4NDU0MzI5NSwtMTA2MzMxMTExMCwtMTQzMDg2MTE5LC03
+NTM1MTA4OTMsLTM1MjgxMjc0OCwxMjg1NzUxNTgxLDYxMjg0OT
+MzNCwyMTA2Nzc3NjgzLDE1NTk0OTY5MTksLTE0MDYzNDkwNjUs
+LTE1ODg2ODIzOTNdfQ==
 -->
