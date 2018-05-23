@@ -68,7 +68,7 @@ Here you can specify the version of Nodejs (`.babelrc` file) that you want the c
 ## Installation
 
 1. ### NodeJs and Npm
-Latest LTS Version: **8.11.1** (includes npm 5.6.0)
+Latest LTS Version: **9.11.1** (includes npm 5.6.0)
 
 - Debian / Ubuntu
 ```bash
@@ -260,11 +260,11 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1NTMxNDU0MiwxNjMxODEwODYxLDUxMj
-M2MDc1NywxNjM3OTQyNjM3LDE3NzU4MTYyNTIsLTM3MzI2OTEx
-NywtMTI2MTA4NDk4NiwxOTg0NTQzMjk1LC0xMDYzMzExMTEwLC
-0xNDMwODYxMTksLTc1MzUxMDg5MywtMzUyODEyNzQ4LDEyODU3
-NTE1ODEsNjEyODQ5MzM0LDIxMDY3Nzc2ODMsMTU1OTQ5NjkxOS
-wtMTQwNjM0OTA2NSwtMTU4ODY4MjM5Myw1NTY5NDU1MjksMTI4
-MDc4NDE1XX0=
+eyJoaXN0b3J5IjpbLTE0Mzg1NDc4MjcsMjA1NTMxNDU0MiwxNj
+MxODEwODYxLDUxMjM2MDc1NywxNjM3OTQyNjM3LDE3NzU4MTYy
+NTIsLTM3MzI2OTExNywtMTI2MTA4NDk4NiwxOTg0NTQzMjk1LC
+0xMDYzMzExMTEwLC0xNDMwODYxMTksLTc1MzUxMDg5MywtMzUy
+ODEyNzQ4LDEyODU3NTE1ODEsNjEyODQ5MzM0LDIxMDY3Nzc2OD
+MsMTU1OTQ5NjkxOSwtMTQwNjM0OTA2NSwtMTU4ODY4MjM5Myw1
+NTY5NDU1MjldfQ==
 -->
