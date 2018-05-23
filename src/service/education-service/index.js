@@ -31,23 +31,23 @@ export default (options) => {
             paths: {
                 one: {
                     method: 'GET',
-                    path: '/educations/:lang/:id'
+                    path: '/:lang/educations/:id'
                 },
                 all: {
                     method: 'GET',
-                    path: '/educations/:lang'
+                    path: '/:lang/educations'
                 },
                 create: {
                     method: 'POST',
-                    path: '/educations/:lang'
+                    path: '/:lang/educations'
                 },
                 update: {
                     method: 'PUT',
-                    path: '/educations/:lang/:id'
+                    path: '/:lang/educations/:id'
                 },
                 remove: {
                     method: 'DELETE',
-                    path: '/educations/:lang/:id'
+                    path: '/:lang/educations/:id'
                 }
             }
         },

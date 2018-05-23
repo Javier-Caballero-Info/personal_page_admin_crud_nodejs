@@ -31,23 +31,23 @@ export default (options) => {
             paths: {
                 one: {
                     method: 'GET',
-                    path: '/social-networks/:lang/:id'
+                    path: '/:lang/social-networks/:id'
                 },
                 all: {
                     method: 'GET',
-                    path: '/social-networks/:lang'
+                    path: '/:lang/social-networks'
                 },
                 create: {
                     method: 'POST',
-                    path: '/social-networks/:lang'
+                    path: '/:lang/social-networks'
                 },
                 update: {
                     method: 'PUT',
-                    path: '/social-networks/:lang/:id'
+                    path: '/:lang/social-networks/:id'
                 },
                 remove: {
                     method: 'DELETE',
-                    path: '/social-networks/:lang/:id'
+                    path: '/:lang/social-networks/:id'
                 }
             }
         },

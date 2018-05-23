@@ -31,23 +31,23 @@ export default (options) => {
             paths: {
                 one: {
                     method: 'GET',
-                    path: '/contacts/:lang/:id'
+                    path: '/:lang/contacts/:id'
                 },
                 all: {
                     method: 'GET',
-                    path: '/contacts/:lang'
+                    path: '/:lang/contacts'
                 },
                 create: {
                     method: 'POST',
-                    path: '/contacts/:lang'
+                    path: '/:lang/contacts'
                 },
                 update: {
                     method: 'PUT',
-                    path: '/contacts/:lang/:id'
+                    path: '/:lang/contacts/:id'
                 },
                 remove: {
                     method: 'DELETE',
-                    path: '/contacts/:lang/:id'
+                    path: '/:lang/contacts/:id'
                 }
             }
         },
