@@ -16,11 +16,44 @@ produces:
 tags:
 - name: "Contact"
 - name: "Education"
+- name: "Home"
+- name: "Health"
 - name: "Research"
 - name: "Scholastic"
 - name: "SocialNetwork"
 - name: "Work"
 paths:
+  /:
+    get:
+      summary: Home - List All Services
+      tags:
+      - "Home"
+      responses:
+        200:
+          description: Successful Response
+          schema:
+            type: object
+            properties:
+              endpoints:
+                type: array
+                items:
+                  $ref: '#/definitions/ServiceRestFull'
+  /health:
+    get:
+      summary: Health check
+      tags:
+      - "Health"
+      responses:
+        200:
+          description: Successful Response
+          schema:
+            type: object
+            properties:
+              health:
+                type: string
+          examples:
+            application/json:
+              health: "Ok"
   /{lang}/contacts:
     get:
       summary: List All Contacts
@@ -1237,6 +1270,33 @@ definitions:
       - lang
       - order
       - time
+  ServiceRestFull:
+    title: ServiceRestFull
+    type: object
+    properties:
+      name:
+        type: string
+      paths:
+        type: object
+        properties:
+          one:
+            $ref: '#/definitions/EndPoint'
+          all:
+            $ref: '#/definitions/EndPoint'
+          create:
+            $ref: '#/definitions/EndPoint'
+          update:
+            $ref: '#/definitions/EndPoint'
+          remove:
+            $ref: '#/definitions/EndPoint'
+  EndPoint:
+    title: EndPoint
+    type: object
+    properties:
+      method: 
+        type: string
+      path:
+        type: string
   Scholastic:
     title: Scholastic
     type: object
