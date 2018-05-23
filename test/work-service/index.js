@@ -128,13 +128,13 @@ describe('Work Service', () => {
             })
     })
 
-    it('DELETE a Work (200)', () => {
+    it('DELETE a Work (204)', () => {
         return chai.request(app)
             .delete(base_path + '/' +work_id)
             .set('authorization', authorizationToken)
             .send()
             .then(res => {
-                res.should.have.status(200)
+                res.should.have.status(204)
             })
     })
 

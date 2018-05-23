@@ -126,13 +126,13 @@ describe('Social Network Service', () => {
             })
     })
 
-    it('DELETE a Social Network (200)', () => {
+    it('DELETE a Social Network (204)', () => {
         return chai.request(app)
             .delete(base_path + '/' +social_network_id)
             .set('authorization', authorizationToken)
             .send()
             .then(res => {
-                res.should.have.status(200)
+                res.should.have.status(204)
             })
     })
 

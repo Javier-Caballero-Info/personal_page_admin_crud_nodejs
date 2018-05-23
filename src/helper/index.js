@@ -35,3 +35,9 @@ export function OkCreated (res) {
     res.status(201).json(data)
   }
 }
+
+export function EmptyOk (res) {
+  return (body) => {
+    res.status(204).json()
+  }
+}

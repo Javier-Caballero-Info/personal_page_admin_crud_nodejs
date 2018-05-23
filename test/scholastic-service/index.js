@@ -128,13 +128,13 @@ describe('Scholastic Service', () => {
             })
     })
 
-    it('DELETE a Scholastic (200)', () => {
+    it('DELETE a Scholastic (204)', () => {
         return chai.request(app)
             .delete(base_path + '/' +scholastic_id)
             .set('authorization', authorizationToken)
             .send()
             .then(res => {
-                res.should.have.status(200)
+                res.should.have.status(204)
             })
     })
 

@@ -3,6 +3,7 @@
  *
  **/
 
+require('newrelic')
 const express = require('express')
 import bodyParser from 'body-parser'
 import path from 'path'

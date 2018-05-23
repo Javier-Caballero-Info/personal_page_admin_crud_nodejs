@@ -1,4 +1,4 @@
-import { Ok, OkCreated, Err, NotFound } from '../../helper/index'
+import { Ok, OkCreated, EmptyOk, Err, NotFound } from '../../helper/index'
 
 export default function Route (model) {
 
@@ -56,7 +56,7 @@ export default function Route (model) {
             const result = await model.remove(req.params.id, req.params.lang)
 
             if(result){
-                Ok(res)(result)
+                EmptyOk(res)()
             }else{
                 NotFound(res)("Education")
             }

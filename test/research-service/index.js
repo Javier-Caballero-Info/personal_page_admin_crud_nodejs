@@ -128,13 +128,13 @@ describe('Research Service', () => {
             })
     })
 
-    it('DELETE a Research (200)', () => {
+    it('DELETE a Research (204)', () => {
         return chai.request(app)
             .delete(base_path + '/' +research_id)
             .set('authorization', authorizationToken)
             .send()
             .then(res => {
-                res.should.have.status(200)
+                res.should.have.status(204)
             })
     })
 
