@@ -38,6 +38,110 @@ paths:
                 type: array
                 items:
                   $ref: '#/definitions/ServiceRestFull'
+            example:
+              endpoints: 
+              - name: "Social Networks"
+                paths:
+                  one:
+                    method: "GET"
+                    path: "/:lang/social-networks/:id"
+                  all: 
+                    method: "GET"
+                    path: "/:lang/social-networks"
+                  create:
+                    method: "POST"
+                    path: "/:lang/social-networks"
+                  update:
+                    method: "PUT"
+                    path: "/:lang/social-networks/:id"
+                  remove:
+                    method: "DELETE"
+                    path: "/:lang/social-networks/:id"
+              - name: "Contacts"
+                paths:
+                  one:
+                    method: "GET"
+                    path: "/:lang/contacts/:id"
+                  all: 
+                    method: "GET"
+                    path: "/:lang/contacts"
+                  create:
+                    method: "POST"
+                    path: "/:lang/contacts"
+                  update:
+                    method: "PUT"
+                    path: "/:lang/contacts/:id"
+                  remove:
+                    method: "DELETE"
+                    path: "/:lang/contacts/:id"
+              - name: "Educations"
+                paths:
+                  one:
+                    method: "GET"
+                    path: "/:lang/educations/:id"
+                  all: 
+                    method: "GET"
+                    path: "/:lang/educations"
+                  create:
+                    method: "POST"
+                    path: "/:lang/educations"
+                  update:
+                    method: "PUT"
+                    path: "/:lang/educations/:id"
+                  remove:
+                    method: "DELETE"
+                    path: "/:lang/educations/:id"
+              - name: "Researches"
+                paths:
+                  one:
+                    method: "GET"
+                    path: "/:lang/researches/:id"
+                  all: 
+                    method: "GET"
+                    path: "/:lang/researches"
+                  create:
+                    method: "POST"
+                    path: "/:lang/researches"
+                  update:
+                    method: "PUT"
+                    path: "/:lang/researches/:id"
+                  remove:
+                    method: "DELETE"
+                    path: "/:lang/researches/:id"
+              - name: "Scholastic"
+                paths:
+                  one:
+                    method: "GET"
+                    path: "/:lang/scholastic/:id"
+                  all: 
+                    method: "GET"
+                    path: "/:lang/scholastic"
+                  create:
+                    method: "POST"
+                    path: "/:lang/scholastic"
+                  update:
+                    method: "PUT"
+                    path: "/:lang/scholastic/:id"
+                  remove:
+                    method: "DELETE"
+                    path: "/:lang/scholastic/:id"
+              - name: "Works"
+                paths:
+                  one:
+                    method: "GET"
+                    path: "/:lang/works/:id"
+                  all: 
+                    method: "GET"
+                    path: "/:lang/works"
+                  create:
+                    method: "POST"
+                    path: "/:lang/works"
+                  update:
+                    method: "PUT"
+                    path: "/:lang/works/:id"
+                  remove:
+                    method: "DELETE"
+                    path: "/:lang/works/:id"
   /health:
     get:
       summary: Health check
