@@ -21,7 +21,7 @@ tags:
 - name: "SocialNetwork"
 - name: "Work"
 paths:
-  /{lang}/Contacts:
+  /{lang}/contacts:
     get:
       summary: List All Contacts
       tags:
@@ -98,7 +98,7 @@ paths:
                 name: "Whatsapp"
                 order: 1
                 lang: "es"
-  /{lang}/Contacts/{id}:
+  /{lang}/contacts/{id}:
     get: 
       summary: Get a Contact
       tags:
@@ -361,6 +361,522 @@ paths:
       summary: Delete a Education
       tags:
       - "Education"
+      security:
+      - Bearer: []
+      parameters:
+      - name: "lang"
+        description: "Lang of the content"
+        in: "path"
+        required: true
+        type: "string"
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        204:
+          description: Successful Response
+  /{lang}/researches:
+    get:
+      summary: List All Researches
+      tags:
+      - "Research"
+      security:
+      - Bearer: []
+      parameters:
+        - name: "lang"
+          description: "Lang of the content"
+          in: "path"
+          required: true
+          type: "string"
+      responses:
+        200:
+          description: Successful Response
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Research'
+          examples:
+            application/json:
+                data:
+                  - id: "RES_ABC002"
+                    description: "Desarrollo del marco teórico, representación en congresos, e implementación del sistema."
+                    group: "Laboratorio de Auditoría y Seguridad en TIC"
+                    project: "Metamodelado de Auditoría y Reingeniería para Sistemas de Trazabilidad de Vinos"
+                    time: "Enero 2016 - Actualidad"
+                    order: 2
+                    lang: "es"
+                  - id: "RES_ABC001"
+                    description: "Definición de algoritmos para la implementación de técnicas de testing formal."
+                    group: "Laboratorio de Auditoría y Seguridad en TIC"
+                    project: "Calidad de Software"
+                    time: "Marzo 2014 - Diciembre 2015"
+                    order: 1
+                    lang: "es"
+    post:
+      summary: Create a New Research
+      tags:
+      - "Research"
+      security:
+      - Bearer: []
+      parameters:
+        - name: "lang"
+          description: "Lang of the content"
+          in: "path"
+          required: true
+          type: "string"
+        - in: body
+          name: body
+          required: true
+          schema:
+            type: object
+            $ref: '#/definitions/ResearchRequest'
+            example:
+              description: "Desarrollo del marco teórico, representación en congresos, e implementación del sistema."
+              group: "Laboratorio de Auditoría y Seguridad en TIC"
+              project: "Metamodelado de Auditoría y Reingeniería para Sistemas de Trazabilidad de Vinos"
+              time: "Enero 2016 - Actualidad"
+              order: 2
+              lang: "es"
+      responses:
+        201:
+          description: ''
+          schema:
+            $ref: '#/definitions/Research'
+          examples:
+            application/json:
+              data:
+                id: "RES_ABC002"
+                description: "Desarrollo del marco teórico, representación en congresos, e implementación del sistema."
+                group: "Laboratorio de Auditoría y Seguridad en TIC"
+                project: "Metamodelado de Auditoría y Reingeniería para Sistemas de Trazabilidad de Vinos"
+                time: "Enero 2016 - Actualidad"
+                order: 2
+                lang: "es"
+  /{lang}/researches/{id}:
+    get: 
+      summary: Get a Research
+      tags:
+      - "Research"
+      security:
+      - Bearer: []
+      parameters:
+      - name: "lang"
+        description: "Lang of the content"
+        in: "path"
+        required: true
+        type: "string"
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: Successful Response
+          schema:
+            type: object
+            $ref: '#/definitions/Research'
+          examples:
+            application/json:
+                data:
+                  id: "RES_ABC002"
+                  description: "Desarrollo del marco teórico, representación en congresos, e implementación del sistema."
+                  group: "Laboratorio de Auditoría y Seguridad en TIC"
+                  project: "Metamodelado de Auditoría y Reingeniería para Sistemas de Trazabilidad de Vinos"
+                  time: "Enero 2016 - Actualidad"
+                  order: 2
+                  lang: "es"
+    put: 
+      summary: Edit a Research
+      tags:
+      - "Research"
+      security:
+      - Bearer: []
+      parameters:
+      - name: "lang"
+        description: "Lang of the content"
+        in: "path"
+        required: true
+        type: "string"
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      - in: body
+        name: body
+        required: true
+        schema:
+          type: object
+          $ref: '#/definitions/ResearchRequest'
+          example:
+            description: "Desarrollo del marco teórico, representación en congresos, e implementación del sistema."
+            group: "Laboratorio de Auditoría y Seguridad en TIC"
+            project: "Metamodelado de Auditoría y Reingeniería para Sistemas de Trazabilidad de Vinos"
+            time: "Enero 2016 - Actualidad"
+            order: 2
+            lang: "es"
+      responses:
+        200:
+          description: Successful Response
+          schema:
+            type: object
+            $ref: '#/definitions/Research'
+          examples:
+            application/json:
+                data:
+                  id: "RES_ABC002"
+                  description: "Desarrollo del marco teórico, representación en congresos, e implementación del sistema."
+                  group: "Laboratorio de Auditoría y Seguridad en TIC"
+                  project: "Metamodelado de Auditoría y Reingeniería para Sistemas de Trazabilidad de Vinos"
+                  time: "Enero 2016 - Actualidad"
+                  order: 2
+                  lang: "es"
+    delete: 
+      summary: Delete a Research
+      tags:
+      - "Research"
+      security:
+      - Bearer: []
+      parameters:
+      - name: "lang"
+        description: "Lang of the content"
+        in: "path"
+        required: true
+        type: "string"
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        204:
+          description: Successful Response
+  /{lang}/scholastic:
+    get:
+      summary: List All Scholastic
+      tags:
+      - "Scholastic"
+      security:
+      - Bearer: []
+      parameters:
+        - name: "lang"
+          description: "Lang of the content"
+          in: "path"
+          required: true
+          type: "string"
+      responses:
+        200:
+          description: Successful Response
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Scholastic'
+          examples:
+            application/json:
+                data:
+                  - id: "SCH_ABC002"
+                    description: "Ayudante de Cátedra de 2da Ad-Honorem"
+                    institute: "Universidad Tecnológica Nacional-Facultad Regional Mendoza"
+                    subject: "Ingeniería en Sistemas de Información-Sistemas de Representación"
+                    time: "Marzo 2014 - Actualidad"
+                    lang: "es"
+                    order: 2
+                  - id: "SCH_ABC001"
+                    description: "Ayudante de Cátedra de 2da Ad-Honorem"
+                    institute: "Universidad Tecnológica Nacional-Facultad Regional Mendoza"
+                    subject: "Ingeniería en Sistemas de Información-Paradigmas de Programación"
+                    time: "Julio 2012 - Julio 2013"
+                    lang: "es"
+                    order: 1
+    post:
+      summary: Create a New Scholastic
+      tags:
+      - "Scholastic"
+      security:
+      - Bearer: []
+      parameters:
+        - name: "lang"
+          description: "Lang of the content"
+          in: "path"
+          required: true
+          type: "string"
+        - in: body
+          name: body
+          required: true
+          schema:
+            type: object
+            $ref: '#/definitions/ScholasticRequest'
+            example:
+              description: "Ayudante de Cátedra de 2da Ad-Honorem"
+              institute: "Universidad Tecnológica Nacional-Facultad Regional Mendoza"
+              subject: "Ingeniería en Sistemas de Información-Sistemas de Representación"
+              time: "Marzo 2014 - Actualidad"
+              lang: "es"
+              order: 2
+      responses:
+        201:
+          description: ''
+          schema:
+            $ref: '#/definitions/Scholastic'
+          examples:
+            application/json:
+              data:
+                id: "SCH_ABC002"
+                description: "Ayudante de Cátedra de 2da Ad-Honorem"
+                institute: "Universidad Tecnológica Nacional-Facultad Regional Mendoza"
+                subject: "Ingeniería en Sistemas de Información-Sistemas de Representación"
+                time: "Marzo 2014 - Actualidad"
+                lang: "es"
+                order: 2
+  /{lang}/scholastic/{id}:
+    get: 
+      summary: Get a Scholastic
+      tags:
+      - "Scholastic"
+      security:
+      - Bearer: []
+      parameters:
+      - name: "lang"
+        description: "Lang of the content"
+        in: "path"
+        required: true
+        type: "string"
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: Successful Response
+          schema:
+            type: object
+            $ref: '#/definitions/Scholastic'
+          examples:
+            application/json:
+                data:
+                  id: "SCH_ABC002"
+                  description: "Ayudante de Cátedra de 2da Ad-Honorem"
+                  institute: "Universidad Tecnológica Nacional-Facultad Regional Mendoza"
+                  subject: "Ingeniería en Sistemas de Información-Sistemas de Representación"
+                  time: "Marzo 2014 - Actualidad"
+                  lang: "es"
+                  order: 2
+    put: 
+      summary: Edit a Scholastic
+      tags:
+      - "Scholastic"
+      security:
+      - Bearer: []
+      parameters:
+      - name: "lang"
+        description: "Lang of the content"
+        in: "path"
+        required: true
+        type: "string"
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      - in: body
+        name: body
+        required: true
+        schema:
+          type: object
+          $ref: '#/definitions/ScholasticRequest'
+          example:
+            description: "Ayudante de Cátedra de 2da Ad-Honorem"
+            institute: "Universidad Tecnológica Nacional-Facultad Regional Mendoza"
+            subject: "Ingeniería en Sistemas de Información-Sistemas de Representación"
+            time: "Marzo 2014 - Actualidad"
+            lang: "es"
+            order: 2
+      responses:
+        200:
+          description: Successful Response
+          schema:
+            type: object
+            $ref: '#/definitions/Scholastic'
+          examples:
+            application/json:
+                data:
+                  id: "SCH_ABC002"
+                  description: "Ayudante de Cátedra de 2da Ad-Honorem"
+                  institute: "Universidad Tecnológica Nacional-Facultad Regional Mendoza"
+                  subject: "Ingeniería en Sistemas de Información-Sistemas de Representación"
+                  time: "Marzo 2014 - Actualidad"
+                  lang: "es"
+                  order: 2
+    delete: 
+      summary: Delete a Scholastic
+      tags:
+      - "Scholastic"
+      security:
+      - Bearer: []
+      parameters:
+      - name: "lang"
+        description: "Lang of the content"
+        in: "path"
+        required: true
+        type: "string"
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        204:
+          description: Successful Response
+  /{lang}/social-networks:
+    get:
+      summary: List All SocialNetwork
+      tags:
+      - "SocialNetwork"
+      security:
+      - Bearer: []
+      parameters:
+        - name: "lang"
+          description: "Lang of the content"
+          in: "path"
+          required: true
+          type: "string"
+      responses:
+        200:
+          description: Successful Response
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/SocialNetwork'
+          examples:
+            application/json:
+                data:
+                  - id: "SOC_ABC001"
+                    img: "https://s3.amazonaws.com/caballerojavier13-pages-files/personal_page/Redes_Sociales/facebook.png"
+                    link: "https://www.facebook.com/caballerojavier13"
+                    name: "Facebook"
+                    order: 1
+                    lang: "es"
+                  - id: "SOC_ABC002"
+                    img: "https://s3.amazonaws.com/caballerojavier13-pages-files/personal_page/Redes_Sociales/instagram.png"
+                    link: "https://instagram.com/caballerojavier13/"
+                    name: "Instagram"
+                    order: 2
+                    lang: "es"
+                    
+    post:
+      summary: Create a New SocialNetwork
+      tags:
+      - "SocialNetwork"
+      security:
+      - Bearer: []
+      parameters:
+        - name: "lang"
+          description: "Lang of the content"
+          in: "path"
+          required: true
+          type: "string"
+        - in: body
+          name: body
+          required: true
+          schema:
+            type: object
+            $ref: '#/definitions/SocialNetworkRequest'
+            example:
+              img: "https://s3.amazonaws.com/caballerojavier13-pages-files/personal_page/Redes_Sociales/facebook.png"
+              link: "https://www.facebook.com/caballerojavier13"
+              name: "Facebook"
+              order: 1
+              lang: "es"
+      responses:
+        201:
+          description: ''
+          schema:
+            $ref: '#/definitions/SocialNetwork'
+          examples:
+            application/json:
+              data:
+                id: "SOC_ABC001"
+                img: "https://s3.amazonaws.com/caballerojavier13-pages-files/personal_page/Redes_Sociales/facebook.png"
+                link: "https://www.facebook.com/caballerojavier13"
+                name: "Facebook"
+                order: 1
+                lang: "es"
+  /{lang}/social-networks/{id}:
+    get: 
+      summary: Get a SocialNetwork
+      tags:
+      - "SocialNetwork"
+      security:
+      - Bearer: []
+      parameters:
+      - name: "lang"
+        description: "Lang of the content"
+        in: "path"
+        required: true
+        type: "string"
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: Successful Response
+          schema:
+            type: object
+            $ref: '#/definitions/SocialNetwork'
+          examples:
+            application/json:
+                data:
+                  id: "SOC_ABC001"
+                  img: "https://s3.amazonaws.com/caballerojavier13-pages-files/personal_page/Redes_Sociales/facebook.png"
+                  link: "https://www.facebook.com/caballerojavier13"
+                  name: "Facebook"
+                  order: 1
+                  lang: "es"
+    put: 
+      summary: Edit a SocialNetwork
+      tags:
+      - "SocialNetwork"
+      security:
+      - Bearer: []
+      parameters:
+      - name: "lang"
+        description: "Lang of the content"
+        in: "path"
+        required: true
+        type: "string"
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      - in: body
+        name: body
+        required: true
+        schema:
+          type: object
+          $ref: '#/definitions/SocialNetworkRequest'
+          example:
+            img: "https://s3.amazonaws.com/caballerojavier13-pages-files/personal_page/Redes_Sociales/facebook.png"
+            link: "https://www.facebook.com/caballerojavier13"
+            name: "Facebook"
+            order: 1
+            lang: "es"
+      responses:
+        200:
+          description: Successful Response
+          schema:
+            type: object
+            $ref: '#/definitions/SocialNetwork'
+          examples:
+            application/json:
+                data:
+                  id: "SOC_ABC001"
+                  img: "https://s3.amazonaws.com/caballerojavier13-pages-files/personal_page/Redes_Sociales/facebook.png"
+                  link: "https://www.facebook.com/caballerojavier13"
+                  name: "Facebook"
+                  order: 1
+                  lang: "es"
+    delete: 
+      summary: Delete a SocialNetwork
+      tags:
+      - "SocialNetwork"
       security:
       - Bearer: []
       parameters:
