@@ -51,7 +51,7 @@ Here you can specify the version of Nodejs (`.babelrc` file) that you want the c
   "presets": [
     ["env", {
       "targets": {
-        "node": "8.11.1"
+        "node": "9.11.1"
       },
       "test": {
         "plugins": [ "istanbul" ]
@@ -62,17 +62,17 @@ Here you can specify the version of Nodejs (`.babelrc` file) that you want the c
 ```
 ## Requirements
 
-* **NodeJs:** 8.11.1 or above
+* **NodeJs:** 9.11.1 or above
 * **Npm:** 5.6.0 or above
 * **Yarn:** 1.6.0  or above
 ## Installation
 
 1. ### NodeJs and Npm
-Latest LTS Version: **8.11.1** (includes npm 5.6.0)
+Latest LTS Version: **9.11.1** (includes npm 5.6.0)
 
 - Debian / Ubuntu
 ```bash
-curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
 ```
 
 ```bash
@@ -95,7 +95,7 @@ sudo apt install -y build-essential
 	```
 	- MacPorts
 	```bash
-	port install nodejs8
+	port install nodejs9
 	```
 
 - Windows
@@ -260,10 +260,11 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzMTgxMDg2MSw1MTIzNjA3NTcsMTYzNz
-k0MjYzNywxNzc1ODE2MjUyLC0zNzMyNjkxMTcsLTEyNjEwODQ5
-ODYsMTk4NDU0MzI5NSwtMTA2MzMxMTExMCwtMTQzMDg2MTE5LC
-03NTM1MTA4OTMsLTM1MjgxMjc0OCwxMjg1NzUxNTgxLDYxMjg0
-OTMzNCwyMTA2Nzc3NjgzLDE1NTk0OTY5MTksLTE0MDYzNDkwNj
-UsLTE1ODg2ODIzOTMsNTU2OTQ1NTI5LDEyODA3ODQxNV19
+eyJoaXN0b3J5IjpbLTIxMDEwMTQ4MDIsLTE4NTM5OTI0MDMsLT
+E0Mzg1NDc4MjcsMTYzMTgxMDg2MSw1MTIzNjA3NTcsMTYzNzk0
+MjYzNywxNzc1ODE2MjUyLC0zNzMyNjkxMTcsLTEyNjEwODQ5OD
+YsMTk4NDU0MzI5NSwtMTA2MzMxMTExMCwtMTQzMDg2MTE5LC03
+NTM1MTA4OTMsLTM1MjgxMjc0OCwxMjg1NzUxNTgxLDYxMjg0OT
+MzNCwyMTA2Nzc3NjgzLDE1NTk0OTY5MTksLTE0MDYzNDkwNjUs
+LTE1ODg2ODIzOTNdfQ==
 -->
