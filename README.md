@@ -51,7 +51,7 @@ Here you can specify the version of Nodejs (`.babelrc` file) that you want the c
   "presets": [
     ["env", {
       "targets": {
-        "node": "8.11.1"
+        "node": "9.11.1"
       },
       "test": {
         "plugins": [ "istanbul" ]
@@ -62,7 +62,7 @@ Here you can specify the version of Nodejs (`.babelrc` file) that you want the c
 ```
 ## Requirements
 
-* **NodeJs:** 8.11.1 or above
+* **NodeJs:** 9.11.1 or above
 * **Npm:** 5.6.0 or above
 * **Yarn:** 1.6.0  or above
 ## Installation
@@ -260,11 +260,11 @@ GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0Mzg1NDc4MjcsMjA1NTMxNDU0MiwxNj
-MxODEwODYxLDUxMjM2MDc1NywxNjM3OTQyNjM3LDE3NzU4MTYy
-NTIsLTM3MzI2OTExNywtMTI2MTA4NDk4NiwxOTg0NTQzMjk1LC
-0xMDYzMzExMTEwLC0xNDMwODYxMTksLTc1MzUxMDg5MywtMzUy
-ODEyNzQ4LDEyODU3NTE1ODEsNjEyODQ5MzM0LDIxMDY3Nzc2OD
-MsMTU1OTQ5NjkxOSwtMTQwNjM0OTA2NSwtMTU4ODY4MjM5Myw1
-NTY5NDU1MjldfQ==
+eyJoaXN0b3J5IjpbLTE4NTM5OTI0MDMsLTE0Mzg1NDc4MjcsMT
+YzMTgxMDg2MSw1MTIzNjA3NTcsMTYzNzk0MjYzNywxNzc1ODE2
+MjUyLC0zNzMyNjkxMTcsLTEyNjEwODQ5ODYsMTk4NDU0MzI5NS
+wtMTA2MzMxMTExMCwtMTQzMDg2MTE5LC03NTM1MTA4OTMsLTM1
+MjgxMjc0OCwxMjg1NzUxNTgxLDYxMjg0OTMzNCwyMTA2Nzc3Nj
+gzLDE1NTk0OTY5MTksLTE0MDYzNDkwNjUsLTE1ODg2ODIzOTMs
+NTU2OTQ1NTI5XX0=
 -->
