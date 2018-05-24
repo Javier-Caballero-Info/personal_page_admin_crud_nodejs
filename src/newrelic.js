@@ -1,4 +1,7 @@
 'use strict'
+
+import config from './config'
+
 /**
  * New Relic agent configuration.
  *
@@ -9,11 +12,11 @@ exports.config = {
   /**
    * Array of application names.
    */
-  app_name: ['Personal Page Admin - NodeJS'],
+  app_name: [config.get('app_name')],
   /**
    * Your New Relic license key.
    */
-  license_key: '7be10c3e62ea7013a5ee495c71c6aa544b18ea35',
+  license_key: config.get('new_relic'),
   logging: {
     /**
      * Level at which to log. 'trace' is most useful to New Relic when diagnosing
