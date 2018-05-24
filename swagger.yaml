@@ -219,7 +219,6 @@ paths:
               info: "+54-263-4200-463" 
               name: "Whatsapp"
               order: 1
-              lang: "es"
       responses:
         201:
           description: ''
@@ -448,7 +447,6 @@ paths:
                   institute: "Universidad Tecnológica Nacional-Facultad Regional Mendoza"
                   time: "2010 - Actualidad"
                   order: 3
-                  lang: "es"
     put: 
       summary: Edit a Education
       tags:
@@ -574,7 +572,6 @@ paths:
               project: "Metamodelado de Auditoría y Reingeniería para Sistemas de Trazabilidad de Vinos"
               time: "Enero 2016 - Actualidad"
               order: 2
-              lang: "es"
       responses:
         201:
           description: ''
@@ -651,7 +648,6 @@ paths:
             project: "Metamodelado de Auditoría y Reingeniería para Sistemas de Trazabilidad de Vinos"
             time: "Enero 2016 - Actualidad"
             order: 2
-            lang: "es"
       responses:
         200:
           description: Successful Response
@@ -747,7 +743,6 @@ paths:
               institute: "Universidad Tecnológica Nacional-Facultad Regional Mendoza"
               subject: "Ingeniería en Sistemas de Información-Sistemas de Representación"
               time: "Marzo 2014 - Actualidad"
-              lang: "es"
               order: 2
       responses:
         201:
@@ -824,7 +819,6 @@ paths:
             institute: "Universidad Tecnológica Nacional-Facultad Regional Mendoza"
             subject: "Ingeniería en Sistemas de Información-Sistemas de Representación"
             time: "Marzo 2014 - Actualidad"
-            lang: "es"
             order: 2
       responses:
         200:
@@ -1181,7 +1175,6 @@ paths:
             position: "Tester Automation Engineer"
             order: 4
             time: "Agosto 2017 - Actualidad"
-            lang: "es"
       responses:
         200:
           description: Successful Response
