@@ -4,8 +4,6 @@ ENV PORT=3000
 
 WORKDIR /app
 
-RUN npm i npm@latest -g
-
 COPY package.json /app
 COPY package-lock.json /app
 
