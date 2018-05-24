@@ -5,6 +5,7 @@
 
 require('newrelic')
 const express = require('express')
+import cors from 'cors'
 import bodyParser from 'body-parser'
 import path from 'path'
 import helmet from 'helmet'
@@ -127,6 +128,9 @@ function middlewares (app) {
         },
         stream: process.stdout
     }))
+
+    app.use(cors())
+
 }
 
 module.exports = app
