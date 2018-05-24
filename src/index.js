@@ -38,6 +38,13 @@ import WorkSchema from './schema/work.json'
 const app = express()
 const schema = Schema()
 
+var dd_options = {
+  'response_code':true,
+  'tags': ['app:Personal Page Admin - NodeJS']
+}
+
+var connect_datadog = require('connect-datadog')(dd_options);
+
 schema.add('social-network', SocialNetworkSchema)
 schema.add('contact', ContactSchema)
 schema.add('education', EducationSchema)
@@ -96,6 +103,9 @@ app.listen(config.get('port'), () => {
 
 // middlewares takes the app, and inject the app with middlewares
 function middlewares (app) {
+
+    app.use(connect_datadog);
+
     app.use(bodyParser.urlencoded({ extended: false }))
     // To parse json
     app.use(bodyParser.json())

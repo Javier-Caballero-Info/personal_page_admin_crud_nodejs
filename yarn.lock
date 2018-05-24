@@ -1416,6 +1416,12 @@ configstore@^3.0.0:
     write-file-atomic "^2.0.0"
     xdg-basedir "^3.0.0"
 
+connect-datadog@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/connect-datadog/-/connect-datadog-0.0.6.tgz#6f88c8082a3416af247d59a9bcb2a460c732f6b9"
+  dependencies:
+    node-dogstatsd "0.0.6"
+
 console-control-strings@^1.0.0, console-control-strings@~1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/console-control-strings/-/console-control-strings-1.1.0.tgz#3d7cf4464db6446ea644bf4b39507f9851008e8e"
@@ -3531,6 +3537,10 @@ newrelic@^4.1.2:
 nocache@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/nocache/-/nocache-2.0.0.tgz#202b48021a0c4cbde2df80de15a17443c8b43980"
+
+node-dogstatsd@0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/node-dogstatsd/-/node-dogstatsd-0.0.6.tgz#d697e4d1903a7ff0c16479cd5d1cde043737e047"
 
 node-forge@0.7.4:
   version "0.7.4"

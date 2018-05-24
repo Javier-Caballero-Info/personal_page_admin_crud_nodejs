@@ -22,6 +22,7 @@
     "body-parser": "^1.18.2",
     "chai-http": "^4.0.0",
     "chakram": "^1.5.0",
+    "connect-datadog": "^0.0.6",
     "convict": "^4.0.1",
     "express": "^4.16.2",
     "firebase-admin": "^5.12.0",
