@@ -23,7 +23,7 @@ const PORT = {
 const SECRET = {
     doc: 'Secret key for JWT',
     format: String,
-    default: 'SecretJWT',
+    default: 'jwt-secret-string',
     env: 'SECRET'
 }
 

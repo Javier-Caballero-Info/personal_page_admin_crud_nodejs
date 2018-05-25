@@ -8,7 +8,7 @@ function verifyToken(req, res, next) {
         return res.status(403).send({ auth: false, message: 'No token provided.' })
     }
 
-    const completeToken = req.headers['authorization'].split(' ');
+    const completeToken = req.headers['authorization'].split(' ')
 
     const token = completeToken[1]
 
@@ -17,12 +17,17 @@ function verifyToken(req, res, next) {
     }
 
     try {
-        const decoded = jwt.verify(token, config.get('secret'), { algorithms: ['HS384'] });
+        const decoded = jwt.verify(token, config.get('secret'), { algorithms: ['HS384'] })
         // if everything good, save to request for use in other routes
-        req.userId = decoded['usid'];
-        next();
+        req.userId = decoded['identity']
+        next()
     } catch(err) {
-        return res.status(403).send({auth: false, message: 'Failed to authenticate token.'});
+        if( err.name === 'TokenExpiredError' ){
+            return res.status(403).send({error: 'E0102', message: 'Jwt token expired'})
+        } else {
+            return res.status(403).send({error: 'E0101', message: 'Failed to authenticate token.'})
+        }
+
     }
 
 }
