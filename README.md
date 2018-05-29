@@ -233,7 +233,7 @@ To run the server on a Docker container, please execute the following from the r
 
 ### Building the image
 ```bash
-docker build -t personal_page_admin .
+docker build -t personal_page_admin_crud_nodejs .
 ```
 ### Starting up a container
 ```bash
@@ -244,7 +244,7 @@ docker run -p 3000:3000 -d \
 -e DB_PRIVATE_KEY="secret" \
 -e DB_CLIENT_EMAIL="email@firebase.com" \
 -e DB_CLIENT_ID="some_client_id" \
-personal_page_admin
+personal_page_admin_crud_nodejs
 ```
 ## Contributing
 
