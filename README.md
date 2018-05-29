@@ -259,12 +259,3 @@ Created and maintained by [Javier Hernán Caballero García](https://javiercabal
 GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDEwMTQ4MDIsLTE4NTM5OTI0MDMsLT
-E0Mzg1NDc4MjcsMTYzMTgxMDg2MSw1MTIzNjA3NTcsMTYzNzk0
-MjYzNywxNzc1ODE2MjUyLC0zNzMyNjkxMTcsLTEyNjEwODQ5OD
-YsMTk4NDU0MzI5NSwtMTA2MzMxMTExMCwtMTQzMDg2MTE5LC03
-NTM1MTA4OTMsLTM1MjgxMjc0OCwxMjg1NzUxNTgxLDYxMjg0OT
-MzNCwyMTA2Nzc3NjgzLDE1NTk0OTY5MTksLTE0MDYzNDkwNjUs
-LTE1ODg2ODIzOTNdfQ==
--->
