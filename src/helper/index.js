@@ -1,10 +1,19 @@
 
 export function Err (res) {
-  return ({ message, code }) => {
-    const data = {
-      code,
-      error: message
+  return (error) => {
+
+    let message = ''
+
+    if(error.constructor === Array){
+        message = error[0].message
+    }else{
+        message = error.message
     }
+
+    const data = {
+      message: message
+    }
+
     res.status(400).json(data)
   }
 }

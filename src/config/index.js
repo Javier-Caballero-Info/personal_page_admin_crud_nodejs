@@ -24,13 +24,13 @@ const SECRET = {
     doc: 'Secret key for JWT',
     format: String,
     default: 'jwt-secret-string',
-    env: 'SECRET'
+    env: 'JWT_SECRET'
 }
 
 const NEW_RELIC = {
     doc: 'Secret key for New Relic',
     format: String,
-    default: 'ABC123',
+    default: '',
     env: 'NEW_RELIC'
 }
 

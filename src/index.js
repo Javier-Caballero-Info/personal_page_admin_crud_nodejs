@@ -3,15 +3,18 @@
  *
  **/
 
-require('newrelic')
+import config from './config'
+
+if (config.get('new_relic').length > 0) {
+    require('newrelic')
+}
+
 const express = require('express')
 import cors from 'cors'
 import bodyParser from 'body-parser'
 import path from 'path'
 import helmet from 'helmet'
 import morgan from 'morgan'
-
-import config from './config'
 
 import Database from './database'
 
@@ -24,6 +27,7 @@ import EducationService from './service/education-service'
 import ReseachService from './service/research-service'
 import ScholasticService from './service/scholastic-service'
 import WorkService from './service/work-service'
+import PortfolioService from './service/portfolio-service'
 
 // Schemas
 import SocialNetworkSchema from './schema/social-network.json'
@@ -32,6 +36,7 @@ import EducationSchema from './schema/education.json'
 import ResearchSchema from './schema/research.json'
 import ScholasticSchema from './schema/scholastic.json'
 import WorkSchema from './schema/work.json'
+import PortfolioSchema from './schema/portfolio.json'
 
 // main is where our application resides
 
@@ -39,12 +44,12 @@ import WorkSchema from './schema/work.json'
 const app = express()
 const schema = Schema()
 
-var dd_options = {
+const dd_options = {
   'response_code':true,
   'tags': ['app:Personal Page Admin - NodeJS']
 }
 
-var connect_datadog = require('connect-datadog')(dd_options);
+const connect_datadog = require('connect-datadog')(dd_options);
 
 schema.add('social-network', SocialNetworkSchema)
 schema.add('contact', ContactSchema)
@@ -52,6 +57,7 @@ schema.add('education', EducationSchema)
 schema.add('research', ResearchSchema)
 schema.add('scholastic', ScholasticSchema)
 schema.add('work', WorkSchema)
+schema.add('portfolio', PortfolioSchema)
 
 // Middlewares
 middlewares(app)
@@ -67,7 +73,8 @@ const services = [
     EducationService,
     ReseachService,
     ScholasticService,
-    WorkService
+    WorkService,
+    PortfolioService,
 ].map(service => service({ db, schema }))
 
 // Initialize service by looping through them

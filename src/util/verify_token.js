@@ -12,7 +12,7 @@ function verifyToken(req, res, next) {
 
     const token = completeToken[1]
 
-    if (completeToken[0] !== 'BEARER' || !token){
+    if (completeToken[0] !== 'Bearer' || !token){
         return res.status(403).send({ auth: false, message: 'No token provided.' })
     }
 

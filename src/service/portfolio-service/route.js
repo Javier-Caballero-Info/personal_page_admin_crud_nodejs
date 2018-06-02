@@ -2,7 +2,7 @@ import { Ok, OkCreated, EmptyOk, Err, NotFound } from '../../helper/index'
 
 export default function Route (model) {
 
-    async function getAllContacts (req, res) {
+    async function getAllPortfolios (req, res) {
 
         try {
             Ok(res)(await model.all(req.params.lang))
@@ -12,14 +12,14 @@ export default function Route (model) {
 
     }
 
-    async function getContact (req, res) {
+    async function getPortfolio (req, res) {
 
         try {
             const result = await model.one(req.params.id, req.params.lang)
             if(result){
                 Ok(res)(result)
             }else{
-                NotFound(res)("Contact")
+                NotFound(res)("Portfolio")
             }
         } catch (error) {
             Err(res)(error)
@@ -27,7 +27,7 @@ export default function Route (model) {
 
     }
 
-    async function postContact (req, res) {
+    async function postPortfolio (req, res) {
         try {
             const result = await model.create(req.params.lang, req.body)
             OkCreated(res)(result)
@@ -36,20 +36,20 @@ export default function Route (model) {
         }
     }
 
-    async function putContact (req, res) {
+    async function putPortfolio (req, res) {
         try {
             const result = await model.update(req.params.id, req.params.lang, req.body)
             if(result){
                 Ok(res)(result)
             }else{
-                NotFound(res)("Contact")
+                NotFound(res)("Portfolio")
             }
         } catch (error) {
             Err(res)(error)
         }
     }
 
-    async function deleteContact (req, res) {
+    async function deletePortfolio (req, res) {
 
         try {
 
@@ -58,7 +58,7 @@ export default function Route (model) {
             if(result){
                 EmptyOk(res)()
             }else{
-                NotFound(res)("Contact")
+                NotFound(res)("Portfolio")
             }
         } catch (error) {
             Err(res)(error)
@@ -67,10 +67,10 @@ export default function Route (model) {
     }
 
     return {
-        getContact,
-        getAllContacts,
-        postContact,
-        putContact,
-        deleteContact
+        getPortfolio,
+        getAllPortfolios,
+        postPortfolio,
+        putPortfolio,
+        deletePortfolio
     }
 }

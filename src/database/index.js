@@ -11,10 +11,6 @@ function Database ({ databaseURL, private_key_id, private_key, client_email, cli
         "client_id": client_id
     }
 
-    console.log('\n==================================================================================')
-    console.log(serviceAccount)
-    console.log('==================================================================================\n')
-
     // Initialize the app with a service account, granting admin privileges
     firebase.initializeApp({
         credential: firebase.credential.cert(serviceAccount),
