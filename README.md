@@ -184,7 +184,7 @@ Make sure you create the `.env` file or the service will not run.
 The `.env` should contain the following:
 ```bash
 PORT=3000
-SECRET=secret # Secret key for JWT
+JWT_SECRET=secret # Secret key for JWT
 
 # Firebase Credentials
 DATABASE_URL=db.firebase.com # Url for Firebase database
