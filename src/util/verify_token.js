@@ -17,7 +17,7 @@ function verifyToken(req, res, next) {
     }
 
     try {
-        const decoded = jwt.verify(token, config.get('secret'), { algorithms: ['HS384'] })
+        const decoded = jwt.verify(token, config.get('jwt_secret'), { algorithms: [config.get('jwt_algorithm')] })
         // if everything good, save to request for use in other routes
         req.userId = decoded['identity']
         next()

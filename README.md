@@ -184,7 +184,8 @@ Make sure you create the `.env` file or the service will not run.
 The `.env` should contain the following:
 ```bash
 PORT=3000
-SECRET=secret # Secret key for JWT
+JWT_SECRET_KEY=jwt-secret-string # Secret key for JWT
+JWT_SIGN_ALGORITHM=HS256 # Algorithm for JWT
 
 # Firebase Credentials
 DATABASE_URL=db.firebase.com # Url for Firebase database
@@ -238,7 +239,8 @@ docker build -t personal_page_admin .
 ### Starting up a container
 ```bash
 docker run -p 3000:3000 -d \
--e SECRET="secret" \
+-e JWT_SECRET_KEY="jwt-secret-string" \
+-e JWT_SIGN_ALGORITHM="HS256" \
 -e DATABASE_URL="db.firebase.com" \
 -e DB_PRIVATE_KEY_ID="secret_id" \
 -e DB_PRIVATE_KEY="secret" \

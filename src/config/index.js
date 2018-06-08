@@ -20,11 +20,18 @@ const PORT = {
     env: 'PORT'
 }
 
-const SECRET = {
+const JWT_SECRET_KEY = {
     doc: 'Secret key for JWT',
     format: String,
     default: 'jwt-secret-string',
-    env: 'SECRET'
+    env: 'JWT_SECRET_KEY'
+}
+
+const JWT_SIGN_ALGORITHM = {
+    doc: 'Algorithm for JWT',
+    format: String,
+    default: 'HS256',
+    env: 'JWT_SIGN_ALGORITHM'
 }
 
 const NEW_RELIC = {
@@ -37,7 +44,8 @@ const NEW_RELIC = {
 const config = convict({
     app_name: APP_NAME,
     port: PORT,
-    secret: SECRET,
+    jwt_secret: JWT_SECRET_KEY,
+    jwt_algorithm: JWT_SIGN_ALGORITHM,
     new_relic: NEW_RELIC,
     db: DB
 })
