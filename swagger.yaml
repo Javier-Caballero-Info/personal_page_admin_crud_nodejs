@@ -18,6 +18,7 @@ tags:
 - name: "Education"
 - name: "Home"
 - name: "Health"
+- name: "Portfolio"
 - name: "Research"
 - name: "Scholastic"
 - name: "SocialNetwork"
@@ -496,6 +497,119 @@ paths:
       summary: Delete a Education
       tags:
       - "Education"
+      security:
+      - Bearer: []
+      parameters:
+      - name: "lang"
+        description: "Lang of the content"
+        in: "path"
+        required: true
+        type: "string"
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        204:
+          description: Successful Response
+  /{lang}/portfolios:
+    get:
+      summary: List All Portfolios
+      tags:
+      - "Portfolio"
+      security:
+      - Bearer: []
+      parameters:
+        - name: "lang"
+          description: "Lang of the content"
+          in: "path"
+          required: true
+          type: "string"
+      responses:
+        200:
+          description: Successful Response
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Portfolio'
+    post:
+      summary: Create a New Portfolio
+      tags:
+      - "Portfolio"
+      security:
+      - Bearer: []
+      parameters:
+        - name: "lang"
+          description: "Lang of the content"
+          in: "path"
+          required: true
+          type: "string"
+        - in: body
+          name: body
+          required: true
+          schema:
+            type: object
+            $ref: '#/definitions/PortfolioRequest'
+      responses:
+        201:
+          description: ''
+          schema:
+            $ref: '#/definitions/Portfolio'
+  /{lang}/portfolios/{id}:
+    get: 
+      summary: Get a Portfolio
+      tags:
+      - "Portfolio"
+      security:
+      - Bearer: []
+      parameters:
+      - name: "lang"
+        description: "Lang of the content"
+        in: "path"
+        required: true
+        type: "string"
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: Successful Response
+          schema:
+            type: object
+            $ref: '#/definitions/Portfolio'
+    put: 
+      summary: Edit a Portfolio
+      tags:
+      - "Portfolio"
+      security:
+      - Bearer: []
+      parameters:
+      - name: "lang"
+        description: "Lang of the content"
+        in: "path"
+        required: true
+        type: "string"
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      - in: body
+        name: body
+        required: true
+        schema:
+          type: object
+          $ref: '#/definitions/PortfolioRequest'
+      responses:
+        200:
+          description: Successful Response
+          schema:
+            type: object
+            $ref: '#/definitions/Portfolio'
+    delete: 
+      summary: Delete a Portfolio
+      tags:
+      - "Portfolio"
       security:
       - Bearer: []
       parameters:
@@ -1367,6 +1481,80 @@ definitions:
       - lang
       - order
       - time
+  Portfolio:
+    title: Research
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      description:
+        type: string
+      resources:
+        type: array
+        items:
+          type: object
+          properties:
+            name:
+              type: string
+            description:
+              type: string
+            technologies:
+              type: array
+              items:
+                type: string
+            links:
+              type: array
+              items:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  icon:
+                    type: string
+                  link:
+                    type: string
+          required:
+          - technologies
+    required:
+    - name
+    - description
+  PortfolioRequest:
+    title: Research
+    properties:
+      name:
+        type: string
+      description:
+        type: string
+      resources:
+        type: array
+        items:
+          type: object
+          properties:
+            name:
+              type: string
+            description:
+              type: string
+            technologies:
+              type: array
+              items:
+                type: string
+            links:
+              type: array
+              items:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  icon:
+                    type: string
+                  link:
+                    type: string
+          required:
+            - technologies
+    required:
+      - name
+      - description
   ServiceRestFull:
     title: ServiceRestFull
     type: object

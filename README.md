@@ -234,7 +234,7 @@ To run the server on a Docker container, please execute the following from the r
 
 ### Building the image
 ```bash
-docker build -t personal_page_admin .
+docker build -t personal_page_admin_crud_nodejs .
 ```
 ### Starting up a container
 ```bash
@@ -246,7 +246,7 @@ docker run -p 3000:3000 -d \
 -e DB_PRIVATE_KEY="secret" \
 -e DB_CLIENT_EMAIL="email@firebase.com" \
 -e DB_CLIENT_ID="some_client_id" \
-personal_page_admin
+personal_page_admin_crud_nodejs
 ```
 ## Contributing
 
@@ -261,12 +261,3 @@ Created and maintained by [Javier Hernán Caballero García](https://javiercabal
 GNU General Public License v3.0
 
 See  [LICENSE](https://github.com/Javier-Caballero-Info/personal_page_admin_nodejs/blob/master/LICENSE)
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDEwMTQ4MDIsLTE4NTM5OTI0MDMsLT
-E0Mzg1NDc4MjcsMTYzMTgxMDg2MSw1MTIzNjA3NTcsMTYzNzk0
-MjYzNywxNzc1ODE2MjUyLC0zNzMyNjkxMTcsLTEyNjEwODQ5OD
-YsMTk4NDU0MzI5NSwtMTA2MzMxMTExMCwtMTQzMDg2MTE5LC03
-NTM1MTA4OTMsLTM1MjgxMjc0OCwxMjg1NzUxNTgxLDYxMjg0OT
-MzNCwyMTA2Nzc3NjgzLDE1NTk0OTY5MTksLTE0MDYzNDkwNjUs
-LTE1ODg2ODIzOTNdfQ==
--->

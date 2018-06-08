@@ -7,7 +7,7 @@ export default function Route (model) {
         try {
             Ok(res)(await model.all(req.params.lang))
         } catch (error) {
-            Err(res)({"message": error.message})
+            Err(res)(error)
         }
 
     }
@@ -22,7 +22,7 @@ export default function Route (model) {
                 NotFound(res)("Research")
             }
         } catch (error) {
-            Err(res)({"message": error.message})
+            Err(res)(error)
         }
 
     }
@@ -32,7 +32,7 @@ export default function Route (model) {
             const result = await model.create(req.params.lang, req.body)
             OkCreated(res)(result)
         } catch (error) {
-            Err(res)({"message": error.message})
+            Err(res)(error)
         }
     }
 
@@ -45,7 +45,7 @@ export default function Route (model) {
                 NotFound(res)("Research")
             }
         } catch (error) {
-            Err(res)({"message": error.message})
+            Err(res)(error)
         }
     }
 
@@ -61,7 +61,7 @@ export default function Route (model) {
                 NotFound(res)("Research")
             }
         } catch (error) {
-            Err(res)({"message": error.message})
+            Err(res)(error)
         }
 
     }

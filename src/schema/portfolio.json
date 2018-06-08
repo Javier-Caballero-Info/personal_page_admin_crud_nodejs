@@ -1,0 +1,93 @@
+{
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "examples": [
+        "Personal Page"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "examples": [
+        "This is a description"
+      ]
+    },
+    "resources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "examples": [
+              "Html page"
+            ]
+          },
+          "description": {
+            "type": "string",
+            "examples": [
+              "This a description"
+            ]
+          },
+          "technologies": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "examples": [
+                "Html",
+                "JQuery"
+              ]
+            }
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "examples": [
+                    "link name"
+                  ]
+                },
+                "icon": {
+                  "type": "string",
+                  "examples": [
+                    "fa-github"
+                  ]
+                },
+                "link": {
+                  "type": "string",
+                  "examples": [
+                    "http://github.com/caballerojavier13"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "required": [
+          "technologies"
+        ]
+      }
+    },
+    "lang": {
+      "type": "string",
+      "enum": [
+        "ES",
+        "EN"
+      ]
+    },
+    "order": {
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "required": [
+    "name",
+    "description",
+    "lang",
+    "order"
+  ]
+}

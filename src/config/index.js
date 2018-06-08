@@ -37,7 +37,7 @@ const JWT_SIGN_ALGORITHM = {
 const NEW_RELIC = {
     doc: 'Secret key for New Relic',
     format: String,
-    default: 'ABC123',
+    default: '',
     env: 'NEW_RELIC'
 }
 
