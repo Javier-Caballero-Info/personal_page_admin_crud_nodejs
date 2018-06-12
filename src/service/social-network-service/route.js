@@ -42,7 +42,7 @@ export default function Route (model) {
             if(result){
                 Ok(res)(result)
             }else{
-                NotFound(res)("SocialNetwork")
+                NotFound(res)("Social Network")
             }
         } catch (error) {
             Err(res)(error)
@@ -58,7 +58,7 @@ export default function Route (model) {
             if(result){
                 EmptyOk(res)()
             }else{
-                NotFound(res)("SocialNetwork")
+                NotFound(res)("Social Network")
             }
         } catch (error) {
             Err(res)(error)
