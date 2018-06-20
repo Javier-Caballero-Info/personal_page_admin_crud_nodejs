@@ -18,7 +18,7 @@ describe('Social Network Service', () => {
 
     const fake_base_path = '/' + fake_lang + '/social-networks'
 
-    const authorizationToken = 'BEARER eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJ1c2lkIjoiQWxnbyJ9.i1ozPMRRfutuMDfJc6tZAIZlagHSy_IBtve0pg6xlGcFj7x6ebPxIivJpEqzdnB2'
+    const authorizationToken = process.env.AUTH_TOKEN
 
     let social_network_id
 
@@ -42,7 +42,7 @@ describe('Social Network Service', () => {
 
         return chai.request(app)
             .get(base_path)
-            .set('authorization', authorizationToken)
+            .set('Authorization', authorizationToken)
             .then(res => {
                 res.should.have.status(200)
                 res.body.data.should.have.length(0)
@@ -55,7 +55,7 @@ describe('Social Network Service', () => {
     it('POST Social Network (201)', () => {
         return chai.request(app)
             .post(base_path)
-            .set('authorization', authorizationToken)
+            .set('Authorization', authorizationToken)
             .send(EXAMPLE_POST_DATA)
             .then(res => {
                 res.should.have.status(201)
@@ -66,7 +66,7 @@ describe('Social Network Service', () => {
     it('GET Social Networks (200,length==1)', () => {
         return chai.request(app)
             .get(base_path)
-            .set('authorization', authorizationToken)
+            .set('Authorization', authorizationToken)
             .then(res => {
                 res.should.have.status(200)
                 res.body.data.should.have.length(1)
@@ -79,7 +79,7 @@ describe('Social Network Service', () => {
     it('POST Social Network (400)', () => {
         return chai.request(app)
             .post(base_path)
-            .set('authorization', authorizationToken)
+            .set('Authorization', authorizationToken)
             .send({})
             .then(res => {
                 res.should.have.status(400)
@@ -89,7 +89,7 @@ describe('Social Network Service', () => {
     it('GET a Social Network (200)', () => {
         return chai.request(app)
             .get(base_path + '/' +social_network_id)
-            .set('authorization', authorizationToken)
+            .set('Authorization', authorizationToken)
             .send()
             .then(res => {
                 res.should.have.status(200)
@@ -99,7 +99,7 @@ describe('Social Network Service', () => {
     it('PUT a Social Network (200)', () => {
         return chai.request(app)
             .put(base_path + '/' +social_network_id)
-            .set('authorization', authorizationToken)
+            .set('Authorization', authorizationToken)
             .send(EXAMPLE_PUT_DATA)
             .then(res => {
                 res.should.have.status(200)
@@ -109,7 +109,7 @@ describe('Social Network Service', () => {
     it('PUT a Social Network (404)', () => {
         return chai.request(app)
             .put(base_path + '/not_found')
-            .set('authorization', authorizationToken)
+            .set('Authorization', authorizationToken)
             .send(EXAMPLE_PUT_DATA)
             .then(res => {
                 res.should.have.status(404)
@@ -119,7 +119,7 @@ describe('Social Network Service', () => {
     it('PUT a Social Network (400)', () => {
         return chai.request(app)
             .put(base_path + '/' +social_network_id)
-            .set('authorization', authorizationToken)
+            .set('Authorization', authorizationToken)
             .send({})
             .then(res => {
                 res.should.have.status(400)
@@ -129,7 +129,7 @@ describe('Social Network Service', () => {
     it('DELETE a Social Network (204)', () => {
         return chai.request(app)
             .delete(base_path + '/' +social_network_id)
-            .set('authorization', authorizationToken)
+            .set('Authorization', authorizationToken)
             .send()
             .then(res => {
                 res.should.have.status(204)
@@ -139,7 +139,7 @@ describe('Social Network Service', () => {
     it('DELETE a Social Network (404)', () => {
         return chai.request(app)
             .delete(base_path + '/not_found')
-            .set('authorization', authorizationToken)
+            .set('Authorization', authorizationToken)
             .send()
             .then(res => {
                 res.should.have.status(404)
@@ -149,7 +149,7 @@ describe('Social Network Service', () => {
     it('GET a Social Network (404)', () => {
         return chai.request(app)
             .get(base_path + '/' +social_network_id)
-            .set('authorization', authorizationToken)
+            .set('Authorization', authorizationToken)
             .send()
             .then(res => {
                 res.should.have.status(404)
@@ -159,7 +159,7 @@ describe('Social Network Service', () => {
     it('GET a Social Network (404)', () => {
         return chai.request(app)
             .get(base_path + '/fake')
-            .set('authorization', authorizationToken)
+            .set('Authorization', authorizationToken)
             .send()
             .then(res => {
                 res.should.have.status(404)
@@ -170,7 +170,7 @@ describe('Social Network Service', () => {
 
         return chai.request(app)
             .get(fake_base_path)
-            .set('authorization', authorizationToken)
+            .set('Authorization', authorizationToken)
             .then(res => {
                 res.should.have.status(400)
             })
@@ -183,7 +183,7 @@ describe('Social Network Service', () => {
 
         return chai.request(app)
             .get(fake_base_path + '/fake_id')
-            .set('authorization', authorizationToken)
+            .set('Authorization', authorizationToken)
             .then(res => {
                 res.should.have.status(400)
             })
@@ -196,7 +196,7 @@ describe('Social Network Service', () => {
 
         return chai.request(app)
             .post(fake_base_path, {})
-            .set('authorization', authorizationToken)
+            .set('Authorization', authorizationToken)
             .then(res => {
                 res.should.have.status(400)
             })
@@ -209,7 +209,7 @@ describe('Social Network Service', () => {
 
         return chai.request(app)
             .put(fake_base_path + '/fake_id', {})
-            .set('authorization', authorizationToken)
+            .set('Authorization', authorizationToken)
             .then(res => {
                 res.should.have.status(400)
             })
@@ -222,7 +222,7 @@ describe('Social Network Service', () => {
 
         return chai.request(app)
             .delete(fake_base_path + '/fake_id')
-            .set('authorization', authorizationToken)
+            .set('Authorization', authorizationToken)
             .then(res => {
                 res.should.have.status(400)
             })

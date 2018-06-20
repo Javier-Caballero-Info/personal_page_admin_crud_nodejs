@@ -18,7 +18,7 @@ describe('Contact Service', () => {
 
     const fake_base_path = '/' + fake_lang + '/contacts'
 
-    const authorizationToken = 'BEARER eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJ1c2lkIjoiQWxnbyJ9.i1ozPMRRfutuMDfJc6tZAIZlagHSy_IBtve0pg6xlGcFj7x6ebPxIivJpEqzdnB2'
+    const authorizationToken = process.env.AUTH_TOKEN
 
     let contact_id
 
@@ -44,7 +44,7 @@ describe('Contact Service', () => {
 
         return chai.request(app)
             .get(base_path)
-            .set('authorization', authorizationToken)
+            .set('Authorization', authorizationToken)
             .then(res => {
                 res.should.have.status(200)
                 res.body.data.should.have.length(0)
@@ -57,7 +57,7 @@ describe('Contact Service', () => {
     it('POST Contact (201)', () => {
         return chai.request(app)
             .post(base_path)
-            .set('authorization', authorizationToken)
+            .set('Authorization', authorizationToken)
             .send(EXAMPLE_POST_DATA)
             .then(res => {
                 res.should.have.status(201)
@@ -68,7 +68,7 @@ describe('Contact Service', () => {
     it('GET Contacts (200,length==1)', () => {
         return chai.request(app)
             .get(base_path)
-            .set('authorization', authorizationToken)
+            .set('Authorization', authorizationToken)
             .then(res => {
                 res.should.have.status(200)
                 res.body.data.should.have.length(1)
@@ -81,7 +81,7 @@ describe('Contact Service', () => {
     it('POST Contact (400)', () => {
         return chai.request(app)
             .post(base_path)
-            .set('authorization', authorizationToken)
+            .set('Authorization', authorizationToken)
             .send({})
             .then(res => {
                 res.should.have.status(400)
@@ -91,7 +91,7 @@ describe('Contact Service', () => {
     it('GET a Contact (200)', () => {
         return chai.request(app)
             .get(base_path + '/' +contact_id)
-            .set('authorization', authorizationToken)
+            .set('Authorization', authorizationToken)
             .send()
             .then(res => {
                 res.should.have.status(200)
@@ -101,7 +101,7 @@ describe('Contact Service', () => {
     it('PUT a Contact (200)', () => {
         return chai.request(app)
             .put(base_path + '/' +contact_id)
-            .set('authorization', authorizationToken)
+            .set('Authorization', authorizationToken)
             .send(EXAMPLE_PUT_DATA)
             .then(res => {
                 res.should.have.status(200)
@@ -111,7 +111,7 @@ describe('Contact Service', () => {
     it('PUT a Contact (404)', () => {
         return chai.request(app)
             .put(base_path + '/not_found')
-            .set('authorization', authorizationToken)
+            .set('Authorization', authorizationToken)
             .send(EXAMPLE_PUT_DATA)
             .then(res => {
                 res.should.have.status(404)
@@ -121,7 +121,7 @@ describe('Contact Service', () => {
     it('PUT a Contact (400)', () => {
         return chai.request(app)
             .put(base_path + '/' +contact_id)
-            .set('authorization', authorizationToken)
+            .set('Authorization', authorizationToken)
             .send({})
             .then(res => {
                 res.should.have.status(400)
@@ -131,7 +131,7 @@ describe('Contact Service', () => {
     it('DELETE a Contact (204)', () => {
         return chai.request(app)
             .delete(base_path + '/' +contact_id)
-            .set('authorization', authorizationToken)
+            .set('Authorization', authorizationToken)
             .send()
             .then(res => {
                 res.should.have.status(204)
@@ -141,7 +141,7 @@ describe('Contact Service', () => {
     it('DELETE a Contact (404)', () => {
         return chai.request(app)
             .delete(base_path + '/not_found')
-            .set('authorization', authorizationToken)
+            .set('Authorization', authorizationToken)
             .send()
             .then(res => {
                 res.should.have.status(404)
@@ -151,7 +151,7 @@ describe('Contact Service', () => {
     it('GET a Contact (404)', () => {
         return chai.request(app)
             .get(base_path + '/' +contact_id)
-            .set('authorization', authorizationToken)
+            .set('Authorization', authorizationToken)
             .send()
             .then(res => {
                 res.should.have.status(404)
@@ -161,7 +161,7 @@ describe('Contact Service', () => {
     it('GET a Contact (404)', () => {
         return chai.request(app)
             .get(base_path + '/fake')
-            .set('authorization', authorizationToken)
+            .set('Authorization', authorizationToken)
             .send()
             .then(res => {
                 res.should.have.status(404)
@@ -172,7 +172,7 @@ describe('Contact Service', () => {
 
         return chai.request(app)
             .get(fake_base_path)
-            .set('authorization', authorizationToken)
+            .set('Authorization', authorizationToken)
             .then(res => {
                 res.should.have.status(400)
             })
@@ -185,7 +185,7 @@ describe('Contact Service', () => {
 
         return chai.request(app)
             .get(fake_base_path + '/fake_id')
-            .set('authorization', authorizationToken)
+            .set('Authorization', authorizationToken)
             .then(res => {
                 res.should.have.status(400)
             })
@@ -198,7 +198,7 @@ describe('Contact Service', () => {
 
         return chai.request(app)
             .post(fake_base_path, {})
-            .set('authorization', authorizationToken)
+            .set('Authorization', authorizationToken)
             .then(res => {
                 res.should.have.status(400)
             })
@@ -211,7 +211,7 @@ describe('Contact Service', () => {
 
         return chai.request(app)
             .put(fake_base_path + '/fake_id', {})
-            .set('authorization', authorizationToken)
+            .set('Authorization', authorizationToken)
             .then(res => {
                 res.should.have.status(400)
             })
@@ -224,7 +224,7 @@ describe('Contact Service', () => {
 
         return chai.request(app)
             .delete(fake_base_path + '/fake_id')
-            .set('authorization', authorizationToken)
+            .set('Authorization', authorizationToken)
             .then(res => {
                 res.should.have.status(400)
             })

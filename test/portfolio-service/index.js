@@ -8,39 +8,67 @@ let app = require('../../src/index')
 chai.should()
 chai.use(chaiHttp)
 
-describe('Education Service', () => {
+describe('Portfolio Service', () => {
 
     const lang = 'es'
 
     const fake_lang = 'asd'
 
-    const base_path = '/' + lang + '/educations'
+    const base_path = '/' + lang + '/portfolios'
 
-    const fake_base_path = '/' + fake_lang + '/educations'
+    const fake_base_path = '/' + fake_lang + '/portfolios'
 
     const authorizationToken = process.env.AUTH_TOKEN
 
-    let education_id
+    let portfolio_id
 
     const EXAMPLE_POST_DATA =  {
-        "career": "Clown",
-        "detail": "Something",
-        "institute": "UTN",
-        "time": "May 2017 - April 2018",
-        "lang": "EN",
+        "name": "Facebook",
+        "description": "",
+        "resources": [
+            {
+                "name": "Html page",
+                "description": "This a description",
+                "technologies": [
+                    "Html",
+                    "JQuery"
+                ],
+                "links": [
+                    {
+                        "name": "link name",
+                        "icon": "fa-github",
+                        "link": "http://github.com/caballerojavier13"
+                    }
+                ]
+            }
+        ],
         "order": 1
     }
 
     const EXAMPLE_PUT_DATA =  {
-        "career": "Clown",
-        "detail": "SomethingEdited",
-        "institute": "UTN",
-        "time": "June 2017 - April 2018",
-        "lang": "EN",
+        "name": "Personal Page",
+        "description": "Esta es una descripción",
+        "resources": [
+            {
+                "name": "Html page",
+                "description": "This a description",
+                "technologies": [
+                    "Html",
+                    "JQuery"
+                ],
+                "links": [
+                    {
+                        "name": "link name",
+                        "icon": "fa-github",
+                        "link": "http://github.com/caballerojavier13"
+                    }
+                ]
+            }
+        ],
         "order": 2
     }
 
-    it('GET Educations (200,length==0)', () => {
+    it('GET Portfolios (200,length==0)', () => {
 
         return chai.request(app)
             .get(base_path)
@@ -54,18 +82,18 @@ describe('Education Service', () => {
             })
     })
 
-    it('POST Education (201)', () => {
+    it('POST Portfolio (201)', () => {
         return chai.request(app)
             .post(base_path)
             .set('Authorization', authorizationToken)
             .send(EXAMPLE_POST_DATA)
             .then(res => {
                 res.should.have.status(201)
-                education_id = res.body.data.id
+                portfolio_id = res.body.data.id
             })
     })
 
-    it('GET Educations (200,length==1)', () => {
+    it('GET Portfolios (200,length==1)', () => {
         return chai.request(app)
             .get(base_path)
             .set('Authorization', authorizationToken)
@@ -78,7 +106,7 @@ describe('Education Service', () => {
             })
     })
 
-    it('POST Education (400)', () => {
+    it('POST Portfolio (400)', () => {
         return chai.request(app)
             .post(base_path)
             .set('Authorization', authorizationToken)
@@ -88,9 +116,9 @@ describe('Education Service', () => {
             })
     })
 
-    it('GET a Education (200)', () => {
+    it('GET a Portfolio (200)', () => {
         return chai.request(app)
-            .get(base_path + '/' +education_id)
+            .get(base_path + '/' +portfolio_id)
             .set('Authorization', authorizationToken)
             .send()
             .then(res => {
@@ -98,9 +126,9 @@ describe('Education Service', () => {
             })
     })
 
-    it('PUT a Education (200)', () => {
+    it('PUT a Portfolio (200)', () => {
         return chai.request(app)
-            .put(base_path + '/' +education_id)
+            .put(base_path + '/' +portfolio_id)
             .set('Authorization', authorizationToken)
             .send(EXAMPLE_PUT_DATA)
             .then(res => {
@@ -108,7 +136,7 @@ describe('Education Service', () => {
             })
     })
 
-    it('PUT a Education (404)', () => {
+    it('PUT a Portfolio (404)', () => {
         return chai.request(app)
             .put(base_path + '/not_found')
             .set('Authorization', authorizationToken)
@@ -118,9 +146,9 @@ describe('Education Service', () => {
             })
     })
 
-    it('PUT a Education (400)', () => {
+    it('PUT a Portfolio (400)', () => {
         return chai.request(app)
-            .put(base_path + '/' +education_id)
+            .put(base_path + '/' +portfolio_id)
             .set('Authorization', authorizationToken)
             .send({})
             .then(res => {
@@ -128,9 +156,9 @@ describe('Education Service', () => {
             })
     })
 
-    it('DELETE a Education (204)', () => {
+    it('DELETE a Portfolio (204)', () => {
         return chai.request(app)
-            .delete(base_path + '/' +education_id)
+            .delete(base_path + '/' +portfolio_id)
             .set('Authorization', authorizationToken)
             .send()
             .then(res => {
@@ -138,7 +166,7 @@ describe('Education Service', () => {
             })
     })
 
-    it('DELETE a Education (404)', () => {
+    it('DELETE a Portfolio (404)', () => {
         return chai.request(app)
             .delete(base_path + '/not_found')
             .set('Authorization', authorizationToken)
@@ -148,9 +176,9 @@ describe('Education Service', () => {
             })
     })
 
-    it('GET a Education (404)', () => {
+    it('GET a Portfolio (404)', () => {
         return chai.request(app)
-            .get(base_path + '/' +education_id)
+            .get(base_path + '/' +portfolio_id)
             .set('Authorization', authorizationToken)
             .send()
             .then(res => {
@@ -158,7 +186,7 @@ describe('Education Service', () => {
             })
     })
 
-    it('GET a Education (404)', () => {
+    it('GET a Portfolio (404)', () => {
         return chai.request(app)
             .get(base_path + '/fake')
             .set('Authorization', authorizationToken)
@@ -168,7 +196,7 @@ describe('Education Service', () => {
             })
     })
 
-    it('GET Educations lang not supported', () => {
+    it('GET Portfolios lang not supported', () => {
 
         return chai.request(app)
             .get(fake_base_path)
@@ -181,7 +209,7 @@ describe('Education Service', () => {
             })
     })
 
-    it('GET Education lang not supported', () => {
+    it('GET Portfolio lang not supported', () => {
 
         return chai.request(app)
             .get(fake_base_path + '/fake_id')
@@ -194,7 +222,7 @@ describe('Education Service', () => {
             })
     })
 
-    it('POST Education lang not supported', () => {
+    it('POST Portfolio lang not supported', () => {
 
         return chai.request(app)
             .post(fake_base_path, {})
@@ -207,7 +235,7 @@ describe('Education Service', () => {
             })
     })
 
-    it('PUT Education lang not supported', () => {
+    it('PUT Portfolio lang not supported', () => {
 
         return chai.request(app)
             .put(fake_base_path + '/fake_id', {})
@@ -220,7 +248,7 @@ describe('Education Service', () => {
             })
     })
 
-    it('DELETE Education lang not supported', () => {
+    it('DELETE Portfolio lang not supported', () => {
 
         return chai.request(app)
             .delete(fake_base_path + '/fake_id')
