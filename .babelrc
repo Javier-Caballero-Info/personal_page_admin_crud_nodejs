@@ -2,7 +2,7 @@
   "presets": [
     ["env", {
       "targets": {
-        "node": "9.11.1"
+        "node": "10.15.0"
       },
       "test": {
         "plugins": [ "istanbul" ]
