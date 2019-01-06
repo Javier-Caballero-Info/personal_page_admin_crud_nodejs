@@ -1,0 +1,25 @@
+{
+  "properties": {
+    "picture": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },    
+    "lang": {
+      "type": "string",
+      "enum": [
+        "ES",
+        "EN"
+      ]
+    }
+  },
+  "required": [
+    "picture",
+    "title",
+    "subtitle"
+  ]
+}

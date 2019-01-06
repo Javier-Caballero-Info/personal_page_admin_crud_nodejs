@@ -43,10 +43,23 @@ export default function Store (db, path) {
 
         return rows
     }
+
     async function one (id, lang) {
         let ref = db.child(getPath(lang) + '/' + id)
 
         return await _getOneEntity(ref, id);
+    }
+
+    async function getSingletonModel(lang) {
+        let ref = db.child(getPath(lang))
+
+        let row = null
+
+        await ref.once("value", function(snapshot) {
+            row = snapshot.val()
+        });
+
+        return row
     }
 
     async function create (lang, data) {
@@ -59,6 +72,26 @@ export default function Store (db, path) {
             row = snapshot.val()
             row["id"] = key
         })
+        return row
+    }
+
+    async function updateSingletonModel(lang, data) {
+        let ref = db.child(getPath(lang))
+        let row = await getSingletonModel(lang)
+
+        if (row){
+
+            await ref.update(data)
+                .then(function() {
+                    row = {}
+                })
+
+            await ref.once("value", function(snapshot) {
+                row = snapshot.val()
+            })
+
+        }
+
         return row
     }
 
@@ -102,9 +135,11 @@ export default function Store (db, path) {
 
     return {
         one,
+        getSingletonModel,
         all,
         create,
         update,
+        updateSingletonModel,
         remove
     }
 }

@@ -1,0 +1,28 @@
+{
+  "type": "object",
+  "properties": {
+    "text": {
+      "type": "string"
+    },
+    "target": {
+      "type": "string"
+    },    
+    "lang": {
+      "type": "string",
+      "enum": [
+        "ES",
+        "EN"
+      ]
+    },
+    "order": {
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "required": [
+    "text",
+    "target",
+    "lang",
+    "order"
+  ]
+}

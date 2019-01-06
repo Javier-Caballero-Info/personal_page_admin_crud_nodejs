@@ -24,6 +24,8 @@ import Schema from './schema'
 import SocialNetworkService from './service/social-network-service'
 import ContactService from './service/contact-service'
 import EducationService from './service/education-service'
+import HomeService from './service/home-service'
+import MenuService from './service/menu-service'
 import ReseachService from './service/research-service'
 import ScholasticService from './service/scholastic-service'
 import WorkService from './service/work-service'
@@ -33,6 +35,8 @@ import PortfolioService from './service/portfolio-service'
 import SocialNetworkSchema from './schema/social-network.json'
 import ContactSchema from './schema/contact.json'
 import EducationSchema from './schema/education.json'
+import HomeSchema from './schema/home.json'
+import MenuItemSchema from './schema/menu-item.json'
 import ResearchSchema from './schema/research.json'
 import ScholasticSchema from './schema/scholastic.json'
 import WorkSchema from './schema/work.json'
@@ -54,6 +58,8 @@ const connect_datadog = require('connect-datadog')(dd_options);
 schema.add('social-network', SocialNetworkSchema)
 schema.add('contact', ContactSchema)
 schema.add('education', EducationSchema)
+schema.add('home', HomeSchema)
+schema.add('menu-item', MenuItemSchema)
 schema.add('research', ResearchSchema)
 schema.add('scholastic', ScholasticSchema)
 schema.add('work', WorkSchema)
@@ -71,6 +77,8 @@ const services = [
     SocialNetworkService,
     ContactService,
     EducationService,
+    HomeService,
+    MenuService,
     ReseachService,
     ScholasticService,
     WorkService,
