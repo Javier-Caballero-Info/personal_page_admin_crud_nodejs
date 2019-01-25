@@ -17,6 +17,7 @@ tags:
 - name: "Contact"
 - name: "Education"
 - name: "Home"
+- name: "Menu Item"
 - name: "Health"
 - name: "Portfolio"
 - name: "Research"
@@ -26,9 +27,9 @@ tags:
 paths:
   /:
     get:
-      summary: Home - List All Services
+      summary: Root - List All Services
       tags:
-      - "Home"
+      - "Root"
       responses:
         200:
           description: Successful Response
@@ -1137,6 +1138,249 @@ paths:
       responses:
         204:
           description: Successful Response
+  /{lang}/home:
+    get:
+      summary: Get the home
+      tags:
+      - "Home"
+      security:
+      - Bearer: []
+      parameters:
+        - name: "lang"
+          description: "Lang of the content"
+          in: "path"
+          required: true
+          type: "string"
+      responses:
+        200:
+          description: Successful Response
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Home'
+          examples:
+            application/json:
+                data:
+                  title: "Javier Hernán Caballero García"
+                  picture: "https://s3.amazonaws.com/caballerojavier13-pages-files/personal_page/Home/avatar.jpg"
+                  subtitle: "Aquí encontrarás algo de información sobre mi."
+                  lang: "es"
+    put:
+      summary: Edit the home
+      tags:
+      - "Home"
+      security:
+      - Bearer: []
+      parameters:
+        - name: "lang"
+          description: "Lang of the content"
+          in: "path"
+          required: true
+          type: "string"
+        - in: body
+          name: body
+          required: true
+          schema:
+            type: object
+            $ref: '#/definitions/HomeRequest'
+            example:
+              title: "Javier Hernán Caballero García"
+              picture: "https://s3.amazonaws.com/caballerojavier13-pages-files/personal_page/Home/avatar.jpg"
+              subtitle: "Aquí encontrarás algo de información sobre mi."
+              lang: "es"
+      responses:
+        200:
+          description: Successful Response
+          schema:
+            type: object
+            $ref: '#/definitions/Home'
+          examples:
+            application/json:
+                data:
+                  title: "Javier Hernán Caballero García"
+                  picture: "https://s3.amazonaws.com/caballerojavier13-pages-files/personal_page/Home/avatar.jpg"
+                  subtitle: "Aquí encontrarás algo de información sobre mi."
+                  lang: "es"
+  /{lang}/menu-items:
+    get:
+      summary: List All Menu Items
+      tags:
+      - "Menu Item"
+      security:
+      - Bearer: []
+      parameters:
+        - name: "lang"
+          description: "Lang of the content"
+          in: "path"
+          required: true
+          type: "string"
+      responses:
+        200:
+          description: Successful Response
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/MenuItem'
+          examples:
+            application/json:
+                data:
+                  - id: "MI_ABC001"
+                    text: "Biografía"
+                    target: "#biografía"
+                    is_displayed: true
+                    order: 0
+                    lang: "es"
+                  - id: "MI_ABC002"
+                    text: "Portfolio"
+                    target: "#portfiolio"
+                    is_displayed: true
+                    order: 1
+                    lang: "es"
+                  - id: "MI_ABC003"
+                    text: "Redes Sociales"
+                    target: "#social-network"
+                    is_displayed: true
+                    order: 2
+                    lang: "es"
+                  - id: "MI_ABC004"
+                    text: "Contacto"
+                    target: "#contact"
+                    is_displayed: true
+                    order: 3
+                    lang: "es"
+    post:
+      summary: Create a New Menu Item
+      tags:
+      - "Menu Item"
+      security:
+      - Bearer: []
+      parameters:
+        - name: "lang"
+          description: "Lang of the content"
+          in: "path"
+          required: true
+          type: "string"
+        - in: body
+          name: body
+          required: true
+          schema:
+            type: object
+            $ref: '#/definitions/MenuItemRequest'
+            example:
+              text: "Biografía"
+              target: "#biografía"
+              is_displayed: true
+              order: 0
+              lang: "es"
+      responses:
+        200:
+          description: Successful Response
+          schema:
+            type: object
+            $ref: '#/definitions/MenuItem'
+          examples:
+            application/json:
+                data:
+                  id: "MI_ABC001"
+                  text: "Biografía"
+                  target: "#biografía"
+                  is_displayed: true
+                  order: 0
+                  lang: "es"
+  /{lang}/menu-items/{id}:
+    get: 
+      summary: Get a Menu Item
+      tags:
+      - "Menu Item"
+      security:
+      - Bearer: []
+      parameters:
+      - name: "lang"
+        description: "Lang of the content"
+        in: "path"
+        required: true
+        type: "string"
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: Successful Response
+          schema:
+            type: object
+            $ref: '#/definitions/MenuItem'
+          examples:
+            application/json:
+                data:
+                  id: "MI_ABC001"
+                  text: "Biografía"
+                  target: "#biografía"
+                  is_displayed: true
+                  order: 0
+                  lang: "es"
+    put: 
+      summary: Edit a Menu Item
+      tags:
+      - "Menu Item"
+      security:
+      - Bearer: []
+      parameters:
+      - name: "lang"
+        description: "Lang of the content"
+        in: "path"
+        required: true
+        type: "string"
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      - in: body
+        name: body
+        required: true
+        schema:
+          type: object
+          $ref: '#/definitions/MenuItemRequest'
+          example:
+            text: "Biografía"
+            target: "#biografía"
+            is_displayed: true
+            order: 0
+            lang: "es"
+      responses:
+        200:
+          description: Successful Response
+          schema:
+            type: object
+            $ref: '#/definitions/MenuItem'
+          examples:
+            application/json:
+                data:
+                  id: "MI_ABC001"
+                  text: "Biografía"
+                  target: "#biografía"
+                  is_displayed: true
+                  order: 0
+                  lang: "es"
+    delete: 
+      summary: Delete a Menu Item
+      tags:
+      - "Menu Item"
+      security:
+      - Bearer: []
+      parameters:
+      - name: "lang"
+        description: "Lang of the content"
+        in: "path"
+        required: true
+        type: "string"
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        204:
+          description: Successful Response
   /{lang}/works:
     get:
       summary: List All Works
@@ -1726,3 +1970,81 @@ definitions:
       - order
       - position
       - time
+  MenuItem:
+    title: MenuItem
+    type: object
+    properties:
+      id:
+        type: string
+      text:
+        type: string
+      target:
+        type: string
+      is_displayed:
+        type: boolean
+      order:
+        type: integer
+        minimum: 0
+      lang:
+        type: string
+    required:
+      - text
+      - target
+      - is_displayed
+      - order
+      - lang
+  MenuItemRequest:
+    title: MenuItem
+    type: object
+    properties:
+      text:
+        type: string
+      target:
+        type: string
+      is_displayed:
+        type: boolean
+      order:
+        type: integer
+        minimum: 0
+      lang:
+        type: string
+    required:
+      - text
+      - target
+      - is_displayed
+      - order
+      - lang
+  Home:
+    title: Home
+    type: object
+    properties:
+      title:
+        type: string
+      subtitle:
+        type: string
+      picture:
+        type: string
+      lang:
+        type: string
+    required:
+      - title
+      - subtitle
+      - picture
+      - lang
+  HomeRequest:
+    title: Home
+    type: object
+    properties:
+      title:
+        type: string
+      subtitle:
+        type: string
+      picture:
+        type: string
+      lang:
+        type: string
+    required:
+      - title
+      - subtitle
+      - picture
+      - lang
