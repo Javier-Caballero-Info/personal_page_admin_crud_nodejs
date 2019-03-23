@@ -30,6 +30,7 @@ import ReseachService from './service/research-service'
 import ScholasticService from './service/scholastic-service'
 import WorkService from './service/work-service'
 import PortfolioService from './service/portfolio-service'
+import GiftService from './service/gift-service'
 
 // Schemas
 import SocialNetworkSchema from './schema/social-network.json'
@@ -41,6 +42,7 @@ import ResearchSchema from './schema/research.json'
 import ScholasticSchema from './schema/scholastic.json'
 import WorkSchema from './schema/work.json'
 import PortfolioSchema from './schema/portfolio.json'
+import GiftSchema from './schema/gift.json'
 
 // main is where our application resides
 
@@ -64,6 +66,7 @@ schema.add('research', ResearchSchema)
 schema.add('scholastic', ScholasticSchema)
 schema.add('work', WorkSchema)
 schema.add('portfolio', PortfolioSchema)
+schema.add('gift', GiftSchema)
 
 // Middlewares
 middlewares(app)
@@ -83,6 +86,7 @@ const services = [
     ScholasticService,
     WorkService,
     PortfolioService,
+    GiftService,
 ].map(service => service({ db, schema }))
 
 // Initialize service by looping through them
